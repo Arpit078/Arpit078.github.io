@@ -1,7 +1,6 @@
 //use inline html vs code extension to write html like these in template strings. Don't forget write /*html*/ or /*css*/
 //before template string after installing inline html extention.
 const Home = /*html*/ `
-<link rel="stylesheet" href="../components/styles/general.css">
 
 <div class="Text">
     <h1 id="hello">Hello.</h1>
