@@ -3,16 +3,17 @@
   margin: 8px;
   padding: 35px 40px 35px 40px;
 }
+
 @media only screen and (min-width: 600px) {
   .text{
     padding:35px 40px 35px 100px;
   }
 }
-#hello{
+.title{
   font-weight: 600;
   font-size: 4.5rem;
 }
-#name{
+.subHead{
   font-weight: 500;
   font-size: 2rem;
 }
@@ -21,6 +22,15 @@
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4;
+  color: black!important;
+}
+.highlight{
+  max-width: 28em;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgb(156, 57, 57,0.8);
+
 }
 p{
   display: block;
@@ -49,7 +59,7 @@ a::before {
   height: 1.6rem;
   bottom: -4px;
   left: 0;
-  background-color: rgba(79, 90, 192, 0.5);;
+  background-color: rgba(79, 90, 192, 0.5);
   transform: scaleY(0.3) translateY(1.6rem);
   transition: transform 0.3s ease;
 }
