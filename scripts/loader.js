@@ -13,7 +13,8 @@ window.sessionStorage.setItem("Blogs",Blogs)
 
 //write the homepage on index.html
 const dom = document.getElementById('virtual-dom');
-// dom.innerHTML = Home
+if(window.location.hash == ""){
+dom.innerHTML = Home }
 
 
 
