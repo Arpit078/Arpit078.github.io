@@ -1,12 +1,11 @@
 
-
 const dom = document.getElementById('virtual-dom');
 
 //load data from sessionStorage for pages from here
-const ProjectsData = sessionStorage.getItem("Projects")
+const ProjectsData =sessionStorage.getItem("Projects")
 const HomeData =sessionStorage.getItem("Home")
-const BlogsData = sessionStorage.getItem("Blogs")
-
+const BlogsData =sessionStorage.getItem("Blogs")
+// console.log(ProjectsData)
 //add your page addresses key value pair here
 const routes =  {
                 "":HomeData,
@@ -33,13 +32,8 @@ function onNavigate(pathname){
 //this condition checks if the page loaded is the same as in hash
 if(window.location.hash in routes == true){
     dom.innerHTML = routes[window.location.hash];
-    // onNavigate(routes[window.location.hash])     
-    // if(dom.innerHTML==""){
-    //     dom.innerHTML = routes[window.location.hash];
-
-        
-    // }
 }
+
 
 
 

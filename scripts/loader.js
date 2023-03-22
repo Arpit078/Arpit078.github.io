@@ -9,13 +9,13 @@ import Blogs from "../components/Blogs.js"
 window.sessionStorage.setItem("Home",Home)
 window.sessionStorage.setItem("Projects",Projects)
 window.sessionStorage.setItem("Blogs",Blogs)
+
 // window.sessionStorage.setItem("Navbar",Navbar)
 
 //write the homepage on index.html
 const dom = document.getElementById('virtual-dom');
-if(window.location.hash == ""){
-dom.innerHTML = Home }
-
+dom.innerHTML = Home 
+    // window.location.hash = "#Home"
 
 
 
