@@ -16,7 +16,7 @@ const Home = /*html*/ `
         You can connect with me on <a href="https://www.linkedin.com/in/arpit-verma-806268227/" class="link"><span class="bar"></span>LinkedIN </a>. If you happen to also use <a href="https://www.instagram.com/arpitverma.here/" class="link"><span class="bar"></span>Instagram </a>, let's have a chat there.
     </p>
     <p class="paragraph">
-        Outside of playing around with web apps and my college acads, I enjoy playing Basketball, Reading stories, watching anime and watching sunsets.
+        Outside of goofing around with scripting and automation, I enjoy playing Basketball, Reading books, Watching anime and maybe travelling.
     </p>
 
 </div>
