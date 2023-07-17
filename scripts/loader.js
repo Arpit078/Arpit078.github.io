@@ -1,22 +1,2 @@
-
-// this file is modular and imports other files.
-//import your components
-import Home from "../components/Home.js"
-import Projects from "../components/Projects.js"
-import Blogs from "../components/Blogs.js"
-
-//load your components in the sessionStorage
-window.sessionStorage.setItem("Home",Home)
-window.sessionStorage.setItem("Projects",Projects)
-window.sessionStorage.setItem("Blogs",Blogs)
-
-// window.sessionStorage.setItem("Navbar",Navbar)
-
-//write the homepage on index.html
-const dom = document.getElementById('virtual-dom');
-dom.innerHTML = Home 
-    // window.location.hash = "#Home"
-
-
-
-
+const dom = document.getElementById("virtual-dom");
+dom.innerHTML = Home;import Blogs from "../Pages/Blogs.js";window.sessionStorage.setItem("Blogs",Blogs);import Books from "../Pages/Books.js";window.sessionStorage.setItem("Books",Books);import Home from "../Pages/Home.js";window.sessionStorage.setItem("Home",Home);import Projects from "../Pages/Projects.js";window.sessionStorage.setItem("Projects",Projects);

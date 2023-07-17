@@ -2,5 +2,7 @@
   "dependencies": {
     "@arpit078/preactjs": "^1.1.0",
     "@notionhq/client": "^2.2.3"
-  }
+  },
+  "type":"module"
+
 }

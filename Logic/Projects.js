@@ -1,15 +1,12 @@
+async function fetchProjects(){
+    let ProjectDatabase = []
+    await fetch('../../projects/data.json')
+        .then((response) => response.json())
+        .then((json) => ProjectDatabase=json);
 
-console.log("workin")
+    let ProjectsFetch = ''
 
-let ProjectDatabase = []
-const Project = window.sessionStorage.getItem("Projects")
-// console.log(Project)
-await fetch('../../projects/data.json')
-.then((response) => response.json())
-.then((json) => {
-    ProjectDatabase=json
-    // console.log(ProjectDatabase)
-    
+
     for(let i =0;i<ProjectDatabase.length;i++){
         const projectObj = `
         <div class="content">
@@ -29,9 +26,12 @@ await fetch('../../projects/data.json')
         </p>
     </div>
     `
-        window.sessionStorage.setItem("Projects",Project+projectObj); 
+        ProjectsFetch = ProjectsFetch + projectObj ; 
     }
-
+    // console.log(ProjectDatabase)
+    return ProjectsFetch
 }
+fetchProjects().then((res)=>{
 
-);
+    document.getElementById("project").innerHTML =  res
+})

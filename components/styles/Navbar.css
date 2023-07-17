@@ -27,7 +27,16 @@
     padding-right: 1rem;
     padding-left: 0;
    }
-   
+   ul{
+    
+    position:sticky;
+    top: 0;
+    left:50;
+    /* background-color: rgba(126, 134, 131, 0.236); */
+    /* filter: blur(5px); */
+    height: max-content;
+    width: max-content;
+  }
   }
 
   ul li{
@@ -40,20 +49,9 @@
   ul li:hover {
     color: #000;
   }
-  
-  ul li::before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    display: block;
-    width: 60%;
-    height: 1.5rem;
-    /* left: 0; */
-    background-color: rgba(79, 90, 192, 0.5);;
-    transform: scaleY(0.3) translateY(1.6rem);
-    transition: transform 0.3s ease;
+  ul{
+    position: fixed;
+    bottom: 0;
+    right: 20;
   }
-  
-  ul li:hover::before {
-    transform: scaleY(1);
-  }
+ 

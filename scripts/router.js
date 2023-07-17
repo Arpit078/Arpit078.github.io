@@ -1,20 +1,4 @@
-
 const dom = document.getElementById('virtual-dom');
-
-//load data from sessionStorage for pages from here
-const ProjectsData =sessionStorage.getItem("Projects")
-const HomeData =sessionStorage.getItem("Home")
-const BlogsData =sessionStorage.getItem("Blogs")
-// console.log(ProjectsData)
-//add your page addresses key value pair here
-const routes =  {
-                "":HomeData,
-                "#Home":HomeData,
-                "#Projects":ProjectsData,
-                "#Blogs":BlogsData
-               
-                }
-
 
 //don't touch this function            
 function onNavigate(pathname){
@@ -27,32 +11,39 @@ function onNavigate(pathname){
     dom.innerHTML = routes[window.location.hash];
     
 }
-
-
-//this condition checks if the page loaded is the same as in hash
-if(window.location.hash in routes == true){
-    dom.innerHTML = routes[window.location.hash];
-}
-
-
-
-
-//add your page addresses key value pair here, also change these relative to hosting
-
-function Projects(){
-    onNavigate("#Projects")
-}
-function Home(){
-    onNavigate("#Home")
-}
-function Blogs(){
-    onNavigate("#Blogs")
-}
-
-
-
-
-
-
-
-
+const BlogsData =sessionStorage.getItem("Blogs");
+        function Blogs(){
+            onNavigate("#Blogs");
+        };const BooksData =sessionStorage.getItem("Books");
+        function Books(){
+            onNavigate("#Books");
+            let dynamicscript = document.getElementsByTagName("script")[3];
+            document.body.removeChild(dynamicscript)
+            let myScript = document.createElement("script");
+            myScript.setAttribute("src", "../Logic/Books.js");
+            document.body.appendChild(myScript);
+        };const HomeData =sessionStorage.getItem("Home");
+        function Home(){
+            onNavigate("#Home");
+        };const ProjectsData =sessionStorage.getItem("Projects");
+        function Projects(){
+            onNavigate("#Projects");
+            let dynamicscript = document.getElementsByTagName("script")[3];
+            document.body.removeChild(dynamicscript)
+            let myScript = document.createElement("script");
+            myScript.setAttribute("src", "../Logic/Projects.js");
+            document.body.appendChild(myScript);
+        };const routes = {"":HomeData,"#Blogs":BlogsData,"#Books":BooksData,"#Home":HomeData,"#Projects":ProjectsData};if(window.location.hash in routes == true){
+        dom.innerHTML = routes[window.location.hash];
+    }
+        const logicRoutes =["Books","Projects"];
+        if(logicRoutes.includes(window.location.hash.slice(1))){
+          let dynamicscript = document.getElementsByTagName("script")[3];
+            document.body.removeChild(dynamicscript)
+            let myScript = document.createElement("script");
+            const filename = window.location.hash.slice(1)
+            const filepath = "../Logic/" + filename + ".js"
+            myScript.setAttribute("src", filepath);
+            document.body.appendChild(myScript);
+        
+    }
