@@ -5,6 +5,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node scripts\\compile.js | node server.js"
+    "start":"node server.js",
+    "build" : "node scripts/compile.js"
   }
 }
