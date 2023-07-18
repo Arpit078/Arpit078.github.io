@@ -18,7 +18,7 @@ const BlogsData =sessionStorage.getItem("Blogs");
         function Books(){
             onNavigate("#Books");
             let dynamicscript = document.getElementsByTagName("script")[3];
-            document.body.removeChild(dynamicscript)
+            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             myScript.setAttribute("src", "../Logic/Books.js");
             document.body.appendChild(myScript);
@@ -29,7 +29,7 @@ const BlogsData =sessionStorage.getItem("Blogs");
         function Projects(){
             onNavigate("#Projects");
             let dynamicscript = document.getElementsByTagName("script")[3];
-            document.body.removeChild(dynamicscript)
+            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             myScript.setAttribute("src", "../Logic/Projects.js");
             document.body.appendChild(myScript);
@@ -39,7 +39,7 @@ const BlogsData =sessionStorage.getItem("Blogs");
         const logicRoutes =["Books","Projects"];
         if(logicRoutes.includes(window.location.hash.slice(1))){
           let dynamicscript = document.getElementsByTagName("script")[3];
-            document.body.removeChild(dynamicscript)
+            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             const filename = window.location.hash.slice(1)
             const filepath = "../Logic/" + filename + ".js"
