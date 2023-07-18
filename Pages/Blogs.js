@@ -17,7 +17,7 @@ const Blogs = /*html*/`
                    Okay, talking about the website it basically works on the js framework that I built, as it can be seen it is a single page application 
                    the website has frontend hash routing setup that basically changes the url with different hashes corresponding to pages. Now one question 
                    that might pop up is why do hash routing, well that has a very straight forward answer I don't own a server of my own! so when I upload 
-                   a website on some free tier PaaS it ends up obstructing direct access to other routes ad only main the default route is accessible through
+                   a website on some free tier PaaS it ends up obstructing direct access to other routes and only the default route is accessible through
                    url search.
                   <br>
                   <br>
@@ -33,7 +33,7 @@ const Blogs = /*html*/`
                    used to perform logic functions and only be used to call upon variables.<br><br>
                    - for the logic part once a page is called a corresponding logic script is linked in the index.html<br><br>
                    - the projects page is a bit different and interesting. Since I am not updating projects every minute of the day having a server 
-                   running and hosting an api to provide for the project page content, it is better to hardcode it into the repository.<br><br>
+                   running and hosting an api to provide for the project page content is waste of resources, it is better to hardcode it into the repository.<br><br>
                    - But hardcoding is tedious task in itself so I use a automation script <a href="https://github.com/arpit078/gitcron">gitcron</a> that
                    fetches project details from a gsheet that I maintain and commits the details on the repository of this website, and voilla thats the website!
 

@@ -35,7 +35,7 @@ const Books = /*html*/`
     </div>
         <div class="content">
         <p class="subHead">Doglapan </p>
-        <p class="paragraph">Stumbled on this as an accident but it was a nice journey. Had me learn about behind the scenes of indian startups.
+        <p class="paragraph">Stumbled on this as an accident but it was a nice journey. Had me learn a lot about behind the scenes of indian startups.
         </p>
         <p class="highlight">
         Cover : <br>
