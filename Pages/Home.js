@@ -18,6 +18,9 @@ const Home = /*html*/ `
     <p class="paragraph">
         Outside of goofing around with scripting and automation, I enjoy playing Basketball, Reading books, Watching anime and maybe travelling sometimes.
     </p>
+    <p class="paragraph">
+        And it's definately not me who took the website design from Evan You's portfolio:}
+    </p>
 
 </div>
 
