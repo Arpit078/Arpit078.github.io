@@ -1,4 +1,10 @@
 import fs from 'fs'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 function readDirAsync(directoryPath) {
   return new Promise((resolve, reject) => {
@@ -12,7 +18,7 @@ function readDirAsync(directoryPath) {
     });
   });
 }
-const logicFiles = await readDirAsync("../Logic")
+const logicFiles = await readDirAsync(path.join(__dirname,"../Logic"))
 let logicFileNames = []
 logicFiles.forEach((file)=>{
   const str = file.slice(0, -3)
@@ -23,8 +29,8 @@ logicFiles.forEach((file)=>{
 
 
 
-const loaderFilePath = './loader.js'
-const routerFilePath = './router.js'
+const loaderFilePath = path.join(__dirname,'loader.js')
+const routerFilePath = path.join(__dirname,'router.js')
 const defaultPage = 'Home';
 const defaultPageData = `const dom = document.getElementById("virtual-dom");
 dom.innerHTML = ${defaultPage};`;
@@ -44,8 +50,8 @@ function onNavigate(pathname){
 }
 `;
 fs.writeFileSync(routerFilePath,routesLogicData,(err)=>{if(err) throw err})
-
-fs.readdir('../pages/', (err, files) => {
+const pagesPath = path.join(__dirname,"../Pages/")
+fs.readdir(pagesPath, (err, files) => {
     if (err) throw err;
     let routesObj = `const routes = {"":${defaultPage}Data`
     files.forEach(file => {
@@ -63,7 +69,7 @@ fs.readdir('../pages/', (err, files) => {
         function ${fileName}(){
             onNavigate("#${fileName}");
             let dynamicscript = document.getElementsByTagName("script")[3];
-            document.body.removeChild(dynamicscript)
+            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             myScript.setAttribute("src", "../Logic/${file}");
             document.body.appendChild(myScript);
@@ -92,7 +98,7 @@ fs.readdir('../pages/', (err, files) => {
         const logicRoutes =${JSON.stringify(logicFileNames)};
         if(logicRoutes.includes(window.location.hash.slice(1))){
           let dynamicscript = document.getElementsByTagName("script")[3];
-            document.body.removeChild(dynamicscript)
+            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             const filename = window.location.hash.slice(1)
             const filepath = "../Logic/" + filename + ".js"

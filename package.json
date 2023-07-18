@@ -1,11 +1,10 @@
 {
   "dependencies": {
     "@arpit078/preactjs": "^1.1.0",
-    "live-server": "^1.2.2"
-    
+    "live-server": "^1.2.2",
   },
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node scripts\\compile.js | node server.js"
   }
 }
