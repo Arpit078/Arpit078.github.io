@@ -21,7 +21,7 @@ const Books = /*html*/`
     </div>
         <div class="content">
         <p class="subHead">Let's Talk Money </p>
-        <p class="paragraph">Was suggested by some youtube video and boy was this book a good. It is so much 
+        <p class="paragraph">Was suggested by some youtube video and boy was this book a good one. It is so much 
             informative I'd have to come back to this again and again. Must read if you want to learn about personal finance.
         </p>
         <p class="highlight">
@@ -35,7 +35,7 @@ const Books = /*html*/`
     </div>
         <div class="content">
         <p class="subHead">Doglapan </p>
-        <p class="paragraph">Stumbled on this as an accident but it was a nice journey. Had me understand the behind the scenes of indian startups.
+        <p class="paragraph">Stumbled on this as an accident but it was a nice journey. Had me learn about behind the scenes of indian startups.
         </p>
         <p class="highlight">
         Cover : <br>
