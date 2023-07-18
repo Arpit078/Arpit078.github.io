@@ -68,8 +68,6 @@ fs.readdir(pagesPath, (err, files) => {
         const toWriteRouter = `const ${fileName}Data =sessionStorage.getItem("${fileName}");
         function ${fileName}(){
             onNavigate("#${fileName}");
-            let dynamicscript = document.getElementsByTagName("script")[3];
-            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             myScript.setAttribute("src", "../Logic/${file}");
             document.body.appendChild(myScript);
@@ -97,8 +95,6 @@ fs.readdir(pagesPath, (err, files) => {
     }
         const logicRoutes =${JSON.stringify(logicFileNames)};
         if(logicRoutes.includes(window.location.hash.slice(1))){
-          let dynamicscript = document.getElementsByTagName("script")[3];
-            document.removeChild(dynamicscript)
             let myScript = document.createElement("script");
             const filename = window.location.hash.slice(1)
             const filepath = "../Logic/" + filename + ".js"
