@@ -9,7 +9,7 @@ const Home = /*html*/ `
     </div>
     <p class="subHead">My name is Arpit Kumar Verma.</p>
     <p class="paragraph">
-        I am a student pursuing bachelor of technology in Electrical Engineering at IIT Ropar. I am a software development ethusiast. I love working on task automation, scripting and sometimes making web applications. I am the creator of the JavaScript framework <a href="https://www.npmjs.com/package/@arpit078/preactjs" class="link">@arpit078/preactJS<span class="bar"></span></a> a single page application framework. Most of my work is open sourced and publicly available on 
+        I am a student pursuing bachelor of technology in Electrical Engineering at IIT Ropar. I am a software development ethusiast. I love working on task automation, scripting and sometimes making web applications. I am the creator of the JavaScript framework <a href="https://www.npmjs.com/package/@arpit078/preactjs" class="link">@arpit078/preactJS<span class="bar"></span></a> that is powering this website. PreactJS is a single page application javascript framework. Most of my work is open sourced and publicly available on 
     <a href="https://github.com/Arpit078" class="link">Github</a> 
     </p>
     <p class="paragraph">
