@@ -14,6 +14,9 @@ function onNavigate(pathname){
 const BlogsData =sessionStorage.getItem("Blogs");
         function Blogs(){
             onNavigate("#Blogs");
+            let myScript = document.createElement("script");
+            myScript.setAttribute("src", "../Logic/Blogs.js");
+            document.body.appendChild(myScript);
         };const BooksData =sessionStorage.getItem("Books");
         function Books(){
             onNavigate("#Books");
@@ -32,7 +35,7 @@ const BlogsData =sessionStorage.getItem("Blogs");
         };const routes = {"":HomeData,"#Blogs":BlogsData,"#Books":BooksData,"#Home":HomeData,"#Projects":ProjectsData};if(window.location.hash in routes == true){
         dom.innerHTML = routes[window.location.hash];
     }
-        const logicRoutes =["Books","Projects"];
+        const logicRoutes =["Blogs","Books","Projects"];
         if(logicRoutes.includes(window.location.hash.slice(1))){
             let myScript = document.createElement("script");
             const filename = window.location.hash.slice(1)

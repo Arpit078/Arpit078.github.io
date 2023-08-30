@@ -1,6 +1,6 @@
 async function fetchProjects(){
     let ProjectDatabase = []
-    await fetch('../../projects/data.json')
+    await fetch('../../data/projects_data.json')
         .then((response) => response.json())
         .then((json) => ProjectDatabase=json);
 
