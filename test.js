@@ -1,5 +1,4 @@
 import fs from 'fs';
-const st = `Was suggested by some youtube video and boy was this book a good one. It is so much 
-informative I'd have to come back to this again and again. Must read if you want to learn about personal finance.`
+const st = `It was sometime in January that I had sat down to write this article, and now it is July 2023, I have been procrastinating over this one thing for a long time I guess. Actually I was not procrastinating over this article rather it should be told that I was not having enough time to fix some minor bugs in the preact.js framework itself.`
 const con = JSON.stringify(st)
 fs.writeFileSync("test.json",con);
