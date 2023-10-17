@@ -10,8 +10,8 @@ async function fetchProjects(){
     for(let i =0;i<blogDatabase.length;i++){
         const projectObj = `
             <div class="content">
-                <p class="subHead">${blogDatabase[i].blog_title}</p>
-                <p class="paragraph">${blogDatabase[i].description}</p>
+                <p class="subHead">${blogDatabase[i].title}</p>
+                <p class="paragraph">${blogDatabase[i].content}</p>
                 <p class="highlight">
                 Dated :
                 <span class="paragraph">${blogDatabase[i].date}</span>
