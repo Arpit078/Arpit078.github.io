@@ -1,8 +1,31 @@
 [
   {
+    "id": "b9c17e82-36c4-44bd-be7c-cac039a58163",
+    "title": "Starting Learning in Public",
+    "date": "2024-01-05",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Fixed many bugs that were present in this blogs page and hooked it up with notion API, HENCE we’ll be having daily updates on what I am learning."
+      },
+      {
+        "component": "paragraph",
+        "text": "Had in mind to restart that leetcode grind today, but all my time went into fixing this page. Learned some stuff about how Notion API works, every page is divided into its metadata and content. Content is the parent of several blocks of different types of component i.e. paragraphs, codes, numbered item lists, bulleted item lists and so on. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Retrieving the data was the easy part just create a integration on the dev page and put in the your client secret in the getting started code. The real headache was formatting the data of this page. Fortunately I found this https://youtu.be/97ARQTHyf1c?si=zJNKNztjMbsK6bMG , my man helped a lot, Thanks Sean. I guess that’s all I learned today.  "
+      },
+      {
+        "component": "paragraph",
+        "text": "Cheers to the new beginning."
+      }
+    ]
+  },
+  {
     "id": "853eef81-0a9c-46fa-a646-bd0805893a0a",
     "title": "How does this website work",
-    "date": "2024-01-06",
+    "date": "2023-06-06",
     "blocks": [
       {
         "component": "paragraph",
@@ -10,27 +33,35 @@
       },
       {
         "component": "paragraph",
-        "text": "Speaking about the website, it operates on a JavaScript framework that I developed. It functions as a single-page application with frontend hash routing, altering the URL with different hashes corresponding to various pages. One might wonder why opt for hash routing. The answer is straightforward: I don't own my server. When I deploy the website on a free-tier Platform as a Service (PaaS), it restricts direct access to other routes, making only the default route accessible through URL search."
+        "text": "Speaking about the website, it operates on the Javascript library that I have developed. It functions as a single-page application with frontend hash routing, altering the URL with different hashes corresponding to various pages. When I deploy the website on a free-tier Platform as a Service (PaaS), it restricts direct access to other routes, making only the default route accessible through URL search and as I don’t have root access to these servers I had to opt for hash routing."
       },
       {
         "component": "paragraph",
-        "text": "Let's delve into the website's flow:"
+        "text": "Not having an easy access to reliable servers for free meant no database and dynamic content on the website, to solve this I had to come up with some innovative solution to have a database that was convenient to update and tagged along with an API. I used google sheets for the projects and books I’ve read page. The data I maintain on the sheet is then hardcoded into the website repository using a Node.js-based automation script i wrote called gitcron. The script commits the changes in sheet on my behalf everytime I start my laptop. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Google sheets wasn’t a good choice for a CMS for blogposts and learning in public updates, So I chose Notion for this and hooked it up with the same script to update the website content."
+      },
+      {
+        "component": "paragraph",
+        "text": "Flow of the Website"
       },
       {
         "component": "bulleted_list_item",
-        "text": "You visit any domain pointing to this website; currently, it's https://arpitverma.me."
+        "text": "You visit any domain pointing to this website; currently, it's https://arpitverma.vercel.app"
       },
       {
         "component": "bulleted_list_item",
-        "text": "The remote server responds with an index.html containing JavaScript files storing content in your browser's session storage."
+        "text": "The remote server responds with an index.html and some JavaScript files that get stored in your browser's session storage."
       },
       {
         "component": "bulleted_list_item",
-        "text": "Content is dynamically rendered on the page by retrieving elements from the session storage."
+        "text": "Now according to the route you are on in the website corresponding content is fetched from the stored javascript files."
       },
       {
         "component": "bulleted_list_item",
-        "text": "When navigating to another route, a URL check system invokes the JavaScript responsible for that page's content."
+        "text": "These javascript files place the stored html into the virtual-dom element in the index.html "
       },
       {
         "component": "bulleted_list_item",
@@ -38,15 +69,7 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "For the logic part, when a page is called, a corresponding logic script is linked in the index.html."
-      },
-      {
-        "component": "bulleted_list_item",
-        "text": "The projects page has a unique approach. Since I don't update projects constantly, maintaining a server to host an API for the project page is inefficient. Instead, I hardcode it into the repository."
-      },
-      {
-        "component": "bulleted_list_item",
-        "text": "To streamline the hardcoding process, I developed a Node.js-based automation script called gitcron. This script fetches project details from a Google Sheet that I maintain, commits the details to the repository of the website, and there you have it—the website is up and running!"
+        "text": "For the logic part, when a page is called, a corresponding logic script is injected in the index.html."
       }
     ]
   }
