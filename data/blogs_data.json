@@ -14,7 +14,7 @@
       },
       {
         "component": "paragraph",
-        "text": "Retrieving the data was the easy part just create a integration on the dev page and put in the your client secret in the getting started code. The real headache was formatting the data of this page. Fortunately I found this <a href = “https://youtu.be/97ARQTHyf1c?si=zJNKNztjMbsK6bMG”>guy</a> , my man helped a lot, Thanks Sean. I guess that’s all I learned today.  "
+        "text": "Retrieving the data was the easy part just create a integration on the dev page and put in the your client secret in the getting started code. The real headache was formatting the data of this page. Fortunately I found this <a href = https://youtu.be/97ARQTHyf1c?si=zJNKNztjMbsK6bMG>guy</a> , my man helped a lot, Thanks Sean. I guess that’s all I learned today.  "
       },
       {
         "component": "paragraph",

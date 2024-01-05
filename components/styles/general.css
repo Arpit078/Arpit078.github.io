@@ -75,4 +75,5 @@ a:hover::before {
   border-radius: 6px;
   padding: 1rem;
   filter: drop-shadow(3px 1px 4px #484849);
+  border-radius: 5px;
 }
