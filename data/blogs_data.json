@@ -1,1 +1,57 @@
-[{"title":"PreactJS behind the scenes","date":"July 2023","content":"It was sometime in January that I had sat down to write this article, and now it is July 2023, I have been procrastinating over this one thing for a long time I guess. Actually I was not procrastinating over this article rather it should be told that I was not having enough time to fix some minor bugs in the preact.js framework itself.\\n\\nOkay, talking about the website it basically works on the js framework that I built, as it can be seen it is a single page application the website has frontend hash routing setup that basically changes the url with different hashes corresponding to pages. Now one question that might pop up is why do hash routing, well that has a very straight forward answer I don't own a server of my own! so when I upload a website on some free tier PaaS it ends up obstructing direct access to other routes and only the default route is accessible through url search.\\n\\nLet's understand the flow of the website.\\n\\n- You go to any domain pointing to this website, as of now it is https://arpitverma.me\\n\\n- the remote server responds with an index.html with some javascript files that contain the content that gets stored in the session storage of your browser.\\n\\n- content is rendered on the page dynamically by calling upon elements from the session storage.\\n\\n- when you go to some other route there is a check system on url that calls up the js responsible for content on that page.\\n\\n- the logic and dynamic part of the page is implemented separately as once js is stored in the session storage it can not be used to perform logic functions and only be used to call upon variables.\\n\\n- for the logic part once a page is called a corresponding logic script is linked in the index.html\\n\\n- the projects page is a bit different and interesting. Since I am not updating projects every minute of the day having a server running and hosting an api to provide for the project page content is waste of resources, it is better to hardcode it into the repository.\\n\\n- But hardcoding is tedious task in itself so I wrote a nodeJS based automation script gitcron that fetches project details from a gsheet that I maintain and commits the details on the repository of this website, and voilla thats the website!"}]
+[
+  {
+    "id": "853eef81-0a9c-46fa-a646-bd0805893a0a",
+    "title": "How does this website work",
+    "date": "2024-01-06",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "In January, I began drafting this article, and now, in July 2023, I realize I've been delaying its completion for quite some time. However, it's important to clarify that my procrastination wasn't centered around the article itself. Instead, it was due to the limited time I had available to address minor bugs in the Preact.js framework."
+      },
+      {
+        "component": "paragraph",
+        "text": "Speaking about the website, it operates on a JavaScript framework that I developed. It functions as a single-page application with frontend hash routing, altering the URL with different hashes corresponding to various pages. One might wonder why opt for hash routing. The answer is straightforward: I don't own my server. When I deploy the website on a free-tier Platform as a Service (PaaS), it restricts direct access to other routes, making only the default route accessible through URL search."
+      },
+      {
+        "component": "paragraph",
+        "text": "Let's delve into the website's flow:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "You visit any domain pointing to this website; currently, it's https://arpitverma.me."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "The remote server responds with an index.html containing JavaScript files storing content in your browser's session storage."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Content is dynamically rendered on the page by retrieving elements from the session storage."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "When navigating to another route, a URL check system invokes the JavaScript responsible for that page's content."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "The logic and dynamic aspects of the page are implemented separately. As JavaScript stored in session storage cannot perform logic functions, it's used solely to call upon variables."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "For the logic part, when a page is called, a corresponding logic script is linked in the index.html."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "The projects page has a unique approach. Since I don't update projects constantly, maintaining a server to host an API for the project page is inefficient. Instead, I hardcode it into the repository."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "To streamline the hardcoding process, I developed a Node.js-based automation script called gitcron. This script fetches project details from a Google Sheet that I maintain, commits the details to the repository of the website, and there you have it—the website is up and running!"
+      },
+      {
+        "component": "code",
+        "text": "async function fetchProjects(){\n    let blogDatabase = []\n    await fetch('../../data/content.json')\n        .then((response) => response.json())\n        .then((json) => blogDatabase=json);\n\n    let ProjectsFetch = ''\n\n\n    for(let i =0;i<blogDatabase.length;i++){\n        let content =``\n        let number = 1\n        for(let j=0;j<blogDatabase[i].blocks.length;j++){\n            let el = blogDatabase[i].blocks[j]\n            switch (el.component) {\n                case \"paragraph\":\n                    content = content + el.text + '<br><br>'\n                    break;\n                case \"bulleted_list_item\":\n                    content = content +'&#149; ' + el.text + '<br>'\n                    break;\n                case \"numbered_list_item\":\n                    content = content + '' + `${number}. ` + el.text + '<br>'\n                    number +=1\n                    break;\n                case \"code\":\n                    code_text = el.text .replace(/\\\\/g, '\"\"') // Replace \\ with \"\"\n                                        .replace(/\\n/g, '<br>') // Replace \\n with <br>\n                                        .replace(/\\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // Replace \\t with HTML tab space\n                    content = content+ '<div class=\"code_block\">' + code_text +'</div>'+ '<br>'\n                    break;\n            \n                default:\n                    break;\n            }\n        }\n        const projectObj = `\n            <div class=\"content\">\n                <p class=\"subHead\">${blogDatabase[i].title}</p>\n                <p class=\"paragraph\">${content}</p>\n                <p class=\"highlight\">\n                Dated :\n                    <span class=\"paragraph\">${blogDatabase[i].date}</span> \n\n                </p>\n            </div>\n    `\n        ProjectsFetch = ProjectsFetch + projectObj ; \n    }\n    console.log(blogDatabase)\n    return ProjectsFetch\n}\nfetchProjects().then((res)=>{\n    document.getElementById(\"blog\").innerHTML =  res\n})"
+      }
+    ]
+  }
+]
