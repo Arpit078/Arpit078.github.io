@@ -15,6 +15,13 @@
 #headAndNav ul li{
     padding: 1rem;
 }
+.bg{
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position:fixed;
+  bottom: 0;
+  right: 0;
+}
 
 @media only screen and (max-width: 900px) {
    #headAndNav{
@@ -28,16 +35,10 @@
     padding-right: 1rem;
     padding-left: 0;
    }
-   #navbox{
-    z-index: 0;
-    filter: blur(1px);    
-
-   }
+   
    ul{
     position:sticky;
     top: 0;
-    z-index: 1;
-
     left:50;
     /* background-color: rgba(126, 134, 131, 0.236); */
     /* filter: blur(5px); */
@@ -56,9 +57,9 @@
   ul li:hover {
     color: #000;
   }
-  ul{
+  /* ul{
     position: fixed;
     bottom: 0;
     right: 20;
-  }
+  } */
  

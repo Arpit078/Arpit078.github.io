@@ -10,7 +10,7 @@ const Books = /*html*/`
    <div id="books" class="text">
     <div id="headAndNav">
         <h1 class="title">Books.</h1>
-        <div>${Navbar}</div>
+        <div class="bg">${Navbar}</div>
     </div>
     <div id="book"></div>
 </div>`

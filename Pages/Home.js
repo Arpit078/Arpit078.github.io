@@ -5,7 +5,7 @@ const Home = /*html*/ `
 <div class="Text">
     <div id="headAndNav">
         <h1 class="title">Hello.</h1>
-        <div>${Navbar}</div>
+        <div class="bg">${Navbar}</div>
     </div>
     <p class="subHead">My name is Arpit Kumar Verma.</p>
     <p class="paragraph">

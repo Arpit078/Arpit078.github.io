@@ -4,7 +4,7 @@ const Blogs = /*html*/`
 <div id="blogs" class="text">
  <div id="headAndNav">
      <h1 class="title">Learning in Public and Thoughts.</h1>
-     <div>${Navbar}</div>
+     <div class="bg">${Navbar}</div>
  </div>
  <div id="blog"></div>
 </div>`
