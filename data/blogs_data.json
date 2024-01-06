@@ -1,5 +1,44 @@
 [
   {
+    "id": "574750e7-acba-43f6-a482-f8ba44e05bad",
+    "title": "Started Leetcode 75",
+    "date": "2024-01-06",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "solving problems on strings"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p1768, easy, 12:05"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p1071, easy, 24:12"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p1431, easy, 5:01"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p605,easy moderate, 32:48 ; good question, 3 pointer "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p345, easy, 7:08"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "p151, medium , 21 + 8 minute spent will do this again couldn’t solve it."
+      },
+      {
+        "component": "paragraph",
+        "text": "Gave the div 4 contest on codeforces solved only 2 problems. Was bad but anyways you need to start somewhere."
+      }
+    ]
+  },
+  {
     "id": "b9c17e82-36c4-44bd-be7c-cac039a58163",
     "title": "Starting Learning in Public",
     "date": "2024-01-05",
