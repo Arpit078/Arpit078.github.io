@@ -26,15 +26,11 @@
       },
       {
         "component": "paragraph",
-        "text": "<h4>About leetcode</h4>"
+        "text": "<h4>About leetcode </h4>"
       },
       {
         "component": "paragraph",
         "text": "did not do much of the grind today, solved the problem151 I had left yesterday. It was about reversing the words in a string. Used two pointer method, had to watch the solutions though."
-      },
-      {
-        "component": "code",
-        "text": "class Solution {\npublic:\n    string reverseWords(string s) {\n        string ans = \"\";\n        int i=0;\n        while(i<s.length()){\n            while(i<s.length()&&s[i]==' '){\n                i++;\n            }\n            if(i>= s.length())break;\n            int j = i+1;\n            while(j<s.length()&&s[j]!=' '){\n                j++;\n            }\n            string temp = s.substr(i,j-i);\n            if(ans.length()==0)ans = temp;\n            else ans = temp + \" \" + ans;\n            i = j+1;\n        }\n        return ans;\n    }\n};"
       }
     ]
   },
