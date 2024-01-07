@@ -1,5 +1,44 @@
 [
   {
+    "id": "9fad17da-8758-482e-b0d2-88745541b661",
+    "title": "Started Socket Programming in C++",
+    "date": "2024-01-07",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Sockets are like pointers but for traversing networks. When you start a socket you are returned an integer that you can use to start communication between a server and client. "
+      },
+      {
+        "component": "paragraph",
+        "text": "There are two types of sockets"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Socket stream - meant for reliable connections and data integrity. Protocols used are TCP/IP (Transmission control protocol)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Datagram socket - meant for speedy and unreliable connections, used in cases where some data loss is acceptable. Protocol used is UDP(user datagram protocol)."
+      },
+      {
+        "component": "paragraph",
+        "text": "Tried writing some code as well to start a basic server but could not figure out how to include winsock_32 something dll in vs code ig vs studio is required."
+      },
+      {
+        "component": "paragraph",
+        "text": "<h4>About leetcode</h4>"
+      },
+      {
+        "component": "paragraph",
+        "text": "did not do much of the grind today, solved the problem151 I had left yesterday. It was about reversing the words in a string. Used two pointer method, had to watch the solutions though."
+      },
+      {
+        "component": "code",
+        "text": "class Solution {\npublic:\n    string reverseWords(string s) {\n        string ans = \"\";\n        int i=0;\n        while(i<s.length()){\n            while(i<s.length()&&s[i]==' '){\n                i++;\n            }\n            if(i>= s.length())break;\n            int j = i+1;\n            while(j<s.length()&&s[j]!=' '){\n                j++;\n            }\n            string temp = s.substr(i,j-i);\n            if(ans.length()==0)ans = temp;\n            else ans = temp + \" \" + ans;\n            i = j+1;\n        }\n        return ans;\n    }\n};"
+      }
+    ]
+  },
+  {
     "id": "574750e7-acba-43f6-a482-f8ba44e05bad",
     "title": "Started Leetcode 75",
     "date": "2024-01-06",
