@@ -26,10 +26,6 @@
       },
       {
         "component": "paragraph",
-        "text": "<h4>About leetcode </h4>"
-      },
-      {
-        "component": "paragraph",
         "text": "did not do much of the grind today, solved the problem151 I had left yesterday. It was about reversing the words in a string. Used two pointer method, had to watch the solutions though."
       }
     ]
