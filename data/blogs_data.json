@@ -1,5 +1,32 @@
 [
   {
+    "id": "da7e3de6-7490-4eab-9d24-8784a43e3b5c",
+    "title": "Solved 4 problems today",
+    "date": "2024-01-09",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Wanted do more as punishment but currently I am too slow."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P283, easy, couldn’t solve had to watch the soln."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P238, medium, again couldn’t solve, had to see the solution while i did the code myself i was still stuck as i was not counting for the time complexity of the inbuilt function of insert in cpp."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P334,medium,solution"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P443,string compression, Medium. Wasted a lot of time as i could not figure out how what was happening at the boundary of chars vector."
+      }
+    ]
+  },
+  {
     "id": "9fad17da-8758-482e-b0d2-88745541b661",
     "title": "Started Socket Programming in C++",
     "date": "2024-01-07",
