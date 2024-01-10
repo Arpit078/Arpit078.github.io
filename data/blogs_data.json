@@ -9,6 +9,22 @@
         "text": "solved 4 problems today :"
       },
       {
+        "component": "bulleted_list_item",
+        "text": "P392, easy, 5:54"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P11 container with most water, medium, 22:28"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1679 max number of k sums, medium, 20:21"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P643 maximum avg subarray, easy, 1:06:24 , took a while to get the concept of sliding window in my head."
+      },
+      {
         "component": "paragraph",
         "text": "Tried doing some work on my DEP project but nothing significant came out of todays work."
       }
