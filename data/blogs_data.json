@@ -1,5 +1,40 @@
 [
   {
+    "id": "0365293f-568e-4123-9095-110530080a0d",
+    "title": "did 6 problems today",
+    "date": "2024-01-11",
+    "blocks": [
+      {
+        "component": "bulleted_list_item",
+        "text": "P1456, medium, 10:04, repetition of max subarr"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1004, medium, 1:22:23, took a lot of time because I had developed my own logic but turned out it was ignorant of many corner cases so wasted a lot of time and finally solved with the solution."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1493, medium , 3:27, special case of P1004"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1732, easy , 5:43, prefix sum "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2215, easy, 26:55, learned the syntax of sets and maps"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1207, easy , 5:15"
+      },
+      {
+        "component": "paragraph",
+        "text": "learned about winsock today, to make a client you do not need to do any logic part there it is mostly copy pasting code from the doc or the web as there is nothing new to do just follow the instructions. I guess I will start getting the data from PMU by tommorrow."
+      }
+    ]
+  },
+  {
     "id": "fcb56e55-4754-4dfa-bf6e-ae9472371784",
     "title": "Started a study plan on leetcode for blind 75",
     "date": "2024-01-10",
