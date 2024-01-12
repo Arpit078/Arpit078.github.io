@@ -1,5 +1,44 @@
 [
   {
+    "id": "d0c1dc83-5f91-456b-a399-e403a263fb54",
+    "title": "Little progress with PDC software.",
+    "date": "2024-01-12",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Did today’s share of leetcode."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P724,easy, 17:37"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2352,medium,22:43, thought my naive approach will tle but it didn’t, though it is kinda slow. Have to see a more optimized solution. Turns out you can compare two vectors easily using maps."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2390; medium; 12:42, Following are some notes : It gave TLE in the first try."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "The reason why using ans.push_back(st.top()) and reversing the string before returning it works fine, while using ans = st.top() + ans results in TLE, is because the + operator for strings is an expensive operation."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "When you use ans = st.top() + ans, for every iteration of the while loop, you are creating a new string by concatenating the current character with the existing string. This new string is then assigned to the ans variable. As the size of the string increases, this operation becomes increasingly expensive, resulting in a TLE for larger inputs."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P735; medium; 49:48; solved with soln; was an easy question my logic was also correct but i could not implement it on time I was exhausted."
+      },
+      {
+        "component": "paragraph",
+        "text": "Progress in DEP project is really slow, I connected my pc to the PMU server though could not get any buffer or configuration file after connection, the code stopped at recv function everytime. This makes me wonder what if the machine is not sending any data packets in the first place."
+      }
+    ]
+  },
+  {
     "id": "0365293f-568e-4123-9095-110530080a0d",
     "title": "did 6 problems today",
     "date": "2024-01-11",
