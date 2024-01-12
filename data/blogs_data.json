@@ -30,7 +30,7 @@
       },
       {
         "component": "paragraph",
-        "text": "learned about winsock today, to make a client you do not need to do any logic part there it is mostly copy pasting code from the doc or the web as there is nothing new to do just follow the instructions. I guess I will start getting the data from PMU by tommorrow."
+        "text": "learned about winsock today, to make a client you do not need to do any logic part there is mostly copy pasting of code from the docs or web as there is nothing new to do just follow the instructions. I guess I will start getting the data from PMU by tommorrow."
       }
     ]
   },
