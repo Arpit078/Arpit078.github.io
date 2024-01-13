@@ -1,5 +1,20 @@
 [
   {
+    "id": "f884bf34-b6b3-468e-880d-73e65228b6a0",
+    "title": "Finally there’s motion in the project",
+    "date": "2024-01-13",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P394, Medium , 1:30:12"
+      }
+    ]
+  },
+  {
     "id": "d0c1dc83-5f91-456b-a399-e403a263fb54",
     "title": "Little progress with PDC software.",
     "date": "2024-01-12",
