@@ -6,11 +6,39 @@
     "blocks": [
       {
         "component": "paragraph",
+        "text": "After commiting plenty of rookie mistakes we finally managed to establish a tcp connection with the phase measurement unit and received its config files. "
+      },
+      {
+        "component": "paragraph",
+        "text": "In the beginning we were thinking that that PMU is a client and sending out requests to connect to server to send data, I know it sounds stupid now but we were not given any port that should have suggested us the alternate. Till yesterday we were thinking okay now that it is a server after connecting to it why the hell is it not sending any data. Finally today while going through the documentation of IEEE C37.118 protocol I came to understand basic flaw in our approach."
+      },
+      {
+        "component": "paragraph",
+        "text": "For any communication to start be whatever the protocol there should be a command frame sent by the client to initiate the conversation. I’ve read it in the course on IOT but boy am I not stupid enough to ignore it while implementing and waste time😭. Finally sent a demo command frame according to the doc and voilla we had the gibberish of a config response. Have to decode that piece tomorrow and then we’ll start receiving the phase data."
+      },
+      {
+        "component": "paragraph",
         "text": "Leetcode"
       },
       {
         "component": "bulleted_list_item",
-        "text": "P394, Medium , 1:30:12"
+        "text": "P394, Medium , Stacks, 1:30:12, unsolved as of now because I read the question wrong. Will do it tomorrow again."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P206, Easy, 20:40, Reverse linked list."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2095, Medium, 23:12, Delete middle in linked list"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2130, Medium , did using vectors to save time and streak, will do it the right way tomorrow."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P372, Easy , did easy binary search question to save time as it is 4:44 AM and I am trying to finish 4 questions for today and save my streak as new day for Leetcode starts at 5:30 AM in India. Had I not misread P394 I would have finished my problems by the evening itself."
       }
     ]
   },
