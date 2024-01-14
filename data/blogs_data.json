@@ -10,11 +10,11 @@
       },
       {
         "component": "paragraph",
-        "text": "In the beginning we were thinking that that PMU is a client and sending out requests to connect to server to send data, I know it sounds stupid now but we were not given any port that should have suggested us the alternate. Till yesterday we were thinking okay now that it is a server after connecting to it why the hell is it not sending any data. Finally today while going through the documentation of IEEE C37.118 protocol I came to understand basic flaw in our approach."
+        "text": "In the beginning we were thinking that the PMU is a client and it is sending out requests to connect to server to send data, I know it sounds stupid now but we were not given any port that should have suggested us the alternate. Till yesterday we were thinking okay now that it is a server, after connecting to it why the hell is it not sending any data. Finally today while going through the documentation of IEEE C37.118 protocol I came to understand the basic flaw in our approach."
       },
       {
         "component": "paragraph",
-        "text": "For any communication to start be whatever the protocol there should be a command frame sent by the client to initiate the conversation. I’ve read it in the course on IOT but boy am I not stupid enough to ignore it while implementing and waste time😭. Finally sent a demo command frame according to the doc and voilla we had the gibberish of a config response. Have to decode that piece tomorrow and then we’ll start receiving the phase data."
+        "text": "For any communication to start be whatever the protocol there should be a command frame sent by the client to initiate the conversation. I’ve read it in the course on IOT but boy am I not stupid enough to ignore it while implementing and waste time😭. Finally sent a demo command frame according to the docs and voilla we had the gibberish of a config response. Have to decode that piece tomorrow and then we’ll start receiving the phase data."
       },
       {
         "component": "paragraph",
