@@ -1,5 +1,36 @@
 [
   {
+    "id": "b9e2f73a-4557-4b37-a9a6-8eed15171038",
+    "title": "Took a break on project",
+    "date": "2024-01-14",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Didn’t go to the lab for project work for I was busy flying kites :)"
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P394; medium ; 2hr+ ;stacks; saw solution; this problem sucked me inside out. Happy that I did it finally."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P328; medium; don’t ask; linked list; saw solution, taking awful lot of time in these newer topics."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P649;medium;40:08;queue; saw solution, very new problem and solution logic."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P933;easy;5:02;queue"
+      }
+    ]
+  },
+  {
     "id": "f884bf34-b6b3-468e-880d-73e65228b6a0",
     "title": "Finally there’s motion in the project",
     "date": "2024-01-13",
