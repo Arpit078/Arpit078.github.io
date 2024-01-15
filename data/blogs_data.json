@@ -1,5 +1,24 @@
 [
   {
+    "id": "b93433eb-6d98-476e-8125-a5094951fb50",
+    "title": "Course work starts consuming time",
+    "date": "2024-01-15",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Not much happened in the project, Realised that the config file received is wrong or maybe the way I converted the buffer to binary was wrong."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode, I have decided since some data structures like trees, graphs and heaps are new to me I’ll be doing them in the last after completing other familiar topics in the sheet as these newer ones will require me to study them for a while,  DP included. Could only manage to do 1 question."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P739, Medium, Monotonic stack."
+      }
+    ]
+  },
+  {
     "id": "b9e2f73a-4557-4b37-a9a6-8eed15171038",
     "title": "Took a break on project",
     "date": "2024-01-14",
