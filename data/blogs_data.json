@@ -1,5 +1,36 @@
 [
   {
+    "id": "4cb84c64-3798-4520-a6ee-8501ee02d0a6",
+    "title": "It is decided",
+    "date": "2024-01-16",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "It is decided I am going to do CSES right after I am done with blind 75. The goal is to finish the list before this semester is over. After that I’ll be working on previously asked questions from Uber and Google. It was a off day for the project."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P2300; medium; 1:25:43; Binary search ; solved with solution"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P162; medium; 35:36; Binary search; solved with solution"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P875; medium; 59:41;Binary search; took hints"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P338; easy; 6:31; Bit manipulation"
+      }
+    ]
+  },
+  {
     "id": "b93433eb-6d98-476e-8125-a5094951fb50",
     "title": "Course work starts consuming time",
     "date": "2024-01-15",
