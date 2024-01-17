@@ -1,5 +1,28 @@
 [
   {
+    "id": "5f382f3e-652a-4d21-9e34-f91489be00fa",
+    "title": "Trie",
+    "date": "2024-01-17",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode"
+      },
+      {
+        "component": "paragraph",
+        "text": "Learned about Trie data structure but could not implement it today. Will see it tomorrow."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P136; Easy ; bit manipulation; Did it using maps space O(n) but Got to know that XOR(^) of two same number returns 0 like a cancelling effect, thus A^B^A = B!"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1318; Medium; 36:11; Bit manipulation complete."
+      }
+    ]
+  },
+  {
     "id": "4cb84c64-3798-4520-a6ee-8501ee02d0a6",
     "title": "It is decided",
     "date": "2024-01-16",
