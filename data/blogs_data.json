@@ -1,5 +1,32 @@
 [
   {
+    "id": "933fe100-8b3a-439e-ba49-6da8315a7469",
+    "title": "Voillla",
+    "date": "2024-01-18",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Understood the iPDC software and also figured out what I was doing wrong in the command frame that could not make us receive the data frames and the real CFG2 file. Tomorrow I will surely move leap years ahead in the software! and that the voilla moment."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode : all known data structures solved(Trie will be done tom), now need to do Tree(BFS,DFS) , Graph(BFS,DFS) , priority queue/heap , DP. 30"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P435; medium;58:45;Intervals;took 1 hint."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P452;medium;5:04;Intervals;special case of 435"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P901;medium;26:04; Montonic stack though i used vector."
+      }
+    ]
+  },
+  {
     "id": "5f382f3e-652a-4d21-9e34-f91489be00fa",
     "title": "Trie",
     "date": "2024-01-17",
@@ -10,7 +37,7 @@
       },
       {
         "component": "paragraph",
-        "text": "Learned about Trie data structure but could not implement it today. Will see it tomorrow."
+        "text": "Learned about Trie data structure but could not implement it today. Will see it tomorrow. Wrote a twitter bot that posts the solved questions on my twitter as well 😇 find the profile here : https://twitter.com/arpitvermahere"
       },
       {
         "component": "bulleted_list_item",
