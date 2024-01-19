@@ -1,5 +1,28 @@
 [
   {
+    "id": "a2901e67-9c41-42c2-b883-86c00e407003",
+    "title": "Started getting data stream",
+    "date": "2024-01-19",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Finally finally we have a data stream. Yesterday I was working on the project alone in the lab when Bibhu sir came and explained me about the structure of the iPDC software, That made me dig into the code again and surprisingly this time around I could understand the stuff I was overlooking before. Borrowed the command frame generation function and bamn we have a continuous stream of data."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode, summed up all the problems that i could solve with my current state of knowledge of dsa now starts the core DSA."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P208; medium; Trie"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1268; medium; didn't complete  as it required knowledge of tree traversal and priority queue."
+      }
+    ]
+  },
+  {
     "id": "933fe100-8b3a-439e-ba49-6da8315a7469",
     "title": "Voillla",
     "date": "2024-01-18",
