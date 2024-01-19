@@ -6,11 +6,11 @@
     "blocks": [
       {
         "component": "paragraph",
-        "text": "Understood the iPDC software and also figured out what I was doing wrong in the command frame that could not make us receive the data frames and the real CFG2 file. Tomorrow I will surely move leap years ahead in the software! and that the voilla moment."
+        "text": "Understood the iPDC software and also figured out what I was doing wrong in the command frame that could not make us receive the data frames and the real CFG2 frame. Tomorrow I will surely move leap years ahead in the software! and that is the voilla moment."
       },
       {
         "component": "paragraph",
-        "text": "Leetcode : all known data structures solved(Trie will be done tom), now need to do Tree(BFS,DFS) , Graph(BFS,DFS) , priority queue/heap , DP. 30"
+        "text": "Leetcode : all known data structures solved(Trie I’ve read it, probs will be done by tom), now need to do Tree(BFS,DFS) , Graph(BFS,DFS) , priority queue/heap , DP. 30 more problems in the blind 75."
       },
       {
         "component": "bulleted_list_item",
