@@ -1,5 +1,32 @@
 [
   {
+    "id": "eb8940aa-2222-44d2-be3e-edccc72c278b",
+    "title": "Studied Binary Trees",
+    "date": "2024-01-20",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "PDC :"
+      },
+      {
+        "component": "paragraph",
+        "text": "Verified that the data stream we are receiving is correct and also started decoding the data frame objects."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "paragraph",
+        "text": "Read about the Binary trees and how to create them. Did BST , DFS(pre,post,in) traversals.Will start the trees questions from tomorrow."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P104; easy; with solution."
+      }
+    ]
+  },
+  {
     "id": "a2901e67-9c41-42c2-b883-86c00e407003",
     "title": "Started getting data stream",
     "date": "2024-01-19",
