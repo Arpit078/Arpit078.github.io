@@ -7,6 +7,18 @@
       {
         "component": "paragraph",
         "text": "Leetcode : "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P872; easy; 26:10"
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode : 23-01-24"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1448; medium; with solution"
       }
     ]
   },

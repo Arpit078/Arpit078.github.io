@@ -1,3 +1,4 @@
+let hello = "hello from books.js logic file."
 async function fetchProjects(){
     let bookDatabase = []
     await fetch('../../data/books_data.json')
@@ -5,7 +6,6 @@ async function fetchProjects(){
         .then((json) => bookDatabase=json);
 
     let ProjectsFetch = ''
-
 
     for(let i =0;i<bookDatabase.length;i++){
         const projectObj = `
