@@ -1,4 +1,3 @@
-let hello = "hello from books.js logic file."
 async function fetchProjects(){
     let bookDatabase = []
     await fetch('../../data/books_data.json')

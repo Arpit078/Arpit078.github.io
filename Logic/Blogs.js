@@ -1,4 +1,3 @@
-console.log(hello);
 async function fetchProjects(){
     let blogDatabase = []
     await fetch('../../data/blogs_data.json')
