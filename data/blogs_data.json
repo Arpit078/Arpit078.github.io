@@ -1,5 +1,36 @@
 [
   {
+    "id": "02d2a94c-3495-4dd5-9f4b-2b6c6906e83b",
+    "title": "Woahh!",
+    "date": "2024-01-29",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "DEP :"
+      },
+      {
+        "component": "paragraph",
+        "text": "Have made a significant progress in the PDC software, can parse data and store in text files in real time. Need to write code to start writing that data to excel."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "paragraph",
+        "text": "After successfully giving up on DSA because solving binary trees was difficult I am finally back. hushh it was a bad week. I was not trying hard enough, not forcing myself to think just running behind time and solutions. Took advice from a lot of people - “ it will come to you only by solving problems ‘no videos can’t help!’ “"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P437; medium; did with brute force"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1372; partially solved; medium; brute force"
+      }
+    ]
+  },
+  {
     "id": "75bfbf24-6043-4bce-b641-7f5ef2154135",
     "title": "Did first tree question on my own",
     "date": "2024-01-22",
