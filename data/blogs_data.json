@@ -1,5 +1,32 @@
 [
   {
+    "id": "eb5b55c8-c68e-4816-b925-968ec48aac0b",
+    "title": "Consistency!",
+    "date": "2024-01-31",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Felt like skipping today."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1372; Solved in O(n); required solution"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P199; BFS; medium; "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1161:BFS;medium;"
+      },
+      {
+        "component": "paragraph",
+        "text": "footnote → Mehdi Hassan is best"
+      }
+    ]
+  },
+  {
     "id": "08b6c5b8-040f-4cce-ad27-5aa1afe32e69",
     "title": "236. Lowest Common Ancestor of a Binary Tree",
     "date": "2024-01-30",
