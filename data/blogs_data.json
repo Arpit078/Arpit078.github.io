@@ -1,5 +1,16 @@
 [
   {
+    "id": "08b6c5b8-040f-4cce-ad27-5aa1afe32e69",
+    "title": "236. Lowest Common Ancestor of a Binary Tree",
+    "date": "2024-01-30",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "kept trying to solve it for idk how long. I was struggling with making the traverse deque but finally did it. Worth it."
+      }
+    ]
+  },
+  {
     "id": "02d2a94c-3495-4dd5-9f4b-2b6c6906e83b",
     "title": "Woahh!",
     "date": "2024-01-29",
