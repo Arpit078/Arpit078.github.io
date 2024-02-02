@@ -6,7 +6,11 @@
     "blocks": [
       {
         "component": "paragraph",
-        "text": "Learnt about component testing in "
+        "text": "Learnt about component testing in javascript in react. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Started writing unit tests for a basic todo react app cloned from github. "
       }
     ]
   },
