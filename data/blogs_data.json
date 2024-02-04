@@ -1,5 +1,39 @@
 [
   {
+    "id": "eafba131-5a9c-40a2-bc6d-7d5e16b9ab87",
+    "title": "After a detour back at the grind",
+    "date": "2024-02-04",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P700; BST; easy;"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P470;BST;medium;needed soln"
+      }
+    ]
+  },
+  {
+    "id": "8a0fa41d-8eac-4541-996f-e55a3f4125c6",
+    "title": "Wrote some react tests for TODO app",
+    "date": "2024-02-02",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Got to learn how to write unit tests for react projects and realized how important it is to write them in bigger applications. I am working on a PDC software myself and as the days are passing by the application is becoming very large it is already more than 1000 lines of code."
+      },
+      {
+        "component": "paragraph",
+        "text": "To make it easier to debug when something breaks and to protect the company from pushing bugs into the live project it is very important to write tests."
+      }
+    ]
+  },
+  {
     "id": "861e5221-97bf-4f15-9555-498afed39c05",
     "title": "Jest",
     "date": "2024-02-01",
