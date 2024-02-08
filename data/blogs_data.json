@@ -1,5 +1,20 @@
 [
   {
+    "id": "074ed2d1-37eb-4f63-9ce3-a1e4d7105a7d",
+    "title": "installed an extension",
+    "date": "2024-02-08",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "That won’t let me browse until i solve a leetcode problem."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P21 ; Linked list; Easy"
+      }
+    ]
+  },
+  {
     "id": "eafba131-5a9c-40a2-bc6d-7d5e16b9ab87",
     "title": "After a detour back at the grind",
     "date": "2024-02-04",
