@@ -11,6 +11,14 @@
       {
         "component": "bulleted_list_item",
         "text": "P21 ; Linked list; Easy"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P841; Graphs dfs; medium"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P62; DP ; Medium, 1st dp problem tbh more of a combinatorics problem."
       }
     ]
   },
