@@ -1,5 +1,20 @@
 [
   {
+    "id": "5a281fd6-829e-4b71-ac4f-393467242952",
+    "title": "Wrote multi threaded program in c++",
+    "date": "2024-02-12",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Yupp, made multiple threads out of the main thread in the PDC software. Well the solution emerged out the very fundamental requirement of the PDC to connect with multiple PMUs at the same time. Since the program runs an infinite loop to accept data from the PMU continuously, you cannot process anything else. This was the major issue was that we could not run execute the sendCloseCommand function and stop the communication on our command. Thus implemented a 3 thread program that accepts data from three pmu and receives user commands on the main thread."
+      },
+      {
+        "component": "paragraph",
+        "text": "I was super excited while writing code for this part I didn't want to leave the lab even though I had a class at 2PM 😁"
+      }
+    ]
+  },
+  {
     "id": "074ed2d1-37eb-4f63-9ce3-a1e4d7105a7d",
     "title": "installed an extension",
     "date": "2024-02-08",
