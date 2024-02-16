@@ -1,9 +1,44 @@
+function formatDate(date) {
+    const year = date.getFullYear();
+    const month = (date.getMonth() +  1).toString().padStart(2, '0'); // Months are zero-based
+    const day = date.getDate().toString().padStart(2, '0');
+  
+    return `${year}-${month}-${day}`;
+  }
+  
+//   console.log(formatDate(date)); // Outputs a string in the format "YYYY-MM-DD"
+  
+function updateTechBox(data){
+    // let divs = ``;
+    // for(let i=0;i<data.tech.length;i++){
+    //     divs = divs + `<div class="tech">${data.tech[i]}</div>`
+    // }
+    // document.getElementById("problem-count-week").innerHTML = data.weekly
+    const date = new Date(); // Current date
+    const comparedate = formatDate(date)
+    let count = 0
+    for (let i =  0; i < data.length; i++) {
+        const item = data[i];
+        if (item.date.slice(0,  7) === comparedate.slice(0,  7)) {
+            for (let j =  0; j < item.blocks.length; j++) {
+                const block = item.blocks[j];
+                if (block.component === "bulleted_list_item") {
+                    count++;
+                }
+            }
+        }
+    }
+    document.getElementById("problem-count-monthly").innerHTML = count
+    // document.getElementById("tech-used").innerHTML = divs
+}
+
 async function fetchProjects(){
     let blogDatabase = []
     await fetch('../../data/blogs_data.json')
         .then((response) => response.json())
         .then((json) => blogDatabase=json);
 
+    updateTechBox(blogDatabase)
     let ProjectsFetch = ''
 
 
@@ -53,15 +88,3 @@ async function fetchProjects(){
 fetchProjects().then((res)=>{
     document.getElementById("blog").innerHTML =  res
 })
-function updateTechBox(data){
-    let divs = ``;
-    for(let i=0;i<data.tech.length;i++){
-        divs = divs + `<div class="tech">${data.tech[i]}</div>`
-    }
-    document.getElementById("problem-count-week").innerHTML = data.weekly
-    document.getElementById("problem-count-monthly").innerHTML = data.monthly
-    document.getElementById("tech-used").innerHTML = divs
-}
-fetch('../../data/progress_data.json')
-.then((response) => (response.json()))
-.then((json) => updateTechBox(json));

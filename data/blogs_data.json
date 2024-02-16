@@ -1,16 +1,5 @@
 [
   {
-    "id": "4e9d504d-0ef0-4117-9e99-aa2b8e6b7d5a",
-    "title": "tech using currently",
-    "date": "2024-02-01",
-    "blocks": [
-      {
-        "component": "paragraph",
-        "text": "c++, java , nextjs "
-      }
-    ]
-  },
-  {
     "id": "5a281fd6-829e-4b71-ac4f-393467242952",
     "title": "Wrote multi threaded program in c++",
     "date": "2024-02-12",
