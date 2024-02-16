@@ -53,3 +53,15 @@ async function fetchProjects(){
 fetchProjects().then((res)=>{
     document.getElementById("blog").innerHTML =  res
 })
+function updateTechBox(data){
+    let divs = ``;
+    for(let i=0;i<data.tech.length;i++){
+        divs = divs + `<div class="tech">${data.tech[i]}</div>`
+    }
+    document.getElementById("problem-count-week").innerHTML = data.weekly
+    document.getElementById("problem-count-monthly").innerHTML = data.monthly
+    document.getElementById("tech-used").innerHTML = divs
+}
+fetch('../../data/progress_data.json')
+.then((response) => (response.json()))
+.then((json) => updateTechBox(json));

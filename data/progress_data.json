@@ -1,0 +1,5 @@
+{
+    "monthly" : 50,
+    "weekly" : 12,
+    "tech" : ["cpp","next.js","postgresql","java_spring_boot"]
+}
