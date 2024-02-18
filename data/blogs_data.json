@@ -1,5 +1,28 @@
 [
   {
+    "id": "a08deb57-b476-473e-8790-ea89376b7ab7",
+    "title": "Pass by reference is faster",
+    "date": "2024-02-18",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P1466 : medium; graphs; dfs; took a small hint; at first my solution gave TLE for n =1647 and won’t submit, then I passed the adjacency list by reference it worked and the submission was accepted! Thank <a href=”phind.com”>phind</a>"
+      },
+      {
+        "component": "paragraph",
+        "text": "<br/>"
+      },
+      {
+        "component": "paragraph",
+        "text": "solved most of the P399 but need to debug some part. Man this problem was one heck of a find, you need to write essay long code and then debug like the piece like you’re working on a software."
+      }
+    ]
+  },
+  {
     "id": "00702e16-36c4-40bf-966b-8dace7e76a9d",
     "title": "??",
     "date": "2024-02-17",
