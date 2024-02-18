@@ -17,6 +17,7 @@ function updateTechBox(data){
     const date = new Date(); // Current date
     const comparedate = formatDate(date)
     let count = 0
+    let countTotal = 0;
     for (let i =  0; i < data.length; i++) {
         const item = data[i];
         if (item.date.slice(0,  7) === comparedate.slice(0,  7)) {
@@ -25,10 +26,19 @@ function updateTechBox(data){
                 if (block.component === "bulleted_list_item") {
                     count++;
                 }
+
             }
+        }
+        for (let j =  0; j < item.blocks.length; j++) {
+            const block = item.blocks[j];
+            if (block.component === "bulleted_list_item") {
+                countTotal++;
+            }
+
         }
     }
     document.getElementById("problem-count-monthly").innerHTML = count
+    document.getElementById("problem-count").innerHTML = countTotal
     // document.getElementById("tech-used").innerHTML = divs
 }
 
