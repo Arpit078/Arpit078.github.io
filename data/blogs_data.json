@@ -1,5 +1,20 @@
 [
   {
+    "id": "00702e16-36c4-40bf-966b-8dace7e76a9d",
+    "title": "??",
+    "date": "2024-02-17",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "P547 ; medium; graphs ; did using dfs and union find. For union find watched solution."
+      }
+    ]
+  },
+  {
     "id": "5a281fd6-829e-4b71-ac4f-393467242952",
     "title": "Wrote multi threaded program in c++",
     "date": "2024-02-12",
