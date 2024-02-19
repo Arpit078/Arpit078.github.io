@@ -10,15 +10,11 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "P1466 : medium; graphs; dfs; took a small hint; at first my solution gave TLE for n =1647 and won’t submit, then I passed the adjacency list by reference it worked and the submission was accepted! Thank <a href=”phind.com”>phind</a>"
+        "text": "P1466 : medium; graphs; dfs; took a small hint; at first my solution gave TLE for n =1647 and won’t submit, then I passed the adjacency list by reference it worked and the submission was accepted! Thank <a href=”https://phind.com”>phind</a>"
       },
       {
         "component": "paragraph",
-        "text": "<br/>"
-      },
-      {
-        "component": "paragraph",
-        "text": "solved most of the P399 but need to debug some part. Man this problem was one heck of a find, you need to write essay long code and then debug like the piece like you’re working on a software."
+        "text": "solved most of the P399 but need to debug some part. Man this problem was one heck of a find, you need to write essay long code and then debug the piece like you’re working on a software."
       }
     ]
   },
