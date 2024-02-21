@@ -1,5 +1,20 @@
 [
   {
+    "id": "204b10fe-131b-484f-9566-59607c1958c8",
+    "title": "Structs create senseless errors",
+    "date": "2024-02-20",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "paragraph",
+        "text": "P1926 ; fairly easy bfs problem but structs was wasted me."
+      }
+    ]
+  },
+  {
     "id": "9bde5100-c09b-4d42-8c4e-b097b2306bc4",
     "title": "Most mind boggling problem solved till date",
     "date": "2024-02-19",
