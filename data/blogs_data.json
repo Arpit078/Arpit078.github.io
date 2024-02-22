@@ -1,5 +1,16 @@
 [
   {
+    "id": "8ff49ec7-9dd3-44d0-851b-44d5e12f7f7b",
+    "title": "classic graph bfs prob now.",
+    "date": "2024-02-22",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "P994;required solution;medium;bfs;graphs"
+      }
+    ]
+  },
+  {
     "id": "204b10fe-131b-484f-9566-59607c1958c8",
     "title": "Structs create senseless errors",
     "date": "2024-02-20",
