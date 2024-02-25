@@ -1,5 +1,24 @@
 [
   {
+    "id": "9fcb761f-4d7d-4aad-ab00-da863fb979ac",
+    "title": " Tried compiling vlc",
+    "date": "2024-02-23",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Tried compiling vlc on my ubuntu system, getting more and more interested in cpp dev."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode"
+      },
+      {
+        "component": "paragraph",
+        "text": "/bulleted_list P215 using sorting🙂 need to learn heaps"
+      }
+    ]
+  },
+  {
     "id": "8ff49ec7-9dd3-44d0-851b-44d5e12f7f7b",
     "title": "classic graph bfs prob now.",
     "date": "2024-02-22",
@@ -21,7 +40,7 @@
       },
       {
         "component": "paragraph",
-        "text": "P1926 ; fairly easy bfs problem but structs was wasted me."
+        "text": "P1926 ; fairly easy bfs problem but structs wasted me."
       }
     ]
   },
@@ -81,7 +100,7 @@
     "blocks": [
       {
         "component": "paragraph",
-        "text": "Yupp, made multiple threads out of the main thread in the PDC software. Well the solution emerged out the very fundamental requirement of the PDC to connect with multiple PMUs at the same time. Since the program runs an infinite loop to accept data from the PMU continuously, you cannot process anything else. This was the major issue was that we could not run execute the sendCloseCommand function and stop the communication on our command. Thus implemented a 3 thread program that accepts data from three pmu and receives user commands on the main thread."
+        "text": "Yupp, made multiple threads out of the main thread in the PDC software. Well the solution emerged out the very fundamental requirement of the PDC to connect with multiple PMUs at the same time. Since the program runs an infinite loop to accept data from the PMU continuously, you cannot process anything else. The major issue was that we could not run the sendCloseCommand function and stop the communication by our choice only option was to CTRL C. Thus implemented a 3 thread program that accepts data from three pmu and receives user commands on the main thread."
       },
       {
         "component": "paragraph",
