@@ -7,7 +7,6 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "build": "node scripts\\compile.js"
+    "start": "node server.js"
   }
 }
