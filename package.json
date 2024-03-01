@@ -8,6 +8,6 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "node scripts\\compile.js | node server.js"
+    "build": "node scripts\\compile.js"
   }
 }

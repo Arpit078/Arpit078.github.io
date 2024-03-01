@@ -13,8 +13,8 @@
         "text": "Leetcode"
       },
       {
-        "component": "paragraph",
-        "text": "/bulleted_list P215 using sorting🙂 need to learn heaps"
+        "component": "bulleted_list_item",
+        "text": " P215 using sorting🙂 need to learn heaps"
       }
     ]
   },
@@ -24,7 +24,7 @@
     "date": "2024-02-22",
     "blocks": [
       {
-        "component": "paragraph",
+        "component": "bulleted_list_item",
         "text": "P994;required solution;medium;bfs;graphs"
       }
     ]
@@ -39,7 +39,7 @@
         "text": "Leetcode :"
       },
       {
-        "component": "paragraph",
+        "component": "bulleted_list_item",
         "text": "P1926 ; fairly easy bfs problem but structs wasted me."
       }
     ]
