@@ -1,5 +1,20 @@
 [
   {
+    "id": "a3842b70-d3b0-4874-8262-c9c011f540fe",
+    "title": "Update",
+    "date": "2024-03-25",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Rougly a month now for the last post. Well I was busy with some personal commitments and will be busy for a while so I guess there will be fewer posts for a while. Some update regarding the PDC software I was working on, The backend part of the software is completed. It was a hassle to figure out that you needed to synchronise threads :) didn’t know it before and had to break my head figuring it out. Then after that it was MySQL connector in cpp damn vscode it had to give up at the end of the project??!  It could not link the sql libraries and we had to finally shift to Visual Studio, I feel it is somewhat of a downgrade from visual studio, just my personal opinion."
+      },
+      {
+        "component": "paragraph",
+        "text": "About DSA I will be doing it in a while but currently don’t have the time for it."
+      }
+    ]
+  },
+  {
     "id": "9fcb761f-4d7d-4aad-ab00-da863fb979ac",
     "title": " Tried compiling vlc",
     "date": "2024-02-23",
