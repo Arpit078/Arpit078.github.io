@@ -6,7 +6,7 @@
     "blocks": [
       {
         "component": "paragraph",
-        "text": "Roughly a month now for the last post. Well I was busy with some personal commitments and will be busy for a while so I guess there will be fewer posts for a while. Some update regarding the PDC software I was working on, The backend part of the software is completed. It was a hassle to figure out that you needed to synchronise threads :) didn’t know it before and had to break my head figuring it out. Then after that it was MySQL connector in cpp damn vscode it had to give up at the end of the project??!  It could not link the sql libraries and we had to finally shift to Visual Studio, I feel it is somewhat of a downgrade from VS code, just my personal opinion."
+        "text": "Roughly a month now for the last post. Well I was busy with some personal commitments and will be busy for a while so I guess there will be fewer posts for a while. Some update regarding the PDC software I was working on, The backend part of the software is completed. It was a hassle to figure out that you needed to synchronise threads :) didn’t know it before and had to break my head figuring it out. Then after that it was MySQL connector in cpp damn vscode it had to give up at the end of the project??!  It could not link the sql libraries and we had to finally shift to Visual Studio, I feel it is somewhat of a downgrade from VS code, just my personal opinion:)"
       },
       {
         "component": "paragraph",
