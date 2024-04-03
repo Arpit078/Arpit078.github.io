@@ -1,1 +1,2 @@
-//intentionally left empty
+//your global state manager!
+var cache = {}

@@ -8,12 +8,7 @@ function formatDate(date) {
   
 //   console.log(formatDate(date)); // Outputs a string in the format "YYYY-MM-DD"
   
-function updateTechBox(data){
-    // let divs = ``;
-    // for(let i=0;i<data.tech.length;i++){
-    //     divs = divs + `<div class="tech">${data.tech[i]}</div>`
-    // }
-    // document.getElementById("problem-count-week").innerHTML = data.weekly
+function countFunc(data){
     const date = new Date(); // Current date
     const comparedate = formatDate(date)
     let count = 0
@@ -37,6 +32,14 @@ function updateTechBox(data){
 
         }
     }
+    return [count, countTotal]
+}
+function updateTechBox(count,countTotal){
+    // let divs = ``;
+    // for(let i=0;i<data.tech.length;i++){
+    //     divs = divs + `<div class="tech">${data.tech[i]}</div>`
+    // }
+    // document.getElementById("problem-count-week").innerHTML = data.weekly
     document.getElementById("problem-count-monthly").innerHTML = count
     document.getElementById("problem-count").innerHTML = countTotal
     // document.getElementById("tech-used").innerHTML = divs
@@ -48,8 +51,11 @@ async function fetchProjects(){
         .then((response) => response.json())
         .then((json) => blogDatabase=json);
 
-    updateTechBox(blogDatabase)
     let ProjectsFetch = ''
+    const [count,countTotal] = countFunc(blogDatabase)
+    cache["countTotal"] = countTotal
+    cache["count"] = count
+    updateTechBox(count, countTotal);
 
 
     for(let i =0;i<blogDatabase.length;i++){
@@ -92,9 +98,17 @@ async function fetchProjects(){
     `
         ProjectsFetch = ProjectsFetch + projectObj ; 
     }
-    console.log(blogDatabase)
-    return ProjectsFetch
+    // console.log(blogDatabase)
+    return [ProjectsFetch,blogDatabase]
 }
-fetchProjects().then((res)=>{
-    document.getElementById("blog").innerHTML =  res
-})
+if(cache[blog]){
+    document.getElementById("blog").innerHTML =  cache[blog]
+    updateTechBox(cache["count"],cache["countTotal"])
+}
+else{
+    fetchProjects().then(([res, blogs]) => {
+        cache[blog] = res;
+        document.getElementById("blog").innerHTML = res;
+    });
+       
+}
