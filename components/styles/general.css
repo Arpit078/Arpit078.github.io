@@ -44,6 +44,8 @@ a {
   position: relative;
   color: #000;
   text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(53, 62, 148, 0.5);
 }
 
 a:hover {
