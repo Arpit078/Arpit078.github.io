@@ -109,6 +109,5 @@ else{
     fetchProjects().then(([res, blogs]) => {
         cache[blog] = res;
         document.getElementById("blog").innerHTML = res;
-    });
-       
+    });  
 }
