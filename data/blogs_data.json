@@ -1,5 +1,40 @@
 [
   {
+    "id": "f0dc4c34-ae18-49c2-b137-94078c480e3f",
+    "title": "woah! been a while",
+    "date": "2024-05-14",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Close to two months now. Well this post goes to explain where have I been and what am I planning to do with this blog space."
+      },
+      {
+        "component": "paragraph",
+        "text": "I was applying for Internships for the past two months, finally got one at BlueStacks. Applying requires you to constantly be prepping for interviews and taking OA and making assignments, explains why I stopped solving DSA problems. "
+      },
+      {
+        "component": "paragraph",
+        "text": "The windows application I was building as a course project under IIT Ropar was a blast or should I say could’nt have been better. On the last day of the project, just a night before the final demonstration while testing the application on a different pc I observed that the application kept crashing after some 10-15 minutes while it won’t crash on the pc I used to work on. My head was spinning I had been testing the application for a while now but it worked for hours and hours on end. That night I was sold on the idea I’d be working on fixing the bug for the whole night. I tried everything “maybe the PMUs not working right ? change it”, “Maybe we have missed locking some common resource somewhere and the application is not thread safe and literally out of desperation I sprinkled mutex anywhere and everywhere I could think of” , “Maybe there is some error in the buffer to hex function and spent an hour trying several different iterations and AI models to fix up the issue all these possibilities because all that Visual studio could give as error was {an exception occured: Accessing memmory without permission} or something along similar lines.” and finally when I was about to give up I went out for a walk, One possiblity came to my mind - what the fucking if there are losses in the lan cable on the pc I was testing the application on!!. and bang that hit the bullseye. When I came back to the lab one of my good friend, team member came in as well and boi that we solved the bug in minutes. We basically had missed adding error handling for cases when the received data buffer was null and the software was trying to parse empty buffer/data arrays. I then ran the application the whole night on my PC over wifi! and it worked like a charm."
+      },
+      {
+        "component": "paragraph",
+        "text": "I learnt a lot from this project and made a good friend."
+      },
+      {
+        "component": "paragraph",
+        "text": "About this blogs page, well I have a 6 month internship so I am free from college for the next semester. I have some spare time after my internship work to allocate to problem solving and developing personal projects and this page serves the exact purpose “to document my daily learnings : ) “ So daily updates are on their wayyy! "
+      },
+      {
+        "component": "paragraph",
+        "text": "Cheers,"
+      },
+      {
+        "component": "paragraph",
+        "text": "Arpit"
+      }
+    ]
+  },
+  {
     "id": "a3842b70-d3b0-4874-8262-c9c011f540fe",
     "title": "Update",
     "date": "2024-03-25",
