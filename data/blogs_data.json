@@ -1,5 +1,36 @@
 [
   {
+    "id": "4d7d9466-6e13-4fc8-aa0f-1e842cbefd42",
+    "title": "…",
+    "date": "2024-05-19",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "It is easier to start something new than to continue with something you left in between. Started learning DP, while I was supposed to finish solving problems from priority queue I could not. I used to sit down in front of the problem for some time and then just pass it on to the next day. Also videos are easy to get started on new things."
+      },
+      {
+        "component": "paragraph",
+        "text": "Leetcode :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "1137. N-th Tribonacci Number| easy | DP"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "746. Min Cost Climbing Stairs| easy | DP"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "198. House Robber; Medium | DP | had some difficulty understanding what the problem actually wants you to do(insufficient test cases) took hints."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "790. Domino and Tromino Tiling | Medium/Hard | good problem had to look several tutorials on how to solve finally this one did the job,  <a href=”https://youtu.be/RhhCWPGsJ0I?si=dn5CLiMmKBpOyRnL”>youtube</a>, thanks bud :)"
+      }
+    ]
+  },
+  {
     "id": "f53ecdf5-f9b4-4f66-8015-4485d4d2dc0a",
     "title": "forgot most of the topics",
     "date": "2024-05-15",
