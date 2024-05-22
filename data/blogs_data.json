@@ -1,5 +1,24 @@
 [
   {
+    "id": "92f263c7-568e-4382-8ce4-253692bd37c1",
+    "title": "Chat GPT has gotten really good",
+    "date": "2024-05-22",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "LC :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "714. Best Time to Buy and Sell Stock with Transaction Fee | 2D DP | Medium | wrote all the code by myself but took help of chatgpt to debug. It has got really good now, earlier it wouldn’t understand shit about the code and just return the solutions from the web but it can now modify your code correctly!"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "72. Edit Distance | Hard | did’nt give a lot of time just looked through and understood the top down solution. | will do again sometime."
+      }
+    ]
+  },
+  {
     "id": "3482dffc-a10a-49d9-8c60-238df7facf6c",
     "title": "2D DP",
     "date": "2024-05-20",
