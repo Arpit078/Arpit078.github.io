@@ -1,5 +1,32 @@
 [
   {
+    "id": "0dc517d8-6b81-4a97-912f-21d733925051",
+    "title": "Finally finished LC 75",
+    "date": "2024-05-24",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Finally the <b>LeetCode 75</b> is over. Took me 140 days(4 months 19 days!). Would be solving a sheet by love babbar now, that famous final450 and finally plan on doing the CSES. let’s see how much gets done by the end of this year."
+      },
+      {
+        "component": "paragraph",
+        "text": "yesterday I watched this Ted talk <a href=https://youtu.be/5MgBikgcWnY?si=tCr9Cr3-4rDJbXPR>youtube</a> and I must say, It was wonderful. He mentioned about the 10000 hour rule from the book “Peak” I had read last year. He finally quotes that it is about 20Hours of deliberate practice that is required to become significantly good at something. Hence took up my dusting ukulele and started on the journey to devote atleast 20h to the instrument :)"
+      },
+      {
+        "component": "paragraph",
+        "text": "Solved : Both of them good problems, Had seen them a week ago but could not solve. Watched solutions for both :<"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "2542. Maximum Subsequence Score | Priority queue | Medium"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "2462. Total Cost to Hire K Workers | Priority queue | Medium "
+      }
+    ]
+  },
+  {
     "id": "a9505a94-78ed-4fce-9195-4c35629bd297",
     "title": "Backtracking",
     "date": "2024-05-23",
