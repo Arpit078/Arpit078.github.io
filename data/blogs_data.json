@@ -1,5 +1,75 @@
 [
   {
+    "id": "e2d832d5-2061-4c4b-91f5-734dc881438f",
+    "title": "Array questions can be tough",
+    "date": "2024-05-29",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Need to solve 4 questions daily for 5 days a week to finish the sheet by october this year."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Minimise the maximum difference between heights "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Minimum no. of Jumps to reach end of an array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "find duplicate in an array of N+1 Integers"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Merge 2 sorted arrays without using Extra space."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Kadane's Algo \n"
+      }
+    ]
+  },
+  {
+    "id": "357c3432-2148-4b2f-8dce-4bfead22f3b0",
+    "title": "Started Final450",
+    "date": "2024-05-28",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Started Final450, starting ones are easy as expected."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Reverse the array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find the maximum and minimum element in an array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find the \"Kth\" max and min element of an array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Move all the negative elements to one side of the array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find the Union and Intersection of the two sorted arrays."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Write a program to cyclically rotate an array by one."
+      }
+    ]
+  },
+  {
     "id": "0dc517d8-6b81-4a97-912f-21d733925051",
     "title": "Finally finished LC 75",
     "date": "2024-05-24",
