@@ -1,5 +1,39 @@
 [
   {
+    "id": "bb99ca98-3704-416f-b562-3511b22fe903",
+    "title": "more arrays",
+    "date": "2024-05-31",
+    "blocks": [
+      {
+        "component": "paragraph",
+        "text": "Can not find time to do something about this notion page tracker?! will do something tommorrow."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "find all pairs on integer array whose sum is equal to given number | GFG | Arrays | Very common."
+      }
+    ]
+  },
+  {
+    "id": "909622e8-e03e-4a72-a867-60f70e56c296",
+    "title": "need to think something about this recording thing.",
+    "date": "2024-05-30",
+    "blocks": [
+      {
+        "component": "bulleted_list_item",
+        "text": "Merge Intervals | Leetcode | Medium | Array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Next Permutation | Leetcode | Medium | Array"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Count Inversions | GFG"
+      }
+    ]
+  },
+  {
     "id": "e2d832d5-2061-4c4b-91f5-734dc881438f",
     "title": "Array questions can be tough",
     "date": "2024-05-29",
