@@ -1,3 +1,4 @@
+// import { contentGen } from "../scripts/dynamic.js"; 
 function formatDate(date) {
     const year = date.getFullYear();
     const month = (date.getMonth() +  1).toString().padStart(2, '0'); // Months are zero-based
@@ -16,16 +17,16 @@ function countFunc(data){
     for (let i =  0; i < data.length; i++) {
         const item = data[i];
         if (item.date.slice(0,  7) === comparedate.slice(0,  7)) {
-            for (let j =  0; j < item.blocks.length; j++) {
-                const block = item.blocks[j];
+            for (let j =  0; j < item.description.length; j++) {
+                const block = item.description[j];
                 if (block.component === "bulleted_list_item") {
                     count++;
                 }
 
             }
         }
-        for (let j =  0; j < item.blocks.length; j++) {
-            const block = item.blocks[j];
+        for (let j =  0; j < item.description.length; j++) {
+            const block = item.description[j];
             if (block.component === "bulleted_list_item") {
                 countTotal++;
             }
@@ -59,32 +60,8 @@ async function fetchProjects(){
 
 
     for(let i =0;i<blogDatabase.length;i++){
-        let content =``
-        let number = 1
-        for(let j=0;j<blogDatabase[i].blocks.length;j++){
-            let el = blogDatabase[i].blocks[j]
-            switch (el.component) {
-                case "paragraph":
-                    content = content + el.text + '<br><br>'
-                    break;
-                case "bulleted_list_item":
-                    content = content +'&#149; ' + el.text + '<br>'
-                    break;
-                case "numbered_list_item":
-                    content = content + '' + `${number}. ` + el.text + '<br>'
-                    number +=1
-                    break;
-                case "code":
-                    code_text = el.text .replace(/\\/g, '""') // Replace \ with ""
-                                        .replace(/\n/g, '<br>') // Replace \n with <br>
-                                        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // Replace \t with HTML tab space
-                    content = content+ '<div class="code_block">' + code_text +'</div>'+ '<br>'
-                    break;
-            
-                default:
-                    break;
-            }
-        }
+        let content = contentGen(blogDatabase[i])
+       
         const projectObj = `
             <div class="content">
                 <p class="subHead">${blogDatabase[i].title}</p>

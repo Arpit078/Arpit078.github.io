@@ -7,10 +7,11 @@ async function fetchProjects(){
     let ProjectsFetch = ''
 
     for(let i =0;i<bookDatabase.length;i++){
+        let content = contentGen(bookDatabase[i])
         const projectObj = `
         <div class="content">
         <p class="subHead">${bookDatabase[i].book_name}</p>
-        <p class="paragraph">${bookDatabase[i].description}
+        <p class="paragraph">${content}
         </p>
         <p class="highlight">
         Cover : <br>

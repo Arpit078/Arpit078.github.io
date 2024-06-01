@@ -8,17 +8,14 @@ async function fetchProjects(){
 
 
     for(let i =0;i<ProjectDatabase.length;i++){
+        let content = contentGen(ProjectDatabase[i])
         const projectObj = `
         <div class="content">
         <p class="subHead">${ProjectDatabase[i].project_name}</p>
-        <p class="paragraph">${ProjectDatabase[i].description}</p>
+        <p class="paragraph">${content}</p>
         <p class="highlight">
         Github Repository :
-        <a href="${ProjectDatabase[i].github}" class="link paragraph">${ProjectDatabase[i].github.slice(28)}</a> 
-        </p>
-        <p class="highlight">
-        Live Preview :
-        <a href="${ProjectDatabase[i].live||`#Projects`}" class="link paragraph">${ProjectDatabase[i].live||"no live preview"}</a>
+        <a href=${ProjectDatabase[i].github} class="link paragraph">${ProjectDatabase[i].github}</a> 
         </p>
         <p class="highlight">
         Dated : 

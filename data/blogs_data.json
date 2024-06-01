@@ -1,24 +1,50 @@
 [
   {
-    "id": "bb99ca98-3704-416f-b562-3511b22fe903",
-    "title": "more arrays",
-    "date": "2024-05-31",
-    "blocks": [
+    "id": "06cd297a-f8b2-4dc4-96f3-36f9a3f491dd",
+    "created_time": "2024-06-01T15:15:00.000Z",
+    "title": "Updated the CMS",
+    "date": "2024-06-01",
+    "description": [
       {
         "component": "paragraph",
-        "text": "Can not find time to do something about this notion page tracker?! will do something tommorrow."
+        "text": "Moved everything from google sheets into one single section of notion. Also increased the startup script runtime speed by using promise.all when sending request to notion api, this way requests for all the blog posts detail are send at the same time thus they get completed really fast asynchronously and parallelly."
+      },
+      {
+        "component": "paragraph",
+        "text": "Will be making some major changes to the data analytics part tommorrow."
+      }
+    ]
+  },
+  {
+    "id": "bb99ca98-3704-416f-b562-3511b22fe903",
+    "created_time": "2024-05-31T11:38:00.000Z",
+    "title": "More Arrays",
+    "date": "2024-05-31",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Can not find time to do something about this notion page tracker?! will do something tommorrow. "
       },
       {
         "component": "bulleted_list_item",
         "text": "find all pairs on integer array whose sum is equal to given number | GFG | Arrays | Very common."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Rearrange the array in alternating positive and negative items with O(1) extra space | Article "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "find common elements In 3 sorted arrays | GFG | Easy"
       }
     ]
   },
   {
     "id": "909622e8-e03e-4a72-a867-60f70e56c296",
+    "created_time": "2024-05-30T16:59:00.000Z",
     "title": "need to think something about this recording thing.",
     "date": "2024-05-30",
-    "blocks": [
+    "description": [
       {
         "component": "bulleted_list_item",
         "text": "Merge Intervals | Leetcode | Medium | Array"
@@ -35,9 +61,10 @@
   },
   {
     "id": "e2d832d5-2061-4c4b-91f5-734dc881438f",
+    "created_time": "2024-05-30T13:31:00.000Z",
     "title": "Array questions can be tough",
     "date": "2024-05-29",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Need to solve 4 questions daily for 5 days a week to finish the sheet by october this year."
@@ -66,9 +93,10 @@
   },
   {
     "id": "357c3432-2148-4b2f-8dce-4bfead22f3b0",
+    "created_time": "2024-05-28T20:12:00.000Z",
     "title": "Started Final450",
     "date": "2024-05-28",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Started Final450, starting ones are easy as expected."
@@ -105,9 +133,10 @@
   },
   {
     "id": "0dc517d8-6b81-4a97-912f-21d733925051",
+    "created_time": "2024-05-24T19:00:00.000Z",
     "title": "Finally finished LC 75",
     "date": "2024-05-24",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Finally the <b>LeetCode 75</b> is over. Took me 140 days(4 months 19 days!). Would be solving a sheet by love babbar now, that famous final450 and finally plan on doing the CSES. let’s see how much gets done by the end of this year."
@@ -132,9 +161,10 @@
   },
   {
     "id": "a9505a94-78ed-4fce-9195-4c35629bd297",
+    "created_time": "2024-05-23T18:11:00.000Z",
     "title": "Backtracking",
     "date": "2024-05-23",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "LC :"
@@ -151,9 +181,10 @@
   },
   {
     "id": "92f263c7-568e-4382-8ce4-253692bd37c1",
+    "created_time": "2024-05-22T12:35:00.000Z",
     "title": "Chat GPT has gotten really good",
     "date": "2024-05-22",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "LC :"
@@ -170,9 +201,10 @@
   },
   {
     "id": "3482dffc-a10a-49d9-8c60-238df7facf6c",
+    "created_time": "2024-05-20T16:14:00.000Z",
     "title": "2D DP",
     "date": "2024-05-20",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "LC :"
@@ -189,9 +221,10 @@
   },
   {
     "id": "4d7d9466-6e13-4fc8-aa0f-1e842cbefd42",
+    "created_time": "2024-05-19T10:56:00.000Z",
     "title": "…",
     "date": "2024-05-19",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "It is easier to start something new than to continue with something you left in between. Started learning DP, while I was supposed to finish solving problems from priority queue I could not. I used to sit down in front of the problem for some time and then just pass it on to the next day. Also videos are easy to get started on new things."
@@ -220,9 +253,10 @@
   },
   {
     "id": "f53ecdf5-f9b4-4f66-8015-4485d4d2dc0a",
+    "created_time": "2024-05-15T18:25:00.000Z",
     "title": "forgot most of the topics",
     "date": "2024-05-15",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Can’t remember anything about how you’d create heaps and use them to solve problems. It’s going to be hard getting to speed again. Sat down for some time on a problem could’nt solve will try tommorrow."
@@ -231,9 +265,10 @@
   },
   {
     "id": "f0dc4c34-ae18-49c2-b137-94078c480e3f",
+    "created_time": "2024-05-14T17:09:00.000Z",
     "title": "woah! been a while",
     "date": "2024-05-14",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Close to two months now. Well this post goes to explain where have I been and what am I planning to do with this blog space."
@@ -266,9 +301,10 @@
   },
   {
     "id": "a3842b70-d3b0-4874-8262-c9c011f540fe",
+    "created_time": "2024-03-25T09:51:00.000Z",
     "title": "Update",
     "date": "2024-03-25",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Roughly a month now for the last post. Well I was busy with some personal commitments and will be busy for a while so I guess there will be fewer posts for a while. Some update regarding the PDC software I was working on, The backend part of the software is completed. It was a hassle to figure out that you needed to synchronise threads :) didn’t know it before and had to break my head figuring it out. Then after that it was MySQL connector in cpp damn vscode it had to give up at the end of the project??!  It could not link the sql libraries and we had to finally shift to Visual Studio, I feel it is somewhat of a downgrade from VS code, just my personal opinion."
@@ -281,9 +317,10 @@
   },
   {
     "id": "9fcb761f-4d7d-4aad-ab00-da863fb979ac",
+    "created_time": "2024-02-22T20:12:00.000Z",
     "title": " Tried compiling vlc",
     "date": "2024-02-23",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Tried compiling vlc on my ubuntu system, getting more and more interested in cpp dev."
@@ -300,9 +337,10 @@
   },
   {
     "id": "8ff49ec7-9dd3-44d0-851b-44d5e12f7f7b",
+    "created_time": "2024-02-21T20:50:00.000Z",
     "title": "classic graph bfs prob now.",
     "date": "2024-02-22",
-    "blocks": [
+    "description": [
       {
         "component": "bulleted_list_item",
         "text": "P994;required solution;medium;bfs;graphs"
@@ -311,9 +349,10 @@
   },
   {
     "id": "204b10fe-131b-484f-9566-59607c1958c8",
+    "created_time": "2024-02-20T15:25:00.000Z",
     "title": "Structs create senseless errors",
     "date": "2024-02-20",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode :"
@@ -326,9 +365,10 @@
   },
   {
     "id": "9bde5100-c09b-4d42-8c4e-b097b2306bc4",
+    "created_time": "2024-02-19T21:52:00.000Z",
     "title": "Most mind boggling problem solved till date",
     "date": "2024-02-19",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode : "
@@ -341,9 +381,10 @@
   },
   {
     "id": "a08deb57-b476-473e-8790-ea89376b7ab7",
+    "created_time": "2024-02-18T11:44:00.000Z",
     "title": "Pass by reference is faster",
     "date": "2024-02-18",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode :"
@@ -360,9 +401,10 @@
   },
   {
     "id": "00702e16-36c4-40bf-966b-8dace7e76a9d",
+    "created_time": "2024-02-17T13:51:00.000Z",
     "title": "??",
     "date": "2024-02-17",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode :"
@@ -375,9 +417,10 @@
   },
   {
     "id": "5a281fd6-829e-4b71-ac4f-393467242952",
+    "created_time": "2024-02-12T15:38:00.000Z",
     "title": "Wrote multi threaded program in c++",
     "date": "2024-02-12",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Yupp, made multiple threads out of the main thread in the PDC software. Well the solution emerged out the very fundamental requirement of the PDC to connect with multiple PMUs at the same time. Since the program runs an infinite loop to accept data from the PMU continuously, you cannot process anything else. The major issue was that we could not run the sendCloseCommand function and stop the communication by our choice only option was to CTRL C. Thus implemented a 3 thread program that accepts data from three pmu and receives user commands on the main thread."
@@ -390,9 +433,10 @@
   },
   {
     "id": "074ed2d1-37eb-4f63-9ce3-a1e4d7105a7d",
+    "created_time": "2024-02-08T13:32:00.000Z",
     "title": "installed an extension",
     "date": "2024-02-08",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "That won’t let me browse until i solve a leetcode problem."
@@ -413,9 +457,10 @@
   },
   {
     "id": "eafba131-5a9c-40a2-bc6d-7d5e16b9ab87",
+    "created_time": "2024-02-04T18:04:00.000Z",
     "title": "After a detour back at the grind",
     "date": "2024-02-04",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode :"
@@ -432,9 +477,10 @@
   },
   {
     "id": "8a0fa41d-8eac-4541-996f-e55a3f4125c6",
+    "created_time": "2024-02-04T18:00:00.000Z",
     "title": "Wrote some react tests for TODO app",
     "date": "2024-02-02",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Got to learn how to write unit tests for react projects and realized how important it is to write them in bigger applications. I am working on a PDC software myself and as the days are passing by the application is becoming very large it is already more than 1000 lines of code."
@@ -447,9 +493,10 @@
   },
   {
     "id": "861e5221-97bf-4f15-9555-498afed39c05",
+    "created_time": "2024-02-02T12:18:00.000Z",
     "title": "Jest",
     "date": "2024-02-01",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Learnt about component testing in javascript in react. "
@@ -462,9 +509,10 @@
   },
   {
     "id": "eb5b55c8-c68e-4816-b925-968ec48aac0b",
+    "created_time": "2024-01-31T18:02:00.000Z",
     "title": "Consistency!",
     "date": "2024-01-31",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Felt like skipping today."
@@ -489,9 +537,10 @@
   },
   {
     "id": "08b6c5b8-040f-4cce-ad27-5aa1afe32e69",
+    "created_time": "2024-01-30T17:00:00.000Z",
     "title": "236. Lowest Common Ancestor of a Binary Tree",
     "date": "2024-01-30",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "kept trying to solve it for idk how long. I was struggling with making the traverse deque but finally did it. Worth it."
@@ -500,9 +549,10 @@
   },
   {
     "id": "02d2a94c-3495-4dd5-9f4b-2b6c6906e83b",
+    "created_time": "2024-01-29T16:09:00.000Z",
     "title": "Woahh!",
     "date": "2024-01-29",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "DEP :"
@@ -531,9 +581,10 @@
   },
   {
     "id": "75bfbf24-6043-4bce-b641-7f5ef2154135",
+    "created_time": "2024-01-22T04:53:00.000Z",
     "title": "Did first tree question on my own",
     "date": "2024-01-22",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode : "
@@ -554,9 +605,10 @@
   },
   {
     "id": "eb8940aa-2222-44d2-be3e-edccc72c278b",
+    "created_time": "2024-01-20T17:46:00.000Z",
     "title": "Studied Binary Trees",
     "date": "2024-01-20",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "PDC :"
@@ -581,9 +633,10 @@
   },
   {
     "id": "a2901e67-9c41-42c2-b883-86c00e407003",
+    "created_time": "2024-01-19T16:33:00.000Z",
     "title": "Started getting data stream",
     "date": "2024-01-19",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Finally finally we have a data stream. Yesterday I was working on the project alone in the lab when Bibhu sir came and explained me about the structure of the iPDC software, That made me dig into the code again and surprisingly this time around I could understand the stuff I was overlooking before. Borrowed the command frame generation function and bamn we have a continuous stream of data."
@@ -604,9 +657,10 @@
   },
   {
     "id": "933fe100-8b3a-439e-ba49-6da8315a7469",
+    "created_time": "2024-01-18T16:38:00.000Z",
     "title": "Voillla",
     "date": "2024-01-18",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Understood the iPDC software and also figured out what I was doing wrong in the command frame that could not make us receive the data frames and the real CFG2 frame. Tomorrow I will surely move leap years ahead in the software! and that is the voilla moment."
@@ -631,9 +685,10 @@
   },
   {
     "id": "5f382f3e-652a-4d21-9e34-f91489be00fa",
+    "created_time": "2024-01-17T12:27:00.000Z",
     "title": "Trie",
     "date": "2024-01-17",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Leetcode"
@@ -654,9 +709,10 @@
   },
   {
     "id": "4cb84c64-3798-4520-a6ee-8501ee02d0a6",
+    "created_time": "2024-01-16T14:27:00.000Z",
     "title": "It is decided",
     "date": "2024-01-16",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "It is decided I am going to do CSES right after I am done with blind 75. The goal is to finish the list before this semester is over. After that I’ll be working on previously asked questions from Uber and Google. It was a off day for the project."
@@ -685,9 +741,10 @@
   },
   {
     "id": "b93433eb-6d98-476e-8125-a5094951fb50",
+    "created_time": "2024-01-15T15:35:00.000Z",
     "title": "Course work starts consuming time",
     "date": "2024-01-15",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Not much happened in the project, Realised that the config file received is wrong or maybe the way I converted the buffer to binary was wrong."
@@ -704,9 +761,10 @@
   },
   {
     "id": "b9e2f73a-4557-4b37-a9a6-8eed15171038",
+    "created_time": "2024-01-14T16:05:00.000Z",
     "title": "Took a break on project",
     "date": "2024-01-14",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Didn’t go to the lab for project work for I was busy flying kites :)"
@@ -735,9 +793,10 @@
   },
   {
     "id": "f884bf34-b6b3-468e-880d-73e65228b6a0",
+    "created_time": "2024-01-13T12:46:00.000Z",
     "title": "Finally there’s motion in the project",
     "date": "2024-01-13",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "After commiting plenty of rookie mistakes we finally managed to establish a tcp connection with the phase measurement unit and received its config files. "
@@ -778,9 +837,10 @@
   },
   {
     "id": "d0c1dc83-5f91-456b-a399-e403a263fb54",
+    "created_time": "2024-01-12T09:24:00.000Z",
     "title": "Little progress with PDC software.",
     "date": "2024-01-12",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Did today’s share of leetcode."
@@ -817,9 +877,10 @@
   },
   {
     "id": "0365293f-568e-4123-9095-110530080a0d",
+    "created_time": "2024-01-11T08:50:00.000Z",
     "title": "did 6 problems today",
     "date": "2024-01-11",
-    "blocks": [
+    "description": [
       {
         "component": "bulleted_list_item",
         "text": "P1456, medium, 10:04, repetition of max subarr"
@@ -852,9 +913,10 @@
   },
   {
     "id": "fcb56e55-4754-4dfa-bf6e-ae9472371784",
+    "created_time": "2024-01-10T09:29:00.000Z",
     "title": "Started a study plan on leetcode for blind 75",
     "date": "2024-01-10",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "solved 4 problems today :"
@@ -883,9 +945,10 @@
   },
   {
     "id": "da7e3de6-7490-4eab-9d24-8784a43e3b5c",
+    "created_time": "2024-01-09T11:54:00.000Z",
     "title": "Solved 4 problems today",
     "date": "2024-01-09",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Wanted do more as punishment but currently I am too slow."
@@ -910,9 +973,10 @@
   },
   {
     "id": "9fad17da-8758-482e-b0d2-88745541b661",
+    "created_time": "2024-01-07T19:32:00.000Z",
     "title": "Started Socket Programming in C++",
     "date": "2024-01-07",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Sockets are like pointers but for traversing networks. When you start a socket you are returned an integer that you can use to start communication between a server and client. "
@@ -941,9 +1005,10 @@
   },
   {
     "id": "574750e7-acba-43f6-a482-f8ba44e05bad",
+    "created_time": "2024-01-06T07:22:00.000Z",
     "title": "Started Leetcode 75",
     "date": "2024-01-06",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "solving problems on strings"
@@ -980,9 +1045,10 @@
   },
   {
     "id": "b9c17e82-36c4-44bd-be7c-cac039a58163",
+    "created_time": "2024-01-05T20:21:00.000Z",
     "title": "Starting Learning in Public",
     "date": "2024-01-05",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "Fixed many bugs that were present in this blogs page and hooked it up with notion API, HENCE we’ll be having daily updates on what I am learning."
@@ -1003,9 +1069,10 @@
   },
   {
     "id": "853eef81-0a9c-46fa-a646-bd0805893a0a",
+    "created_time": "2024-01-05T15:02:00.000Z",
     "title": "How does this website work",
     "date": "2023-06-06",
-    "blocks": [
+    "description": [
       {
         "component": "paragraph",
         "text": "In January, I began drafting this article, and now, in July 2023, I realize I've been delaying its completion for quite some time. However, it's important to clarify that my procrastination wasn't centered around the article itself. Instead, it was due to the limited time I had available to address minor bugs in the Preact.js framework."
