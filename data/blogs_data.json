@@ -7,11 +7,11 @@
     "description": [
       {
         "component": "paragraph",
-        "text": "Moved everything from google sheets into one single section of notion. Also increased the startup script runtime speed by using promise.all when sending request to notion api, this way requests for all the blog posts detail are send at the same time thus they get completed really fast asynchronously and parallelly."
+        "text": "Moved everything from google sheets into one single section of notion. Also increased the startup script runtime speed by using promise.all when sending request to notion api, this way requests for all the blog posts detail are send at the same time thus they get completed really fast parallelly."
       },
       {
         "component": "paragraph",
-        "text": "Will be making some major changes to the data analytics part tommorrow."
+        "text": "Did some tweaks to the analytics section of this page. Its better now, easier to track progress."
       }
     ]
   },
@@ -986,11 +986,11 @@
         "text": "There are two types of sockets"
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "Socket stream - meant for reliable connections and data integrity. Protocols used are TCP/IP (Transmission control protocol)"
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "Datagram socket - meant for speedy and unreliable connections, used in cases where some data loss is acceptable. Protocol used is UDP(user datagram protocol)."
       },
       {
@@ -1094,27 +1094,27 @@
         "text": "Flow of the Website"
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "You visit any domain pointing to this website; currently, it's https://arpitverma.vercel.app"
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "The remote server responds with an index.html and some JavaScript files that get stored in your browser's session storage."
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "Now according to the route you are on in the website corresponding content is fetched from the stored javascript files."
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "These javascript files place the stored html into the virtual-dom element in the index.html "
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "The logic and dynamic aspects of the page are implemented separately. As JavaScript stored in session storage cannot perform logic functions, it's used solely to call upon variables."
       },
       {
-        "component": "bulleted_list_item",
+        "component": "numbered_list_item",
         "text": "For the logic part, when a page is called, a corresponding logic script is injected in the index.html."
       }
     ]

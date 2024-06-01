@@ -4,12 +4,18 @@ const Box = () => {
             <div class="dsa-update">Total DSA Questions solved : 
                 <span id="problem-count"></span>
             </div>
-            <div class="dsa-update">DSA Questions solved this month : 
-                <span id="problem-count-monthly"></span>
+            <div class="dsa-update">DSA Questions solved this week : 
+                <span id="problem-count-weekly"></span>/24
+                <div id="Progress_Status"> 
+                    <div id="myprogressBar"></div> 
+                </div> 
             </div>
-            <!-- <div class="tech-used-update">Tech I used this week :
-                <span id="tech-used"></span>
-            </div> -->
+            <div class="dsa-update">
+                Questions left in Final450 : <span id="questions-left"></span> | Target date of completion : 2024-09-30
+            </div>
+            <div class="dsa-update">
+                Solved last week : <span id="problem-count-last-week"></span> | Expected date of completion : <span id="expected-date"></span> 
+            </div>
         </div>
     `
     )
