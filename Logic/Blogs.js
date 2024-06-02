@@ -41,7 +41,7 @@ function getAnalytics(blogs){
     let countCurrentWeek = 0;
     let countLastWeek = 0;
     blogs.forEach(blog => {
-        let blogWeekNumber = getWeekNumber(new Date(blog.created_time))[1];
+        let blogWeekNumber = getWeekNumber(new Date(blog.date))[1];
         let currentWeekNumber = getWeekNumber(new Date())[1];
         let lastWeekNumber = currentWeekNumber-1;
         blog.description.forEach(element=>{
