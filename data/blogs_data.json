@@ -3,11 +3,11 @@
     "id": "ae55c94b-b25a-4571-b1fc-332f57c355a2",
     "created_time": "2024-06-02T19:50:00.000Z",
     "title": "Wow questions !!",
-    "date": "2024-06-02",
+    "date": "2024-06-01",
     "description": [
       {
         "component": "bulleted_list_item",
-        "text": "Find if there is any subarray with sum equal to 0 | GFG | I tried solvingwith my O(n) but it had some bugs that could not be solved. The solution to this was tricky! what happens is when you search in the set/map for previously seen sum, what you are doing is saying ohh some element has appeared in between that took some part of the sum to zero and we are back at the sum we found at an earlier index :))"
+        "text": "Find if there is any subarray with sum equal to 0 | GFG | I tried solving with my O(n) approach but it had some bugs that could not be solved. The solution to this was tricky! what happens is when you search in the set/map for previously seen sum, what you are doing is saying ohh some element has appeared in between that took some part of the sum to zero and we are back at the sum we found at an earlier index :))"
       },
       {
         "component": "bulleted_list_item",

@@ -134,7 +134,7 @@ if(cache[blog]){
     cache["expectedDatewrtLastWeek"])
 }
 else{
-    fetchProjects().then(([res, blogs]) => {
+    fetchProjects().then(([res, blog]) => {
         cache[blog] = res;
         document.getElementById("blog").innerHTML = res;
     });  
