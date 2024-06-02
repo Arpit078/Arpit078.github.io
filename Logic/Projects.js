@@ -26,9 +26,21 @@ async function fetchProjects(){
         ProjectsFetch = ProjectsFetch + projectObj ; 
     }
     // console.log(ProjectDatabase)
-    return ProjectsFetch
-}
-fetchProjects().then((res)=>{
+    // return ProjectsFetch
+    return [ProjectsFetch,ProjectDatabase]
 
-    document.getElementById("project").innerHTML =  res
-})
+}
+// fetchProjects().then((res)=>{
+
+//     document.getElementById("project").innerHTML =  res
+// })
+
+if(cache[project]){
+    document.getElementById("project").innerHTML =  cache[project]
+}
+else{
+    fetchProjects().then(([res, project]) => {
+        cache[project] = res;
+        document.getElementById("project").innerHTML = res;
+    });  
+}

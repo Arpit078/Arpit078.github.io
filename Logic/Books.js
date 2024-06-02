@@ -25,14 +25,25 @@ async function fetchProjects(){
     `
         ProjectsFetch = ProjectsFetch + projectObj ; 
     }
-    console.log(bookDatabase)
-    return ProjectsFetch
+    // console.log(bookDatabase)
+    // return ProjectsFetch
+    return [ProjectsFetch,bookDatabase]
+
 }
-fetchProjects().then((res)=>{
-    document.getElementById("book").innerHTML =  res
-})
+// fetchProjects().then((res)=>{
+//     document.getElementById("book").innerHTML =  res
+// })
 
 
+if(cache[book]){
+    document.getElementById("book").innerHTML =  cache[book]
+}
+else{
+    fetchProjects().then(([res, book]) => {
+        cache[book] = res;
+        document.getElementById("book").innerHTML = res;
+    });  
+}
 /*
 It was sometime in January that I had sat down to write this article, and now it is July 2023,
            I have been procrastinating over this one thing for a long time I guess. Actually I was not procrastinating

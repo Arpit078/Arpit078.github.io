@@ -14,7 +14,7 @@ const Box = () => {
                 Questions left in Final450 : <span id="questions-left"></span> | Target date of completion : 2024-09-30
             </div>
             <div class="dsa-update">
-                Solved last week : <span id="problem-count-last-week"></span> | Expected date of completion : <span id="expected-date"></span> 
+                Solved last week : <span id="problem-count-last-week"></span> | Expected date of completing final450 : <span id="expected-date"></span> 
             </div>
         </div>
     `

@@ -19,11 +19,11 @@ function getNextWeekdays(x) {
     while (count < x) {
         today.setDate(today.getDate() + 1); // Move one day forward
         const dayOfWeek = today.getDay(); // Get the day of the week (0 for Sunday, 1 for Monday,..., 6 for Saturday)
-
-        // Check if the day is a weekday (Monday to Friday)
-        if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-            count++;
-        }
+        count++;
+        // // Check if the day is a weekday (Monday to Friday)
+        // if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+        //     count++;
+        // }
     }
 
     return today;
