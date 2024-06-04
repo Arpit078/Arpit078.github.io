@@ -1,5 +1,41 @@
 [
   {
+    "id": "f2a371f6-2b46-4344-b6bc-bdfc6bc2d305",
+    "created_time": "2024-06-04T17:14:00.000Z",
+    "title": "Crazyy🤯",
+    "date": "2024-06-04",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Only the first problem had the crazy factor."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find longest consecutive subsequence | GFG | Found a recursive solution and thought it won’t work. Got accepted in the first run🤯🤯. Took 26 minute to just figure out the solution and to write code it was 20 minutes more. Good question highly recommend."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Given an array of size n and a number k, fin all elements that appear more than \" n/k \" times. | GFG Article | got to know about boyer moore majority voting algo."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Maximum profit by buying and selling a share atmost twice "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find whether an array is a subset of another array | GFG | stupid easy que."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find the triplet that sum to a given value | GFG | Missed the sorting part and wasted some time."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Trapping Rain water problem | GFG/Leetcode | Need to do it again. Will check again tomorrow."
+      }
+    ]
+  },
+  {
     "id": "eb8fa2b3-1dd3-43cb-94d7-d5126b8cbc7e",
     "created_time": "2024-06-03T11:12:00.000Z",
     "title": "starting to observe a pattern in these questions.",
