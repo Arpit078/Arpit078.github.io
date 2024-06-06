@@ -1,5 +1,33 @@
 [
   {
+    "id": "74a5a290-0d18-483f-ab38-eb59fa922bd3",
+    "created_time": "2024-06-06T17:03:00.000Z",
+    "title": "Started Matrix",
+    "date": "2024-06-06",
+    "description": [
+      {
+        "component": "bulleted_list_item",
+        "text": "Spiral traversal on a Matrix | GFG | medium to easy"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Search an element in a matrix | GFG | Many times the edge cases and bugs in my code are solved by chat gpt this is not good, i should do it myself! "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find median in a row wise sorted matrix | GFG | Very similar to yesterdays problem of finding median in two sorted arrays. just now increase that 2 to n."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Find row with maximum no. of 1's | GFG | The expected approach was written as o(m+n) but it accepted a o(m*n) solution as well, strange. though i learned the optimised solution 🤝"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Print elements in sorted order using row-column wise sorted matrix | GFG | easy question due to very leniant time complexity."
+      }
+    ]
+  },
+  {
     "id": "f62645b0-641e-4c97-af7a-ad3c492e0f5c",
     "created_time": "2024-06-05T16:49:00.000Z",
     "title": "Arrays complete",
