@@ -1,5 +1,33 @@
 [
   {
+    "id": "4b3baff4-4140-4fd0-bea6-e919e4ef2148",
+    "created_time": "2024-06-07T19:46:00.000Z",
+    "title": "Little progress",
+    "date": "2024-06-08",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "I read through most of the important concepts of rust. And boi rustaceans are just so much spent on solving the memmory safety that c/c++ had. The pointers are smart pointers with owners, In threads prefer communication over channels and if required to use shared memory use “move” to pass the ownership to the thread! If required access by multiple threads use a smart pointer that has one to many owner relation(Arc,Rc). The language is’nt completely object oriented you don’t have classes instead you use structs and impl as classes make structs obsolete and vice versa :). "
+      },
+      {
+        "component": "paragraph",
+        "text": "The libraries are bare bones; I saw for the first time a http server library exposing that it is creating a Socket and then adding a TCP listener to it like for real! Who does that, everyone is just hiding it into one single function lols. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Well I did’nt like writing software in C++ in the beginning but as time passed man I loved it. Wish it works out the same with rust 🦀."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Kth smallest element in a row-cpumn wise sorted matrix | GFG | Very similar logic to median in two sorted arrays. That question is very important."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Maximum size rectangle | GFG | Good question, same problem in stacks as largest area of a histogram."
+      }
+    ]
+  },
+  {
     "id": "74a5a290-0d18-483f-ab38-eb59fa922bd3",
     "created_time": "2024-06-06T17:03:00.000Z",
     "title": "Started Matrix",
