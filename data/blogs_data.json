@@ -1,5 +1,29 @@
 [
   {
+    "id": "d0ff3e50-c299-42a3-960f-0c92e9329ab8",
+    "created_time": "2024-06-09T16:40:00.000Z",
+    "title": "Started String",
+    "date": "2024-06-09",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "I am kinda bored of writing code for the framework I have created. Like whatever I have done is somewhat ground up but it does not have any innovation or any big reason for people to adopt it and that sucks. Everytime I sit down to do something about it, I just get fed up of lack of something new and don’t get anything done. Need to figure something new for this the next weekend."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Reverse a String | LC | Easy"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Check whether a String is Palindrome or not | GFG | Easy"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "316. Remove Duplicate Letters | LC | Good question, could’nt solve needed solution, this guy helped <a href = https://www.youtube.com/watch?v=rU5p0MRm5zU>link</a>"
+      }
+    ]
+  },
+  {
     "id": "f62f6dd9-eb68-4731-8121-fff3cf533561",
     "created_time": "2024-06-08T17:06:00.000Z",
     "title": "Matrix complete",
