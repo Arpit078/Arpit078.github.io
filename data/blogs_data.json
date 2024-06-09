@@ -10,6 +10,10 @@
         "text": "I am kinda bored of writing code for the framework I have created. Like whatever I have done is somewhat ground up but it does not have any innovation or any big reason for people to adopt it and that sucks. Everytime I sit down to do something about it, I just get fed up of lack of something new and don’t get anything done. Need to figure something new for this the next weekend."
       },
       {
+        "component": "paragraph",
+        "text": "Also I realized that reading articles as listed in the sheet isn’t helping at all, so I’ll replace it with similar practice questions."
+      },
+      {
         "component": "bulleted_list_item",
         "text": "Reverse a String | LC | Easy"
       },
