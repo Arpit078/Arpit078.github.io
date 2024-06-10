@@ -1,5 +1,29 @@
 [
   {
+    "id": "e72bf33f-3727-4b34-a40e-7b2044842a5a",
+    "created_time": "2024-06-10T13:25:00.000Z",
+    "title": "Python also does shallow copies",
+    "date": "2024-06-10",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "I did’nt know python also does shallow copies when used with equality signs, I used to believe python always does deep copies as never heard of pointers and references in python💁‍♂️. Got to know about this when I spent the whole day just to figure out why my code does’nt work even though it looks correct ;/"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Roman to Integer | LC | Easy"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Write a Code to check whether one string is a rotation of another | GFG | Tricky."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Integer to Roman | LC | Real good question."
+      }
+    ]
+  },
+  {
     "id": "d0ff3e50-c299-42a3-960f-0c92e9329ab8",
     "created_time": "2024-06-09T16:40:00.000Z",
     "title": "Started String",
