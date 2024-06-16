@@ -11,7 +11,19 @@
       },
       {
         "component": "paragraph",
-        "text": "Read through some notes of <a href=https://vinija.ai/recsys/index.html>Vinija’s notes</a> also this <a href=https://developers.google.com/machine-learning/recommendation>google’s course </a>on recommendation systems. Finally settled on developing a system that recommends by using both content based and collaborative filtering, more of Cb. Will be going through and implementing this research paper : https://www.inderscienceonline.com/doi/abs/10.1504/IJBIDM.2020.104738 published by Yiu-Kai Ng Computer Science Department, Brigham Young University. "
+        "text": "Read through some notes of <a href=https://vinija.ai/recsys/index.html>Vinija’s notes</a> also this <a href=https://developers.google.com/machine-learning/recommendation>google’s course </a>on recommendation systems. Finally settled on developing a system that recommends by using both content based and collaborative filtering, more of Cb. Will be going through and implementing this research paper : "
+      },
+      {
+        "component": "paragraph",
+        "text": "<a href=https://www.inderscienceonline.com/doi/abs/10.1504/IJBIDM.2020.104738 >paper<a> "
+      },
+      {
+        "component": "paragraph",
+        "text": "published by "
+      },
+      {
+        "component": "paragraph",
+        "text": "Yiu-Kai Ng Computer Science Department, Brigham Young University. "
       },
       {
         "component": "paragraph",
@@ -23,7 +35,7 @@
     "id": "6b1a1f2d-8e74-486b-b9fa-723eca2d382d",
     "created_time": "2024-06-15T19:20:00.000Z",
     "title": "Rust",
-    "date": "2024-06-16",
+    "date": "2024-06-15",
     "description": [
       {
         "component": "paragraph",
