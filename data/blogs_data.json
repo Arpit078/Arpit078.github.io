@@ -1,5 +1,25 @@
 [
   {
+    "id": "d247fe5b-e52d-41d2-a4bf-5fa92fb08927",
+    "created_time": "2024-06-16T12:39:00.000Z",
+    "title": "The product is taking shape.",
+    "date": "2024-06-16",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "The product I am trying to build is now giving me the chills. It is getting interesting, it began as a basic recommedation system for books based on your past reads, but now I feel like I finally have a product wrapped around this. The idea is to have the main page house the recommendor then the second page the books you’ve read, a page with reviews about them in form of blog posts which can be shared just like you can share your spotify playlists using urls. Finally a third page where you can upload your own epubs and mobi to read, the app will track your progress, keep updating your reading status on your public profile, which houses (already mentioned) reviews. Share your reading status and past reads with your friends. Recommendor gives you options to add past reads, your current mood for your next read and any biases you would like for the choice for example similar to reads suggestions by some great personalities like bill gates or elon musk."
+      },
+      {
+        "component": "paragraph",
+        "text": "Read through some notes of <a href=https://vinija.ai/recsys/index.html>Vinija’s notes</a> also this <a href=https://developers.google.com/machine-learning/recommendation>google’s course </a>on recommendation systems. Finally settled on developing a system that recommends by using both content based and collaborative filtering, more of Cb. Will be going through and implementing this research paper : https://www.inderscienceonline.com/doi/abs/10.1504/IJBIDM.2020.104738 published by Yiu-Kai Ng Computer Science Department, Brigham Young University. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Cheers."
+      }
+    ]
+  },
+  {
     "id": "6b1a1f2d-8e74-486b-b9fa-723eca2d382d",
     "created_time": "2024-06-15T19:20:00.000Z",
     "title": "Rust",
