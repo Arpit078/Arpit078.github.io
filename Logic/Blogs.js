@@ -75,7 +75,7 @@ function updateTechBox(countTotal,countCurrentWeek,countLastWeek,expectedDatewrt
     // }
     // document.getElementById("problem-count-week").innerHTML = data.weekly
     var elem = document.getElementById("myprogressBar");
-    var width = (countCurrentWeek/24)*100;
+    var width = (countCurrentWeek/targetQuestions)*100;
     console.log(width)
     elem.style.width = width + "%";
     document.getElementById("problem-count-weekly").innerHTML = countCurrentWeek

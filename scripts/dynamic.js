@@ -29,3 +29,6 @@ function contentGen(db){
     }
     return content
 }
+
+var targetQuestions = 15
+var targetDate = "2024-12-31"
