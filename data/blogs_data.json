@@ -8,6 +8,10 @@
       {
         "component": "bulleted_list_item",
         "text": "Text Justification."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Split the binary string into substrings with equal number of 0s and 1s"
       }
     ]
   },
