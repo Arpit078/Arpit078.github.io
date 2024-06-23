@@ -3,8 +3,13 @@
     "id": "27d0be31-f54a-4095-878d-f88734a0c777",
     "created_time": "2024-06-21T19:07:00.000Z",
     "title": "…",
-    "date": "2024-06-21",
-    "description": []
+    "date": "2024-06-22",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Tried giving the leetcode contest 133. Did two questions Was stuck with TLE for the third one."
+      }
+    ]
   },
   {
     "id": "d779511d-8655-431b-a199-51840cb72772",
