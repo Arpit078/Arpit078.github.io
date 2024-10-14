@@ -443,6 +443,10 @@
       },
       {
         "component": "bulleted_list_item",
+        "text": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+      },
+      {
+        "component": "bulleted_list_item",
         "text": "Count Inversions | GFG"
       }
     ]

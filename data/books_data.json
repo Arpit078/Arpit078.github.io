@@ -1,14 +1,39 @@
 [
   {
+    "id": "11f44be4-ba9d-80f2-99a6-fd114bc7b989",
+    "created_time": "2024-10-14T18:04:00.000Z",
+    "book_name": "Kafka on the Shore",
+    "read_date": "2024-08-14 to Reading ...",
+    "cover_url": "https://m.media-amazon.com/images/I/81tdbrewW0L._AC_UF1000,1000_QL80_.jpg",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Was kind of switching between this and system design book now and then. "
+      },
+      {
+        "component": "paragraph",
+        "text": "The storyline is very very veryy dreamy. Different from norwegian wood and kind of similar to it at the same point. Love it."
+      }
+    ]
+  },
+  {
     "id": "28b6b11d-2749-4d7c-828e-b240e1a43edd",
     "created_time": "2024-06-23T10:38:00.000Z",
     "book_name": "System Design Interview – An insider's guide",
-    "read_date": "2024-06-20 to Reading ...",
+    "read_date": "2024-06-20 to 2024-10-09",
     "cover_url": "https://m.media-amazon.com/images/I/51vZ6t5W4gL._SY522_.jpg",
     "description": [
       {
         "component": "paragraph",
         "text": "I had picked up murakami’s kafka on the shore but somehow got into this book and boy is it interesting. I read the first 50-60 pages in one go like it was nothing."
+      },
+      {
+        "component": "paragraph",
+        "text": "Took a little wayy too long finishing this. Got distracted by kafka on the shore. The book is a good start for system design, teaches a lot a fundamental concepts about system design. Gets a bit repetitive after some time but that is the nature of the subject as at the lowest level most applications have a very similar setup. "
+      },
+      {
+        "component": "paragraph",
+        "text": "would recommend to get more practice of the design thought process. The book is good for learning the concepts but does not provide practice problems. Will find some resource for practice. "
       }
     ]
   },
