@@ -3,7 +3,7 @@
     "id": "11f44be4-ba9d-80f2-99a6-fd114bc7b989",
     "created_time": "2024-10-14T18:04:00.000Z",
     "book_name": "Kafka on the Shore",
-    "read_date": "2024-08-14 to Reading ...",
+    "read_date": "2024-08-14 to 2024-12-29",
     "cover_url": "https://m.media-amazon.com/images/I/81tdbrewW0L._AC_UF1000,1000_QL80_.jpg",
     "description": [
       {
@@ -12,7 +12,11 @@
       },
       {
         "component": "paragraph",
-        "text": "The storyline is very very veryy dreamy. Different from norwegian wood and kind of similar to it at the same point. Love it."
+        "text": "The storyline is very very veryy dreamy. Different from norwegian wood and kind of similar to it at the same point."
+      },
+      {
+        "component": "paragraph",
+        "text": "The curse could have been something else as it did’nt make any sense throughout the book. Also the story was out of place most of the things were never explained. Do not recommend."
       }
     ]
   },
