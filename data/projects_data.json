@@ -1,5 +1,18 @@
 [
   {
+    "id": "17b44be4-ba9d-80ff-9475-f001ada89690",
+    "created_time": "2025-01-14T11:47:00.000Z",
+    "project_name": "Burner Browsers",
+    "date": "2024-09-04 to ongoing ...",
+    "github": "https://github.com/Arpit078/burner-browsers",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Burner browsers based on browser instances in docker containers hosted on cloud providers. Can be used as a highly secure way of traversing the jungle of internet where you are free from any kind of scripts and trackers and all your isp and your destination websites see is the ip of your cloud resources."
+      }
+    ]
+  },
+  {
     "id": "33f6f7ae-e680-4124-b792-6c6579b6bc13",
     "created_time": "2024-06-01T14:36:00.000Z",
     "project_name": "RtPDC",
@@ -23,45 +36,13 @@
   {
     "id": "6ef57111-1662-40d5-9e11-c7414891c249",
     "created_time": "2024-06-01T14:34:00.000Z",
-    "project_name": "PreactJS",
+    "project_name": "Pre-ReactJS",
     "date": "2023-08-01 to 2023-09-01",
     "github": "https://github.com/Arpit078/preactjs",
     "description": [
       {
         "component": "paragraph",
-        "text": "A custom Javascript library for making single page web applications. "
-      },
-      {
-        "component": "paragraph",
-        "text": "Features include "
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "component based architecture of the application"
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "browser window api access"
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "one time call on server for static objects and hash routing."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "File based routing."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": " Instead of hooks/states like React.js, dynamic script file injection is used to follow build pattern of no JS framework/library applications."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": " Ships with a dev server with hot reload."
-      },
-      {
-        "component": "paragraph",
-        "text": "<b> Hosted as a npm package with 500+ all time downloads.</b>"
+        "text": "Pre-ReactJS: A lightweight, powerful library to create single page web applications in VanillaJS with features like component-based architecture, one-time server call for static content, file based routing and access to dom and browser apis. Simplify your development journey with Pre-ReactJS! 🚀✨ Ideal for indie and hobby projects."
       }
     ]
   },
