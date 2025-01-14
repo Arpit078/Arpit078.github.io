@@ -55,11 +55,7 @@
     "description": [
       {
         "component": "paragraph",
-        "text": "A file server that can enlist songs from a public spotify playlist and download them on the local storage. "
-      },
-      {
-        "component": "paragraph",
-        "text": "The web server lists all the songs in the playlist using spotify api and queries them with youtube search using youtube data api. The songs are then downloaded on the server using yt-dlp and a bash script. The complete folder is zipped synchronously and is sent to the client."
+        "text": "App that can download songs for free. App follows micro services architecture with a highly scalable design. Did not host it for it violates copyrights."
       }
     ]
   },
