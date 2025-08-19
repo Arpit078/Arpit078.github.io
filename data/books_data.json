@@ -1,41 +1,20 @@
 [
   {
-    "id": "17b44be4-ba9d-8072-8320-eec9079ba7b4",
-    "created_time": "2025-01-14T11:45:00.000Z",
-    "book_name": "The Almanack of Naval Ravikant",
-    "read_date": "2025-01-04 to Reading ...",
-    "cover_url": "https://m.media-amazon.com/images/I/51lUeX6L2BL._AC_UF1000,1000_QL80_.jpg",
+    "id": "1e7e9933-5fca-81e3-92f5-cd3740f21586",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "Parable of the pipeline ",
+    "read_date": "2024-01-19 to 2024-01-20",
+    "cover_url": "https://imgs.search.brave.com/kpVEB-UG7ZSqb_mpC2jvdqcYXYCMnrLkWo7_YUFhpzs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFGLXljN2FWRkwu/anBn",
     "description": [
       {
         "component": "paragraph",
-        "text": "Heard a lot of reviews saying how magical of a read it is let’s see."
+        "text": "One go read. Widens your perspective towards passive income aka the pipelines. Was written back in the day when MLM was a thing thus makes the times leverage part kind of irrelevant today but surely puts up a thought in your head about core idea that the time vs work can't be a straight line forever. Ah yes ditched 'The great gatsby' couldn't get past the first chapter tbh."
       }
     ]
   },
   {
-    "id": "11f44be4-ba9d-80f2-99a6-fd114bc7b989",
-    "created_time": "2024-10-14T18:04:00.000Z",
-    "book_name": "Kafka on the Shore",
-    "read_date": "2024-08-14 to 2024-12-29",
-    "cover_url": "https://m.media-amazon.com/images/I/81tdbrewW0L._AC_UF1000,1000_QL80_.jpg",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "Was kind of switching between this and system design book now and then. "
-      },
-      {
-        "component": "paragraph",
-        "text": "The storyline is very very veryy dreamy. Different from norwegian wood and kind of similar to it at the same point. "
-      },
-      {
-        "component": "paragraph",
-        "text": "The curse could have been something else as it did’nt make any sense throughout the book. Also the story was out of place most of the things were never explained. Do not recommend."
-      }
-    ]
-  },
-  {
-    "id": "28b6b11d-2749-4d7c-828e-b240e1a43edd",
-    "created_time": "2024-06-23T10:38:00.000Z",
+    "id": "1e7e9933-5fca-8196-9248-e8d9c6cebf3b",
+    "created_time": "2025-05-02T13:59:00.000Z",
     "book_name": "System Design Interview – An insider's guide",
     "read_date": "2024-06-20 to 2024-10-09",
     "cover_url": "https://m.media-amazon.com/images/I/51vZ6t5W4gL._SY522_.jpg",
@@ -55,59 +34,63 @@
     ]
   },
   {
-    "id": "661f9533-5508-466f-a523-47cb5fff4eec",
-    "created_time": "2024-06-01T14:27:00.000Z",
-    "book_name": "Never split the difference ",
-    "read_date": "2024-01-24 to 2024-05-10",
-    "cover_url": "https://imgs.search.brave.com/rmA82LHj7brC-0DOYr-AQuFysKVpAVdK0j-yXj1rVv8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/Lzgxb1VQRUlmNk9M/LmpwZw",
+    "id": "1e7e9933-5fca-813b-b2c1-f9f61fc317ea",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "Kafka on the Shore",
+    "read_date": "2024-08-14 to 2024-12-29",
+    "cover_url": "https://m.media-amazon.com/images/I/81tdbrewW0L._AC_UF1000,1000_QL80_.jpg",
     "description": [
       {
         "component": "paragraph",
-        "text": "Finally finished the book. It is a lot of content to digest tbh but yes very practical and useful insights on human conversations and how real life negotiations are affected by small changes in choice of words and tone of your voice. The concepts of mirroring, rapport building, Starting with a \"No\", open ended questions and making the other party think and think just blew up my mind especially  when they were suported by real life cases. Though a lot of practical knowledge it is waste until not practiced enough as all of it highly depends on the delivery of the person. I would recommend it to anyone who likes to understand the dynamics of deal making and negotiations."
+        "text": "Was kind of switching between this and system design book now and then. "
+      },
+      {
+        "component": "paragraph",
+        "text": "The storyline is very very veryy dreamy. Different from norwegian wood and kind of similar to it at the same point. "
+      },
+      {
+        "component": "paragraph",
+        "text": "The curse could have been something else as it did’nt make any sense throughout the book. Also the story was out of place most of the things were never explained. Do not recommend."
       }
     ]
   },
   {
-    "id": "562d4dc1-1425-4541-9d6a-87d6d744cad0",
-    "created_time": "2024-06-01T14:26:00.000Z",
-    "book_name": "Parable of the pipeline ",
-    "read_date": "2024-01-19 to 2024-01-20",
-    "cover_url": "https://imgs.search.brave.com/kpVEB-UG7ZSqb_mpC2jvdqcYXYCMnrLkWo7_YUFhpzs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFGLXljN2FWRkwu/anBn",
+    "id": "1e7e9933-5fca-812b-a1c1-dd9355315328",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "It happens for a reason",
+    "read_date": "2023-08-03 to 2023-08-22",
+    "cover_url": "https://m.media-amazon.com/images/I/51gk96JiXzL._AC_UF1000,1000_QL80_.jpg",
     "description": [
       {
         "component": "paragraph",
-        "text": "One go read. Widens your perspective towards passive income aka the pipelines. Was written back in the day when MLM was a thing thus makes the times leverage part kind of irrelevant today but surely puts up a thought in your head about core idea that the time vs work can't be a straight line forever. Ah yes ditched 'The great gatsby' couldn't get past the first chapter tbh."
+        "text": "Good story, Bought it just by the name of Preeti Shenoy and boy was it worth it. Was looking for a story that could grip me to finally finish it(I started a lot of fictions but never finished them:{) and this was the one after a long time"
       }
     ]
   },
   {
-    "id": "11ef498a-c1fa-4d50-879f-0edb0df50024",
-    "created_time": "2024-06-01T14:24:00.000Z",
-    "book_name": "Norwegian Wood",
-    "read_date": "2023-12-01 to 2024-01-19",
-    "cover_url": "https://rukminim2.flixcart.com/image/416/416/ki96c280-0/book/n/h/e/norwegian-wood-original-imafy36nzw3hhrgb.jpeg?q=70",
+    "id": "1e7e9933-5fca-81b4-a8de-e22bfa77cb4c",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "The Almanack of Naval Ravikant",
+    "read_date": "2025-01-04 to 2025-05-05",
+    "cover_url": "https://m.media-amazon.com/images/I/51lUeX6L2BL._AC_UF1000,1000_QL80_.jpg",
     "description": [
       {
         "component": "paragraph",
-        "text": "If I keep it short <b>\"Love life of a college going unsocial main character who does not know what is he doing with his life.\"</b>"
+        "text": "Heard a lot of reviews saying how magical of a read it is let’s see."
       },
       {
         "component": "paragraph",
-        "text": "Longer version of my review will say that the book is worth a read even if the story isn't moving and the best out there. The way characters are weaved, it is the best I've seen so far. Murakami describes every scene in words so vividly that you start to have a strong visual of the place in your head as if you were there watching everything happen in front of your own eyes. The evening when Watanabe and Midori sat there on the terrace watching a fire in her neighbourhood or when Watanabe visits Naoko in her sanatorium I feel as if these are my own memories. "
+        "text": "There's a lot lot lot of stuff. For the first time I feel like man I need to save this somewhere highlight it? Write it? Idk."
       },
       {
         "component": "paragraph",
-        "text": "I heard the norwegian wood song by beatles on loop for days:)"
-      },
-      {
-        "component": "paragraph",
-        "text": "All in all a good book if you want to feel as if you are living in a story."
+        "text": "Left one fourth of the book unread, had lost the excitement to read further."
       }
     ]
   },
   {
-    "id": "efad3b4b-fe6b-42b4-b769-35c3ded07cda",
-    "created_time": "2024-06-01T14:22:00.000Z",
+    "id": "1e7e9933-5fca-81b7-94ea-e4909b2ea207",
+    "created_time": "2025-05-02T13:59:00.000Z",
     "book_name": "Peak",
     "read_date": "2023-09-29 to 2023-10-12",
     "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzwPXpgJ8Acq9aH___DNYqo7nQJsaKrLT4g",
@@ -131,34 +114,8 @@
     ]
   },
   {
-    "id": "728cf6be-1208-4351-b9f9-1bcc11657a65",
-    "created_time": "2024-06-01T14:21:00.000Z",
-    "book_name": "Psycho-Cybernetics",
-    "read_date": "2023-07-30 to 2023-08-23",
-    "cover_url": "https://m.media-amazon.com/images/I/41uiX93jl8L._SX309_BO1,204,203,200_.jpg",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "Discontinued Reading it mid way. Will finish one day."
-      }
-    ]
-  },
-  {
-    "id": "5468e30c-fa77-4af6-b4ed-40e3a2444ef3",
-    "created_time": "2024-06-01T14:21:00.000Z",
-    "book_name": "It happens for a reason",
-    "read_date": "2023-08-03 to 2023-08-22",
-    "cover_url": "https://m.media-amazon.com/images/I/51gk96JiXzL._AC_UF1000,1000_QL80_.jpg",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "Good story, Bought it just by the name of Preeti Shenoy and boy was it worth it. Was looking for a story that could grip me to finally finish it(I started a lot of fictions but never finished them:{) and this was the one after a long time"
-      }
-    ]
-  },
-  {
-    "id": "3619e2e9-42c2-41b5-9505-f56c7bdc6468",
-    "created_time": "2024-06-01T14:20:00.000Z",
+    "id": "1e7e9933-5fca-81e4-8a78-f98f60e67924",
+    "created_time": "2025-05-02T13:59:00.000Z",
     "book_name": "Let's Talk Money",
     "read_date": "2023-06-02 to 2023-06-29",
     "cover_url": "https://m.media-amazon.com/images/I/51YJ9xQuWfS._SX324_BO1,204,203,200_.jpg",
@@ -170,8 +127,59 @@
     ]
   },
   {
-    "id": "105981eb-4636-4f02-a7c8-742089eda6a7",
-    "created_time": "2024-06-01T14:18:00.000Z",
+    "id": "1e7e9933-5fca-81a2-bb72-d389f1baac9a",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "Never split the difference ",
+    "read_date": "2024-01-24 to 2024-05-10",
+    "cover_url": "https://imgs.search.brave.com/rmA82LHj7brC-0DOYr-AQuFysKVpAVdK0j-yXj1rVv8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/Lzgxb1VQRUlmNk9M/LmpwZw",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Finally finished the book. It is a lot of content to digest tbh but yes very practical and useful insights on human conversations and how real life negotiations are affected by small changes in choice of words and tone of your voice. The concepts of mirroring, rapport building, Starting with a \"No\", open ended questions and making the other party think and think just blew up my mind especially  when they were suported by real life cases. Though a lot of practical knowledge it is waste until not practiced enough as all of it highly depends on the delivery of the person. I would recommend it to anyone who likes to understand the dynamics of deal making and negotiations."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8112-b8df-d37b518f3cbc",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "Psycho-Cybernetics",
+    "read_date": "2023-07-30 to 2023-08-23",
+    "cover_url": "https://m.media-amazon.com/images/I/41uiX93jl8L._SX309_BO1,204,203,200_.jpg",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Discontinued Reading it mid way. Will finish one day."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8126-99eb-e841b4a5f9ba",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "book_name": "Norwegian Wood",
+    "read_date": "2023-12-01 to 2024-01-19",
+    "cover_url": "https://rukminim2.flixcart.com/image/416/416/ki96c280-0/book/n/h/e/norwegian-wood-original-imafy36nzw3hhrgb.jpeg?q=70",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "If I keep it short <b>\"Love life of a college going unsocial main character who does not know what is he doing with his life.\"</b>"
+      },
+      {
+        "component": "paragraph",
+        "text": "Longer version of my review will say that the book is worth a read even if the story isn't moving and the best out there. The way characters are weaved, it is the best I've seen so far. Murakami describes every scene in words so vividly that you start to have a strong visual of the place in your head as if you were there watching everything happen in front of your own eyes. The evening when Watanabe and Midori sat there on the terrace watching a fire in her neighbourhood or when Watanabe visits Naoko in her sanatorium I feel as if these are my own memories. "
+      },
+      {
+        "component": "paragraph",
+        "text": "I heard the norwegian wood song by beatles on loop for days:)"
+      },
+      {
+        "component": "paragraph",
+        "text": "All in all a good book if you want to feel as if you are living in a story."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8174-82e8-c7238f925442",
+    "created_time": "2025-05-02T13:59:00.000Z",
     "book_name": "Doglapan",
     "read_date": "2023-06-01 to 2023-07-01",
     "cover_url": "https://rukminim2.flixcart.com/image/416/416/xif0q/book/l/o/t/doglapan-original-imagmxk5qzfebqwj.jpeg?q=70",
