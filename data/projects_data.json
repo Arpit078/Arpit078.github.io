@@ -1,83 +1,5 @@
 [
   {
-    "id": "1e7e9933-5fca-810e-a92b-f9905db5b742",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "ColMail ",
-    "date": "2023-06-01 to 2023-08-02",
-    "github": "https://github.com/arpit078/colmail",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "A personalised cold/bulk emailing cross platform desktop application using Gmail api and Electron.js"
-      }
-    ]
-  },
-  {
-    "id": "1e7e9933-5fca-8167-87e3-d12292c94426",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "Resume Builder",
-    "date": "2023-06-03 to 2023-06-04",
-    "github": "https://github.com/arpit078/resume-builder",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "A nodejs script to automate the boring process of updating your resume in latex format everytime you log in your pc . User has to update a google sheet and the program just fills in the corresponding details into a latex template and and updates the resume in pdf."
-      }
-    ]
-  },
-  {
-    "id": "1e7e9933-5fca-812b-9a6e-d84dd715cab7",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "Pre-ReactJS",
-    "date": "2023-08-01 to 2023-09-01",
-    "github": "https://github.com/Arpit078/preactjs",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "Pre-ReactJS: A lightweight, powerful library to create single page web applications in VanillaJS with features like component-based architecture, one-time server call for static content, file based routing and access to dom and browser apis. Simplify your development journey with Pre-ReactJS! 🚀✨ Ideal for indie and hobby projects."
-      }
-    ]
-  },
-  {
-    "id": "1e7e9933-5fca-81d2-a35d-d2450f45cc74",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "InstaPost",
-    "date": "2023-01-17 to 2023-01-31",
-    "github": "https://github.com/Arpit078/instaPost",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "puppeteer.js app that can be used in automating instagram posts. Since Instagram does not provide any API for account management this script script comes in handy for posting computer generated posts on a regular time interval helping with consistnency in posting which might increase account reach."
-      }
-    ]
-  },
-  {
-    "id": "1e7e9933-5fca-8127-8cc1-f4f2c5981820",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "Spot-Down",
-    "date": "2023-03-09 to 2023-03-23",
-    "github": "https://github.com/arpit078/spot-down",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "App that can download songs for free. App follows micro services architecture with a highly scalable design. Did not host it for it violates copyrights."
-      }
-    ]
-  },
-  {
-    "id": "1e7e9933-5fca-8195-8bba-d965315acf9d",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "Stories",
-    "date": "2023-01-05 to 2023-01-08",
-    "github": "https://github.com/Arpit078/stories",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "wanted to read some premchand stories on my phone but all websites sucked and i've got no kindle!"
-      }
-    ]
-  },
-  {
     "id": "1e7e9933-5fca-81bf-a069-c7481107b989",
     "created_time": "2025-05-02T13:59:00.000Z",
     "project_name": "Burner Browsers",
@@ -108,6 +30,84 @@
       {
         "component": "paragraph",
         "text": "The Project tries to Improve upon the pitfalls of the depreceated linux application iPDC developed by IITB students in 2012 or around that time."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-812b-9a6e-d84dd715cab7",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "Pre-ReactJS",
+    "date": "2023-08-01 to 2023-09-01",
+    "github": "https://github.com/Arpit078/preactjs",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Pre-ReactJS: A lightweight, powerful library to create single page web applications in VanillaJS with features like component-based architecture, one-time server call for static content, file based routing and access to dom and browser apis. Simplify your development journey with Pre-ReactJS! 🚀✨ Ideal for indie and hobby projects."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8167-87e3-d12292c94426",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "Resume Builder",
+    "date": "2023-06-03 to 2023-06-04",
+    "github": "https://github.com/arpit078/resume-builder",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "A nodejs script to automate the boring process of updating your resume in latex format everytime you log in your pc . User has to update a google sheet and the program just fills in the corresponding details into a latex template and and updates the resume in pdf."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-810e-a92b-f9905db5b742",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "ColMail ",
+    "date": "2023-06-01 to 2023-08-02",
+    "github": "https://github.com/arpit078/colmail",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "A personalised cold/bulk emailing cross platform desktop application using Gmail api and Electron.js"
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8127-8cc1-f4f2c5981820",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "Spot-Down",
+    "date": "2023-03-09 to 2023-03-23",
+    "github": "https://github.com/arpit078/spot-down",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "App that can download songs for free. App follows micro services architecture with a highly scalable design. Did not host it for it violates copyrights."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-81d2-a35d-d2450f45cc74",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "InstaPost",
+    "date": "2023-01-17 to 2023-01-31",
+    "github": "https://github.com/Arpit078/instaPost",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "puppeteer.js app that can be used in automating instagram posts. Since Instagram does not provide any API for account management this script script comes in handy for posting computer generated posts on a regular time interval helping with consistnency in posting which might increase account reach."
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8195-8bba-d965315acf9d",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "Stories",
+    "date": "2023-01-05 to 2023-01-08",
+    "github": "https://github.com/Arpit078/stories",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "wanted to read some premchand stories on my phone but all websites sucked and i've got no kindle!"
       }
     ]
   }
