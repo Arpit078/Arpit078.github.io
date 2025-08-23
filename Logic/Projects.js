@@ -14,7 +14,7 @@ async function fetchProjects(){
         <p class="subHead">${ProjectDatabase[i].project_name}</p>
         <p class="paragraph">${content}</p>
         <p class="highlight">
-        Github Repository :
+        Learn more at:
         <a href=${ProjectDatabase[i].github} class="link paragraph">${ProjectDatabase[i].github}</a> 
         </p>
         <p class="highlight">
