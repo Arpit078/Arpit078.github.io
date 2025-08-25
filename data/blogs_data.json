@@ -1,5 +1,85 @@
 [
   {
+    "id": "25ae9933-5fca-80d3-9531-cab57ede7228",
+    "created_time": "2025-08-25T14:42:00.000Z",
+    "title": "Bloom Filters? You've probably read the name somewhere.",
+    "date": "2025-08-25",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Bloom filter is a data structure used to test whether an element is a member of a set or not. It is probabilistic in nature, what that means is that sometimes it may return false positives (i.e., it may return true even if the element does not exist in the set), while it never returns a false negative. If the bloom filter says the element is not a member then it is not a member 100%. It trades a little bit of accuracy for big gains in speed and memory efficiency."
+      },
+      {
+        "component": "paragraph",
+        "text": "Bloom filters are very handy in large scale systems like in key value stores, distributed HashMap where filtering out which node might contain the element saves a lot of time."
+      },
+      {
+        "component": "paragraph",
+        "text": "The implementation for bloom filters is very easy to be honest, all you need is a bit array and some hash functions. Let’s take an example :"
+      },
+      {
+        "component": "paragraph",
+        "text": "Consider a bit array of size 10 = [0 0 0 0 0 0 0 0 0 0] and 2 hash functions H1 and H2"
+      },
+      {
+        "component": "paragraph",
+        "text": "Let’s insert a key “cat” in our filter :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Apply all the hash functions on the key - idx1 = H1(”cat”) = 2; idx2 =  H2(”cat”) = 7"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Set all the bits at indexes idx1 and idx2 in the bit array."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Updated bit array : [0 0 1 0 0 0 0 1 0 0]"
+      },
+      {
+        "component": "paragraph",
+        "text": "We’ve inserted the key."
+      },
+      {
+        "component": "paragraph",
+        "text": "Now to query a key “dog” follow these steps :"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Apply all the hash functions on the key - idx1 = H1(”dog”) = 4; idx2 = H2(”dog”)  = 7"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "check all the bits in the bit array at the idx1 and idx2."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "If all the bits are set the element is in the set else not. Clearly dog is not a member."
+      },
+      {
+        "component": "paragraph",
+        "text": "This procedure of querying explains the reason for false positives as there might be collisions, the bits might be set by some other key but match the same pattern of another key not in the set."
+      },
+      {
+        "component": "paragraph",
+        "text": "In production the size of the bit arrays is reasonable, for storing 1 Million items the size required is 9.2 Million bits roughly 1.2 MB and 7 hash functions. The setup responds with 1% of false positives."
+      },
+      {
+        "component": "paragraph",
+        "text": "When not to use a Bloom filter (important to know)"
+      },
+      {
+        "component": "paragraph",
+        "text": "1️⃣ When false positives are not allowed. Like Checking if a password hash exists in a breach database. A false positive could wrongly tell a user their password is compromised."
+      },
+      {
+        "component": "paragraph",
+        "text": "2️⃣ When the dataset keeps on changing frequently, because bloom filters do not provide a method for key deletion as two or more keys might have set a common bit. But aren’t key value stores meant to be constantly changing datasets? Well yes they are! but they have a very clever solution in place which can be discussed in some other article."
+      }
+    ]
+  },
+  {
     "id": "25ae9933-5fca-8076-97c5-c03d05e7e1fb",
     "created_time": "2025-08-25T10:13:00.000Z",
     "title": "You heard MongoDB follows ACID properties while other NoSQL DBs don’t. Do you know How and Why?",
