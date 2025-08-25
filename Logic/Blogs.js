@@ -99,23 +99,24 @@ async function fetchProjects(){
     cache["countCurrentWeek"]=countCurrentWeek;
     cache["countLastWeek"]=countLastWeek;
     cache["expectedDatewrtLastWeek"]=expectedDatewrtLastWeek;
-    updateTechBox(countTotal,countCurrentWeek,countLastWeek,expectedDatewrtLastWeek)
+    // updateTechBox(countTotal,countCurrentWeek,countLastWeek,expectedDatewrtLastWeek)
     for(let i =0;i<blogDatabase.length;i++){
-        let content = contentGen(blogDatabase[i])
-       
-        const projectObj = `
-            <div class="content">
-                <p class="subHead">${blogDatabase[i].title}</p>
-                <p class="paragraph">${content}</p>
-                <p class="highlight">
+    let content = contentGen(blogDatabase[i])
+   
+    const projectObj = `
+        <div class="content">
+            <p class="subHead">${blogDatabase[i].title}</p>
+            <p class="paragraph" id="para-${i}">${content}</p>
+            <span class="read-more-btn" onclick="toggleReadMore('para-${i}', this)">Read More</span>
+            <p class="highlight">
                 Dated :
-                    <span class="paragraph">${blogDatabase[i].date}</span> 
-
-                </p>
-            </div>
+                <span class="paragraph">${blogDatabase[i].date}</span> 
+            </p>
+        </div>
     `
-        ProjectsFetch = ProjectsFetch + projectObj ; 
+    ProjectsFetch = ProjectsFetch + projectObj ; 
     }
+
     // console.log(blogDatabase)
     return [ProjectsFetch,blogDatabase]
 }
@@ -123,15 +124,25 @@ async function fetchProjects(){
 // // Example usage:
 // const futureDate = getNextWeekdays(3); // Find a date that is 3 weekdays away from today
 // console.log(futureDate);
+function toggleReadMore(id, btn) {
+    const para = document.getElementById(id);
+    para.classList.toggle("expanded");
+
+    if (para.classList.contains("expanded")) {
+        btn.textContent = "Read Less";
+    } else {
+        btn.textContent = "Read More";
+    }
+}
 
 
 
 if(cache[blog]){
     document.getElementById("blog").innerHTML =  cache[blog]
-    updateTechBox(cache["countTotal"],
-    cache["countCurrentWeek"],
-    cache["countLastWeek"],
-    cache["expectedDatewrtLastWeek"])
+    // updateTechBox(cache["countTotal"],
+    // cache["countCurrentWeek"],
+    // cache["countLastWeek"],
+    // cache["expectedDatewrtLastWeek"])
 }
 else{
     fetchProjects().then(([res, blog]) => {

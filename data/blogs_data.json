@@ -18,19 +18,19 @@
         "text": "But this still doesn’t explain why most NoSQL databases aren’t ACID. The term ACID, made popular by SQL databases, requires that a compliant database ensures:"
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Atomicity: In a transaction either all the operations are successful or none of them are."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Consistency: After a transaction the DB should remain in a valid state, always respecting constraints such as schemas."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Isolation: Every transaction should happen in Isolation, such that no other transaction is affected. This is often implemented using MVCC (Multi-Version Concurrency Control), which I’ll cover later."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Durability: Once committed, a transaction is permanent and crash-safe, often implemented via Write-Ahead Logging (WAL), also discussed later."
       },
       {
@@ -50,19 +50,19 @@
         "text": "\nTo support consistency-sensitive use cases such as financial or healthcare data, MongoDB provides full ACID support by making key architectural changes:"
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Atomicity : MongoDB stores data in BSON format, where each document is a contiguous unit on the disk, making single-document updates atomic. It extends this further with multi-document transactions using Write-Ahead Logging (WAL). While most NoSQL databases (like Cassandra) ensure only document-level atomicity, MongoDB supports atomic operations across multiple documents."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Consistency : Document-level consistency can be enforced through schemas. Note: this is different from the “consistency” defined in the CAP theorem."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Isolation : MongoDB uses document-level locking for isolation. During transactions, it provides snapshot isolation, ensuring reads within a transaction see a stable view of the data."
       },
       {
-        "component": "numbered_list_item",
+        "component": "bulleted_list_item",
         "text": "Durability : MongoDB uses a Write-Ahead Log (WAL) called WiredTiger, which provides a configurable property called WriteConcern to manage durability requirements, tunable by the user."
       },
       {
