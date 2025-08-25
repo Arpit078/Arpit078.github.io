@@ -79,18 +79,3 @@ a:hover::before {
   filter: drop-shadow(3px 1px 4px #484849);
   border-radius: 5px;
 }
-.paragraph {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* show only 3 lines */
-  -webkit-box-orient: vertical;
-}
-
-.paragraph.expanded {
-  -webkit-line-clamp: unset; /* remove restriction */
-}
-.read-more-btn {
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 20px;
-}
