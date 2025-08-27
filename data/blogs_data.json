@@ -1,5 +1,109 @@
 [
   {
+    "id": "25be9933-5fca-8026-8dbd-c96403b39a0c",
+    "created_time": "2025-08-26T16:34:00.000Z",
+    "title": "Elasticsearch: What is it really, and why is it so fast?",
+    "date": "2025-08-26",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Elasticsearch is a search engine program that sits on top of your database to make your search queries blazingly fast. Where SQL might take minutes Elasticsearch responds within milliseconds."
+      },
+      {
+        "component": "paragraph",
+        "text": "It supports full text searches, aggregations, geo queries, autocompletes and a lot more. "
+      },
+      {
+        "component": "paragraph",
+        "text": "The architecture involved in setting up Elasticsearch system is as follows : "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Data source - The source of Truth : Postgres, MySQL, MongoDB"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Ingestion pipeline- To  copy or stream the data into Elasticsearch from the database."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Elasticsearch cluster - Multiple nodes with primary and replica shards of indexes(A big Index over the whole database is broken down into multiple smaller shards so that you can query all of the index in one go with parallel searches on these shards pretty clever!)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Search API - search queries are done via REST API (JSON over HTTP)"
+      },
+      {
+        "component": "paragraph",
+        "text": "Okay Elasticsearch is great and all but how does it do it?"
+      },
+      {
+        "component": "paragraph",
+        "text": "A very rudimentary view of the inner workings can be taken by the following illustration :"
+      },
+      {
+        "component": "paragraph",
+        "text": "1️⃣ Data ingestion in the Elasticsearch - data is inserted using POST API"
+      },
+      {
+        "component": "paragraph",
+        "text": "POST /book/_doc/1 "
+      },
+      {
+        "component": "paragraph",
+        "text": "{"
+      },
+      {
+        "component": "paragraph",
+        "text": "}"
+      },
+      {
+        "component": "paragraph",
+        "text": "2️⃣ Inverted indexes are created - Think of these indexes as the word indexes found at the end of books. Tokens are mapped to the documents they occurred in."
+      },
+      {
+        "component": "paragraph",
+        "text": "“Harry” → Doc1"
+      },
+      {
+        "component": "paragraph",
+        "text": "“Potter” → Doc1"
+      },
+      {
+        "component": "paragraph",
+        "text": "“Hogwarts” → Doc2"
+      },
+      {
+        "component": "paragraph",
+        "text": "3️⃣ Scoring and Ranking for search - Search inputs are broken into tokens and matched with the relevant documents using the Inverted Indexes. Docs having the highest occurrence of the token are given higher scores. Docs which contain the rarer word are given higher score(”Hogwarts” is rarer than “the”). The higher the score the higher the rank."
+      },
+      {
+        "component": "paragraph",
+        "text": "4️⃣ Indexes are broken into smaller shards and spread across multiple nodes, for faster lookups."
+      },
+      {
+        "component": "paragraph",
+        "text": "One more notable property of Elasticsearch is that it stores the fields in a columnar fashion. Which significantly boosts the aggregation speeds. Now to get averages instead of going to multiple rows you are only required to traverse all the entries in the column."
+      },
+      {
+        "component": "paragraph",
+        "text": "What it looks like is : "
+      },
+      {
+        "component": "paragraph",
+        "text": "Field : year → [1997 2005 1996]"
+      },
+      {
+        "component": "paragraph",
+        "text": "Field : prices → [20 15 25] "
+      },
+      {
+        "component": "paragraph",
+        "text": "That sums up, absolute basics one should know about Elasticsearch."
+      }
+    ]
+  },
+  {
     "id": "25ae9933-5fca-80d3-9531-cab57ede7228",
     "created_time": "2025-08-25T14:42:00.000Z",
     "title": "Bloom Filters? You've probably read the name somewhere.",
