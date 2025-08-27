@@ -51,11 +51,7 @@
       },
       {
         "component": "paragraph",
-        "text": "{"
-      },
-      {
-        "component": "paragraph",
-        "text": "}"
+        "text": "{“title” : “Harry  Potter”, “author” : “J. K. Rowling”, “year” : 1997}"
       },
       {
         "component": "paragraph",
