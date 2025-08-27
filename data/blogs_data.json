@@ -1,5 +1,85 @@
 [
   {
+    "id": "25ce9933-5fca-805b-8041-df7e15ca1191",
+    "created_time": "2025-08-27T17:38:00.000Z",
+    "title": "How do food delivery apps like swiggy, zomato find the nearest restaurants in milliseconds",
+    "date": "2025-08-27",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "When you start thinking about it, the problem looks very simple: just store the restaurants’ coordinates, and once the user opens the app, calculate the distance to the restaurants, sort them, and return the results. Easy, right? Yes, until your app grows beyond being a pet project. When the user base reaches millions or even billions, optimized approaches are required."
+      },
+      {
+        "component": "paragraph",
+        "text": "One way to handle this is by using geo-enabled databases and spatial indexing."
+      },
+      {
+        "component": "paragraph",
+        "text": "For example, insert your restaurants into a geo-enabled database like PostGIS (Postgres) or MongoDB. Then build spatial indexes on the database. Internally, these use R-Trees (rectangle trees), where nearby restaurants are stored within the same rectangles."
+      },
+      {
+        "component": "paragraph",
+        "text": "When a user opens the app at a given location (lat, lon), the backend runs a query with a radius (e.g., all restaurants within 5 km). The index filters out relevant restaurants using bounding rectangles with the user location rectangle, and then the exact distance is calculated for the candidates. This is a workable approach when the number of rows is in the millions."
+      },
+      {
+        "component": "paragraph",
+        "text": "However, when dealing with billions of rows, geohashing is often used."
+      },
+      {
+        "component": "paragraph",
+        "text": "In this setup, the world is divided into grid cells, and each cell is assigned a unique ID (a geohash). Locations that are close to each other have similar geohash prefixes. The algorithm for computing a geohash is straightforward:"
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Take the user’s longitude and latitude. The longitude range is [-180, 180] and the latitude range is [-90, 90]."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Create a bit array (size depends on the precision required). Each geohash character requires 5 bits."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Start with the longitude: if it lies in the upper half of the range, set the bit; otherwise, leave it unset."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Halve the range (e.g., [0, 180]) and do the same for latitude to set the next bit."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Repeat this process until the array is filled."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Take 5 bits at a time, convert them to base32, and map them to a character from '0123456789bcdefghjkmnpqrstuvwxyz'."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "Repeat until you obtain the final geohash string."
+      },
+      {
+        "component": "paragraph",
+        "text": "The more characters in the geohash, the more precise the location. For example:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "5 characters → ~4.9 km precision"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "6 characters → ~1.2 km precision"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "7 characters → ~152 m precision"
+      },
+      {
+        "component": "paragraph",
+        "text": "Food delivery apps usually use 6–7 characters for querying. The query simply looks for restaurants with a geohash equal to the user’s geohash or its neighbors. This is a significantly faster approach than calculating distances for every restaurant in the database. 😂"
+      }
+    ]
+  },
+  {
     "id": "25be9933-5fca-8026-8dbd-c96403b39a0c",
     "created_time": "2025-08-26T16:34:00.000Z",
     "title": "Elasticsearch: What is it really, and why is it so fast?",
