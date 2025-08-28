@@ -1,5 +1,77 @@
 [
   {
+    "id": "25de9933-5fca-8075-a89a-c15181577fe4",
+    "created_time": "2025-08-28T16:01:00.000Z",
+    "title": "Proxy, Forward Proxy and Reverse Proxy what are they?",
+    "date": "2025-08-28",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "A Proxy is basically a layer that sits between the server and the client. Whenever a request–response cycle takes place in your application, it goes through the proxy. One might find a lot of use cases as to why a proxy might be required, and depending on the use case, proxies can be broadly divided into two categories: Forward Proxy and Reverse Proxy."
+      },
+      {
+        "component": "paragraph",
+        "text": "🔹 Forward Proxy"
+      },
+      {
+        "component": "paragraph",
+        "text": "A forward proxy sits in front of the client. When the client sends a request, it first passes through the forward proxy before reaching the server. The server sees the proxy as the requester, not the actual client."
+      },
+      {
+        "component": "paragraph",
+        "text": "Common use cases:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Enforcing corporate/institutional policies (e.g., blocking certain websites)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Anonymizing client identity, So all the server sees is the ip address of the proxy server requesting the resource"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Forward proxy acts as an abstraction layer for the clients."
+      },
+      {
+        "component": "paragraph",
+        "text": "🔹 Reverse Proxy"
+      },
+      {
+        "component": "paragraph",
+        "text": "A reverse proxy, on the other hand, sits in front of the server. The client makes a request, but it only communicates with the reverse proxy, which then forwards the request to the appropriate server on behalf of the client. Here, the client never directly interacts with the actual server."
+      },
+      {
+        "component": "paragraph",
+        "text": "Common use cases:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Load balancing across multiple servers."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Routing requests to different services, i.e. yourdomain.com/service1 and service2 maybe running on the same server but on different ports, proxy server can direct the traffic accordingly."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Enhancing security by hiding server details(Abstraction layer for the server)"
+      },
+      {
+        "component": "paragraph",
+        "text": "In short:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Forward Proxy → client-facing (protects/manages the client)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Reverse Proxy → server-facing (protects/manages the server)"
+      }
+    ]
+  },
+  {
     "id": "25ce9933-5fca-805b-8041-df7e15ca1191",
     "created_time": "2025-08-27T17:38:00.000Z",
     "title": "How do food delivery apps like swiggy, zomato find the nearest restaurants in milliseconds",
