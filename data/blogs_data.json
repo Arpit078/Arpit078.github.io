@@ -63,11 +63,7 @@
       },
       {
         "component": "paragraph",
-        "text": "Cool reference article for this : Better rate limiting with Redis sorted sets | Building ClassDojo"
-      },
-      {
-        "component": "paragraph",
-        "text": "I learn and write about tech and system design everyday. Follow if interested!"
+        "text": "Cool reference article for this : https://engineering.classdojo.com/blog/2015/02/06/rolling-rate-limiter/"
       }
     ]
   },
