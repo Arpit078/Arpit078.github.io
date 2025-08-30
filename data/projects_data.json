@@ -60,19 +60,6 @@
     ]
   },
   {
-    "id": "1e7e9933-5fca-8167-87e3-d12292c94426",
-    "created_time": "2025-05-02T13:59:00.000Z",
-    "project_name": "Resume Builder",
-    "date": "2023-06-03 to 2023-06-04",
-    "github": "https://github.com/arpit078/resume-builder",
-    "description": [
-      {
-        "component": "paragraph",
-        "text": "A nodejs script to automate the boring process of updating your resume in latex format everytime you log in your pc . User has to update a google sheet and the program just fills in the corresponding details into a latex template and and updates the resume in pdf."
-      }
-    ]
-  },
-  {
     "id": "1e7e9933-5fca-810e-a92b-f9905db5b742",
     "created_time": "2025-05-02T13:59:00.000Z",
     "project_name": "ColMail ",
@@ -82,6 +69,19 @@
       {
         "component": "paragraph",
         "text": "A personalised cold/bulk emailing cross platform desktop application using Gmail api and Electron.js"
+      }
+    ]
+  },
+  {
+    "id": "1e7e9933-5fca-8167-87e3-d12292c94426",
+    "created_time": "2025-05-02T13:59:00.000Z",
+    "project_name": "Resume Builder",
+    "date": "2023-04-01 to 2023-04-02",
+    "github": "https://github.com/arpit078/resume-builder",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "A nodejs script to automate the boring process of updating your resume in latex format everytime you log in your pc . User has to update a google sheet and the program just fills in the corresponding details into a latex template and and updates the resume in pdf."
       }
     ]
   },

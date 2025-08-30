@@ -1,5 +1,77 @@
 [
   {
+    "id": "25fe9933-5fca-809a-bba4-e928fc2db523",
+    "created_time": "2025-08-30T19:43:00.000Z",
+    "title": "How is a rate limiter designed for distributed environments?",
+    "date": "2025-08-30",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Probably, this will be something more than what you’ve previously read about the topic."
+      },
+      {
+        "component": "paragraph",
+        "text": "Most commonly, a rate limiter is implemented in an API Gateway. An API Gateway is essentially a reverse proxy with fully managed services like rate limiting, SSL termination, authentication, IP whitelisting, and static content handling. It can convert request/response object formats (e.g., XML → JSON) or perform authentication for user requests without ever hitting your backend service. Some commonly used API gateways are AWS API Gateway, Kong Gateway and Apigee. Rate limiting can also be implemented with the backend services without an API Gateway, depending on product requirements."
+      },
+      {
+        "component": "paragraph",
+        "text": "There are multiple algorithms used for rate limiting, but the most common are Token Bucket and Leaky Bucket. The idea is pretty straightforward."
+      },
+      {
+        "component": "paragraph",
+        "text": "In the Token Bucket algorithm, each user has a bucket of tokens that is refilled at a constant rate. When a user request arrives, if a token is present in the bucket, the request proceeds; otherwise, it is dropped. This is the easy part. The harder part is the refilling process. For millions of users, there would need to be millions of refilling processes accessing a shared Redis backend, which would result in a nightmare of Redis requests."
+      },
+      {
+        "component": "paragraph",
+        "text": "A solution to this is to remove the explicit refiller. Instead, you store some additional information the last access timestamp. For example, you store:"
+      },
+      {
+        "component": "paragraph",
+        "text": "user123 : { tokens_left, last_access_timestamp }"
+      },
+      {
+        "component": "paragraph",
+        "text": "When a new request comes in, you calculate how many tokens would have been refilled since the last access and add that to tokens_left. Based on this, you can decide whether the request is allowed."
+      },
+      {
+        "component": "paragraph",
+        "text": "However, this approach has a caveat in distributed systems. It’s no longer just a simple counter increment, it requires calculation, which means a two-way round trip to the server. First, the server reads the last timestamp from Redis, then calculates the updated token count, and finally writes it back. This can create race conditions."
+      },
+      {
+        "component": "paragraph",
+        "text": "For example, suppose two push notifications need to be sent to user123 at exactly the same time, and they are handled by two different nodes. Node A fetches the last timestamp, calculates the updated value, and prepares to update Redis. Meanwhile, Node B fetches the now stale timestamp and performs its own calculation. This causes inconsistencies and may occasionally allow requests to go over the limit."
+      },
+      {
+        "component": "paragraph",
+        "text": "The final solution to this problem is to store only the access timestamps in a sorted set in Redis. The set stores only a range of timestamps — for example, at most the last 3 timestamps within the last 10 seconds. The size of the set then acts as the counter. A new timestamp is added only if the set size is below the limit; otherwise, the request is dropped. This can be done in one atomic transaction using built-in Redis functions such as:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "ZREMRANGEBYSCORE (remove elements outside the time range)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "ZADD (add the new timestamp)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "ZCARD (count the size)"
+      },
+      {
+        "component": "paragraph",
+        "text": "A question….if Redis can do all this, why can’t it also calculate the token refill (tokens_left + (current_timestamp - last_timestamp)/rate) in a single transaction? The reason is that Redis has no built-in function for this calculation, so backend logic is still needed. However, this can be solved by using Redis Lua scripts, which allows you to define custom logic and execute it atomically. That way, the Token Bucket approach can also work in one single atomic transaction!"
+      },
+      {
+        "component": "paragraph",
+        "text": "Cool reference article for this : Better rate limiting with Redis sorted sets | Building ClassDojo"
+      },
+      {
+        "component": "paragraph",
+        "text": "I learn and write about tech and system design everyday. Follow if interested!"
+      }
+    ]
+  },
+  {
     "id": "25ee9933-5fca-80c1-b06b-d613f8fb768f",
     "created_time": "2025-08-29T17:40:00.000Z",
     "title": "What happens in the backend when you do a UPI transaction?",
