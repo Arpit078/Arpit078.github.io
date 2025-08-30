@@ -1,5 +1,45 @@
 [
   {
+    "id": "25ee9933-5fca-80c1-b06b-d613f8fb768f",
+    "created_time": "2025-08-29T17:40:00.000Z",
+    "title": "What happens in the backend when you do a UPI transaction?",
+    "date": "2025-08-29",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "When you do a UPI transaction, the payment app extracts the Virtual Payment Address (VPA or UPI ID) from the QR code or the contact number. Payment apps like Paytm, GPay, and PhonePe are called Payment Service Provider (PSP) apps. The transaction request is sent to the NPCI (National Payments Corporation of India), which maintains a directory that maps VPAs to bank accounts."
+      },
+      {
+        "component": "paragraph",
+        "text": "The request is routed to the issuer bank (payer’s bank). It validates the request using the UPI PIN and the payer’s account balance."
+      },
+      {
+        "component": "paragraph",
+        "text": "The bank then sends a debit confirmation to the NPCI UPI switch, which routes a credit request to the receiver’s bank."
+      },
+      {
+        "component": "paragraph",
+        "text": "The settlement in the banks reflects instantly for the user, but the actual money transfer between banks happens through the RBI’s payment system. After regular intervals, a net transaction amount is calculated and fund transfers are settled between banks."
+      },
+      {
+        "component": "paragraph",
+        "text": "One important aspect of this whole setup is security. When you enter the UPI PIN, you do it through a secure keypad designed with additional safeguards. The keypad is a very peculiar case it is not a component of the payment app instead, it is provided by the NPCI’s UPI SDK."
+      },
+      {
+        "component": "paragraph",
+        "text": "This is an isolated UI component—no input is registered through the standard input channels of Android or iOS that are used by regular keyboard apps. As soon as a keystroke is registered, the digit is immediately encrypted by the SDK. The UPI PIN never exists in memory as plain text. Every input block is encrypted using the public key provided by the payer’s bank. The corresponding private key is securely stored only with the bank. Not even NPCI has access to your PIN."
+      },
+      {
+        "component": "paragraph",
+        "text": "Even banks do not store the PIN in plain text. They use symmetric encryption to encrypt the PIN and store it inside a Hardware Security Module (HSM), a tamper-proof device that self-erases data if tampering is attempted. The PIN entered by the user is decrypted using the private key, re-encrypted inside the HSM using the symmetric key, and then compared against the stored encrypted block."
+      },
+      {
+        "component": "paragraph",
+        "text": "That’s a lot going for a transaction that happens almost instantly!"
+      }
+    ]
+  },
+  {
     "id": "25de9933-5fca-8075-a89a-c15181577fe4",
     "created_time": "2025-08-28T16:01:00.000Z",
     "title": "Proxy, Forward Proxy and Reverse Proxy what are they?",
