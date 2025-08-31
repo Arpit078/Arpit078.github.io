@@ -1,5 +1,53 @@
 [
   {
+    "id": "260e9933-5fca-8052-8b02-d0f38eb99378",
+    "created_time": "2025-08-31T18:14:00.000Z",
+    "title": "What are preflight requests and why are they important?",
+    "date": "2025-08-31",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "No, they are not redundant. Remember last time you set Access-Control-Allow-Origin = \"*\"  in your backend? Well, that can be a serious problem!"
+      },
+      {
+        "component": "paragraph",
+        "text": "A preflight request is a type of request that web browsers send before making a cross-origin HTTP request. This is part of the CORS (Cross-Origin Resource Sharing) mechanism."
+      },
+      {
+        "component": "paragraph",
+        "text": "Browsers send preflight requests before any request that is considered non-simple. Non-simple requests include:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Methods like PUT, DELETE, or PATCH."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "POST requests with content types other than application/x-www-form-urlencoded, multipart/form-data, or text/plain."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Requests with custom headers (e.g., Authorization, X-API-KEY, etc.)."
+      },
+      {
+        "component": "paragraph",
+        "text": "Preflight requests use the OPTIONS HTTP method to check with the backend server whether the actual request is allowed from the requesting origin. Only if the backend responds with the proper CORS headers (essentially saying the origin is allowed) will the browser proceed with the real request."
+      },
+      {
+        "component": "paragraph",
+        "text": "This is especially important when you use cookies for authentication in your backend. When a website makes a request to a server, the browser automatically includes the cookies associated with that server’s origin. Even though frontend JavaScript cannot access cookies from other origins or tabs, the browser attaches them to outgoing requests for that origin, for authentication purpose of that request."
+      },
+      {
+        "component": "paragraph",
+        "text": "If preflight checks didn’t exist, or if the backend allowed all origins (*), then any malicious website could send requests to your backend from the victim’s browser. Since the browser would automatically attach authentication cookies, the attacker could perform actions on behalf of the logged-in user on you backend. This kind of exploit is called CSRF (Cross-Site Request Forgery)."
+      },
+      {
+        "component": "paragraph",
+        "text": "Preflight requests help prevent this by ensuring that only trusted origins are allowed to perform non-simple requests. They cannot be bypassed in a normal browser environment. Preflight requests are important aren’t they?"
+      }
+    ]
+  },
+  {
     "id": "25fe9933-5fca-809a-bba4-e928fc2db523",
     "created_time": "2025-08-30T19:43:00.000Z",
     "title": "How is a rate limiter designed for distributed environments?",
