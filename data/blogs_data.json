@@ -1,5 +1,69 @@
 [
   {
+    "id": "261e9933-5fca-8021-9db8-c34dc95f1473",
+    "created_time": "2025-09-01T19:18:00.000Z",
+    "title": "What are SOAP and GraphQL",
+    "date": "2025-09-01",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "REST is so commonplace that we never dig deeper to learn that there other ways of designing APIs."
+      },
+      {
+        "component": "paragraph",
+        "text": "🔹 GraphQL"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "GraphQL is a query language for APIs."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Instead of the server deciding what data you get (like in REST) the client asks exactly what it needs."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Instead of multiple endpoints, there is only one flexible endpoint."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "You just define a schema and data resolvers(methods to fetch the data), the client sends in dynamic requests around the schema with what it needs."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Like you can get {“query” : \"{ user(id: 123) { name email orders { id total } } }”} no specific handler needs to be coded on the backend for different queries."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "This reduces over-fetching/under-fetching problems common with REST. Just return exactly what was asked."
+      },
+      {
+        "component": "paragraph",
+        "text": "🔹 SOAP (Simple Object Access Protocol)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Heavily used in enterprise and legacy systems (e.g., banking, telecom, government)."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Operates over multiple protocols (HTTP, SMTP, etc.), not just HTTP."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Uses XML as request/response objects. Has a strict schema defined for the objects. If req/res does not follow the schema, the API call fails. "
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Comes with strict standards and built-in security (WS-Security), Portions like certain fields of the req/res object can be encrypted separately in the application layer itself! while in REST it is done in the Transport layer."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Many banking systems use SOAP because it provides stricter control over payloads and is generally considered more secure."
+      }
+    ]
+  },
+  {
     "id": "260e9933-5fca-8052-8b02-d0f38eb99378",
     "created_time": "2025-08-31T18:14:00.000Z",
     "title": "What are preflight requests and why are they important?",
