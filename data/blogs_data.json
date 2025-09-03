@@ -1,5 +1,61 @@
 [
   {
+    "id": "262e9933-5fca-80e5-8772-c7a7e5c70491",
+    "created_time": "2025-09-02T19:13:00.000Z",
+    "title": "Tech behind torrents",
+    "date": "2025-09-02",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "I’ve always been fascinated by the tech behind torrents, no central server hosting files, and yet files can download at lightning speeds. There’s no single server keeping track of which peer has which piece, but somehow the whole file gets downloaded. How does it all work?"
+      },
+      {
+        "component": "paragraph",
+        "text": "Torrents operate on a P2P (peer-to-peer) file sharing network. Instead of transferring one giant file, the content is broken down into many smaller pieces."
+      },
+      {
+        "component": "paragraph",
+        "text": "The .torrent file contains hashes for these pieces, which serve two purposes:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "They tell the client which pieces to download."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "They verify file integrity, ensuring that downloaded pieces haven’t been tampered with."
+      },
+      {
+        "component": "paragraph",
+        "text": "In a torrent network, there are two main types of users:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Leechers: users who are downloading file pieces."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Seeders: users who are uploading file pieces."
+      },
+      {
+        "component": "paragraph",
+        "text": "A single user can be both at once, as soon as you download a piece, you can immediately begin uploading it to others."
+      },
+      {
+        "component": "paragraph",
+        "text": "To download pieces, your client needs to know where peers are. In the early days, torrents relied heavily on a central tracker server that acted like a directory, keeping a list of which users had which files."
+      },
+      {
+        "component": "paragraph",
+        "text": "Modern torrent clients, however, are more decentralized. While trackers still exist, they’re no longer the only way to find peers. Instead, clients use a Distributed Hash Table (DHT):"
+      },
+      {
+        "component": "paragraph",
+        "text": "Once you open your client it goes to the tracker to get the addresses of some nearby peers. Every peer stores a local Distributed hash table, which contains address:port → info hashes of files that can be downloaded from that peer. From one peer to another the search goes on until you get the nearest peer that has the file you are looking for. And with that one downloads the whole file without relying on a single server."
+      }
+    ]
+  },
+  {
     "id": "261e9933-5fca-8021-9db8-c34dc95f1473",
     "created_time": "2025-09-01T19:18:00.000Z",
     "title": "What are SOAP and GraphQL",
