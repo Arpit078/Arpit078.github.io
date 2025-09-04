@@ -1,5 +1,65 @@
 [
   {
+    "id": "264e9933-5fca-804d-af9c-c2efe62c453e",
+    "created_time": "2025-09-04T11:59:00.000Z",
+    "title": "How does Live broadcast work?",
+    "date": "2025-09-04",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "That live cricket match you saw on jiohotstar …. how does that work?"
+      },
+      {
+        "component": "paragraph",
+        "text": "The broadcaster sends a compressed video stream to the ingest edge server. The video sent by the source is a continuous stream over a TCP connection. It is compressed and usually has a single bitrate/resolution. The video is then uncompressed/decoded into raw image frames, and the audio is extracted."
+      },
+      {
+        "component": "paragraph",
+        "text": "The stream is encoded into different resolutions and bitrates, and similarly for the audio. Encoders use GOPs (Groups of Pictures), for example, 2-second chunks. As soon as the first GOP of raw frames is processed, the transcoder can output it. This means you don’t wait for the whole stream; instead, you process in a rolling window, per GOP. The transcoding happens in parallel for all the resolutions of the current GOP. The encoder-generated files do not contain any metadata for the video stream (such as length, bitrate, or resolution), so packaging is required for delivery to CDNs and the origin storage bucket."
+      },
+      {
+        "component": "paragraph",
+        "text": "The packager takes each GOP and writes it into a small file called a segment. For each rendition (encoder output at a different resolution), a playlist (manifest) is generated. A playlist is essentially a text metadata file that defines the segment order and details of the different renditions. There are two major protocols for streaming content over HTTP:"
+      },
+      {
+        "component": "paragraph",
+        "text": "HLS (HTTP Live Streaming)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Uses .m3u8 (text-based playlists)."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Segments are usually MPEG-TS (.ts) or fMP4 (.m4s)."
+      },
+      {
+        "component": "paragraph",
+        "text": "MPEG-DASH (Dynamic Adaptive Streaming over HTTP)"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "An open standard."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Uses .mpd files (XML-based manifests)."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Segments are usually fMP4 (.m4s)."
+      },
+      {
+        "component": "paragraph",
+        "text": "The packager emits sub-GOP span chunks, around 200–400 ms in length, compared to the 2-second GOPs received from the encoder. Multiple of these smaller chunks are delivered to the CDN along with the updated playlists. This is done to enable faster downloads on the client."
+      },
+      {
+        "component": "paragraph",
+        "text": "Finally, the client player periodically requests the playlists according to the resolution supported by the client’s network. The corresponding video segments are downloaded and played live on the client, typically with a 2–3 second delay from when the original event was recorded."
+      }
+    ]
+  },
+  {
     "id": "263e9933-5fca-80a2-a855-dc4f4e07d9d1",
     "created_time": "2025-09-03T19:20:00.000Z",
     "title": "How is code sandboxing on platforms like LeetCode designed?",
