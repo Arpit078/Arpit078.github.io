@@ -1,5 +1,33 @@
 [
   {
+    "id": "268e9933-5fca-80de-b031-c76827a2bf8f",
+    "created_time": "2025-09-08T20:41:00.000Z",
+    "title": "How will you implement a sleep function in javascript",
+    "date": "2025-09-08",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "In Python, the sleep function blocks the execution of the current thread for a specified time. Internally, this is implemented by making a system call that suspends the thread, allowing the CPU to be used for other tasks. When the operating system schedules the thread again, it may resume slightly later than the requested interval due to context switching overhead (Something new I learnt today). Therefore, sleep is not guaranteed to be 100% precise."
+      },
+      {
+        "component": "paragraph",
+        "text": "In JavaScript, there is no built-in sleep function, and you cannot make direct system calls or suspend the main thread of the browser(since JavaScript runs in a single-threaded event loop in the browser or Node.js)."
+      },
+      {
+        "component": "paragraph",
+        "text": "One naive way to mimic sleep would be to use a blocking loop that wastes CPU cycles until the desired time has passed, but this is inefficient and prevents other code from running. This implementation can bring up a disaster when you use this in your frontend code, the whole page will be unresponsive for the interval and might even crash."
+      },
+      {
+        "component": "paragraph",
+        "text": "A better approach is to leverage JavaScript’s asynchronous nature. Using setTimeout, one can create a function that returns a Promise which resolves after a delay. Due to the event loop architecture of JS, this does not waste CPU cycles; the program continues to run other tasks like handling the user interactions with the webpage, and once the timer completes, the promise resolves and execution resumes at the next .then or await with the next line of code after your sleep."
+      },
+      {
+        "component": "paragraph",
+        "text": "Though not the same thread blocking implementation as of the sleep function in python. Async sleep gets the job done."
+      }
+    ]
+  },
+  {
     "id": "265e9933-5fca-807b-b389-f6ea98071a83",
     "created_time": "2025-09-05T17:34:00.000Z",
     "title": "How do unordered hashmaps work?",
