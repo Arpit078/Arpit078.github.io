@@ -1,5 +1,97 @@
 [
   {
+    "id": "26be9933-5fca-80e0-a739-d16bf3327276",
+    "created_time": "2025-09-11T20:20:00.000Z",
+    "title": "Why just blocking the IPs won’t help with DDoS…",
+    "date": "2025-09-11",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Been a little busy for the past few days, couldn’t write. So, Distributed Denial of Service (DDoS) on the application? Well, most probably just blocking suspicious IP addresses won’t help. These attacks are designed to come from different source addresses so that there isn’t a quick fix."
+      },
+      {
+        "component": "paragraph",
+        "text": "But how can a single attacker have multiple addresses? Well, there are ways. Some operating systems provide ways to interfere with the network layer originally meant for testing, but now used for attacks. The issue could have been resolved if there were mandates for ISPs to discard requests that do not have a source address belonging to their network. But since there is no such mandate, these requests go through. Attackers spoof their IP addresses to flood your servers."
+      },
+      {
+        "component": "paragraph",
+        "text": "These attacks target the limited resources of the application server whether by executing high-compute calls like heavy database queries or by flooding the connection pools. Attackers can also use SYN spoofing, which means spoofing TCP connection requests. This exploits the root implementation of the TCP 3-way handshake."
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ A user sends a SYN packet."
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ The server responds with SYN-ACK and stores the user address for retries and connection management."
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ But the attacker’s request does not belong to a legitimate address. The server thinks the request was dropped and retries with the SYN-ACK, but receives no ACK."
+      },
+      {
+        "component": "paragraph",
+        "text": "Two things happen:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "The connection table fills up because these fake addresses remain there until they time out."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "The server wastes bandwidth sending requests that go nowhere."
+      },
+      {
+        "component": "paragraph",
+        "text": "With the table filling faster and emptying slowly, the server eventually reaches its limit and can’t accept valid requests."
+      },
+      {
+        "component": "paragraph",
+        "text": "Apart from IP spoofing, attackers can also use a network of botnets for a distributed attack. In this way, requests are sent from a network of compromised devices — though this is a rarer scenario. "
+      },
+      {
+        "component": "paragraph",
+        "text": "Some steps to handle this situation:"
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ On the server firewall, set up rules like limiting the number of open connections a single IP can create, rate-limit the web server, and block IPs that try to establish too many connections in a short span of time or exceed the connection cap. This way, sooner or later, the attacker’s available IPs will be exhausted."
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ In your reverse proxy (NGINX, Apache), configure rate limiting in their config files."
+      },
+      {
+        "component": "paragraph",
+        "text": "➡️ Use CDNs like Cloudflare. They offer DDoS protection plans that analyze repeated requests and block them. Since they’re geographically closer to the attacker, they can help detect the region making the exploit requests."
+      },
+      {
+        "component": "paragraph",
+        "text": "Real-world DDoS attacks do not always follow a pattern and are much harder to debug. There is no 100% solution against these attacks. But one can plan ahead while developing the application by making design decisions to reduce exposure:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Add CAPTCHAs on the frontend."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Rate-limit APIs."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Use pagination and other methods to avoid huge DB queries from a single trigger."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Use async processing with queues to prevent server overload."
+      },
+      {
+        "component": "paragraph",
+        "text": "To read more refer reading Chapter 7 in Computer Security Principles by WILLIAM STALLINGS really good resource."
+      }
+    ]
+  },
+  {
     "id": "268e9933-5fca-80de-b031-c76827a2bf8f",
     "created_time": "2025-09-08T20:41:00.000Z",
     "title": "How will you implement a sleep function in javascript",
