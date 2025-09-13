@@ -36,6 +36,10 @@
         "text": "Two thoughts really stood out."
       },
       {
+        "component": "heading_3",
+        "text": "4 types of luck"
+      },
+      {
         "component": "bulleted_list_item",
         "text": "Blind Luck – Pure chance, outside of your control. Things just happen to go your way (fate, fortune, randomness)."
       },
@@ -50,6 +54,10 @@
       {
         "component": "bulleted_list_item",
         "text": "Luck from Character – The rarest and most powerful. You build a unique reputation, expertise, or brand so opportunities seek you out. At this level, what others call “luck” is really the result of who you’ve become."
+      },
+      {
+        "component": "heading_3",
+        "text": "Wealth creation"
       },
       {
         "component": "paragraph",
