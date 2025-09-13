@@ -30,6 +30,30 @@
       {
         "component": "paragraph",
         "text": "Left one fourth of the book unread, had lost the excitement to read further."
+      },
+      {
+        "component": "paragraph",
+        "text": "Two thoughts really stood out."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Blind Luck – Pure chance, outside of your control. Things just happen to go your way (fate, fortune, randomness)."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Luck from friction – Created by persistence, hard work, and hustle. By being active and stirring things up, you increase the odds of lucky breaks finding you."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Luck from Preparation – Comes from skill and awareness. When you’re highly knowledgeable in a field, you notice opportunities and lucky breaks others miss."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Luck from Character – The rarest and most powerful. You build a unique reputation, expertise, or brand so opportunities seek you out. At this level, what others call “luck” is really the result of who you’ve become."
+      },
+      {
+        "component": "paragraph",
+        "text": "“You start as a salaried employee. But you want to work your way up to try and get higher leverage, more accountability, and specific knowledge. The combination of those over a long period of time with the magic of compound interest will make you wealthy.”"
       }
     ]
   },
