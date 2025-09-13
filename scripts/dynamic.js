@@ -1,34 +1,59 @@
 //your global state manager! add functions, variables and access in every page.
 var cache = {}
-function contentGen(db){
-    let content = ''
-    let number = 1
-    for(let j=0;j<db.description.length;j++){
-        let el = db.description[j]
+function contentGen(db) {
+    let content = '';
+    let inBullets = false;
+    let inNumbers = false;
+
+    for (let j = 0; j < db.description.length; j++) {
+        let el = db.description[j];
+
         switch (el.component) {
             case "paragraph":
-                content = content + el.text + '<br><br>'
+                if (inBullets) { content += '</ul>'; inBullets = false; }
+                if (inNumbers) { content += '</ol>'; inNumbers = false; }
+
+                content += `<p class="paragraph">${el.text}</p>`;
                 break;
+
             case "bulleted_list_item":
-                content = content +'&#149; ' + el.text + '<br>'
+                if (!inBullets) { content += '<ul>'; inBullets = true; }
+                content += `<li>${el.text}</li>`;
                 break;
+
             case "numbered_list_item":
-                content = content + '' + `${number}. ` + el.text + '<br>'
-                number +=1
+                if (!inNumbers) { content += '<ol>'; inNumbers = true; }
+                content += `<li>${el.text}</li>`;
                 break;
+
             case "code":
-                code_text = el.text .replace(/\\/g, '""') // Replace \ with ""
-                                    .replace(/\n/g, '<br>') // Replace \n with <br>
-                                    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // Replace \t with HTML tab space
-                content = content+ '<div class="code_block">' + code_text +'</div>'+ '<br>'
+                if (inBullets) { content += '</ul>'; inBullets = false; }
+                if (inNumbers) { content += '</ol>'; inNumbers = false; }
+
+                let code_text = el.text.replace(/\\/g, '""')
+                                       .replace(/\n/g, '<br>')
+                                       .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                content += `<div class="code_block">${code_text}</div>`;
                 break;
-        
+
+            case "heading_3":
+                if (inBullets) { content += '</ul>'; inBullets = false; }
+                if (inNumbers) { content += '</ol>'; inNumbers = false; }
+
+                content += `<h3>${el.text}</h3>`;
+                break;
+
             default:
                 break;
         }
     }
-    return content
+
+    if (inBullets) content += '</ul>';
+    if (inNumbers) content += '</ol>';
+
+    return content;
 }
+
 
 var targetQuestions = 15
 var targetDate = "2024-12-31"
