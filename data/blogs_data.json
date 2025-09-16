@@ -1,5 +1,33 @@
 [
   {
+    "id": "26fe9933-5fca-8073-a80e-e830a5343285",
+    "created_time": "2025-09-15T21:15:00.000Z",
+    "title": "How does driving matching algorithm work in Uber and Rapido ",
+    "date": "2025-09-16",
+    "description": [
+      {
+        "component": "numbered_list_item",
+        "text": "Instead of Instant matching the closest driver batch the requests, create a pool of riders and drivers nearby."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "this creates a bipartite graph with the driver set and the rider set."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "now bipartite graph matching algorithm is used, like hungarian algorithm, the goal is to minimize the total waiting time with whatever matching the algorithm comes up with."
+      },
+      {
+        "component": "numbered_list_item",
+        "text": "geohashing and quadrant cutoff"
+      },
+      {
+        "component": "paragraph",
+        "text": "https://youtu.be/T4TrFA39AJU?si=aWwp7bZpQ01VPq1D"
+      }
+    ]
+  },
+  {
     "id": "26be9933-5fca-80e0-a739-d16bf3327276",
     "created_time": "2025-09-11T20:20:00.000Z",
     "title": "Why just blocking the IPs won’t help with DDoS…",
