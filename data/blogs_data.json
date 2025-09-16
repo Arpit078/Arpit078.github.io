@@ -2,28 +2,40 @@
   {
     "id": "26fe9933-5fca-8073-a80e-e830a5343285",
     "created_time": "2025-09-15T21:15:00.000Z",
-    "title": "How does driving matching algorithm work in Uber and Rapido ",
+    "title": "How does the driver-matching algorithm work under the hood in ride-sharing apps like Uber and Rapido?",
     "date": "2025-09-16",
     "description": [
       {
-        "component": "numbered_list_item",
-        "text": "Instead of Instant matching the closest driver batch the requests, create a pool of riders and drivers nearby."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "this creates a bipartite graph with the driver set and the rider set."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "now bipartite graph matching algorithm is used, like hungarian algorithm, the goal is to minimize the total waiting time with whatever matching the algorithm comes up with."
-      },
-      {
-        "component": "numbered_list_item",
-        "text": "geohashing and quadrant cutoff"
+        "component": "paragraph",
+        "text": "It is a very complex problem that appears simple on the surface. It is hard to understand the matching algorithm even with the simplest constraint, i.e. just minimizing the total wait times. In a real setting there are more factors like reward, ride distance, rider preference(avoid driver that was rated poorly last time), real time issues like traffic, rain and the list goes on…"
       },
       {
         "component": "paragraph",
-        "text": "https://youtu.be/T4TrFA39AJU?si=aWwp7bZpQ01VPq1D"
+        "text": "When a user opens the app and sends a request for booking a ride, the first thought might be to simply fetch the driver nearest to the user’s location and assign them. But in a dense area where multiple drivers are available and multiple riders are requesting around the same time, this approach can result in suboptimal allocations."
+      },
+      {
+        "component": "paragraph",
+        "text": "For example, suppose you open the app and request a ride. There are two nearby drivers: A → 7 minutes away, and B → 13 minutes away. Now assume another person also requests a ride at about the same time. For that person, the ETAs for the same two drivers are 10 minutes and 26 minutes. If driver A were assigned to you, the other rider would be left with driver B (26 minutes away), leading to a total wait time of 33 minutes. But if driver B were assigned to you, the other rider could get driver A (10 minutes away), giving a total wait time of 23 minutes a significant saving. This makes it clear that a smarter approach is needed, especially with larger pools of drivers and riders."
+      },
+      {
+        "component": "paragraph",
+        "text": "As mentioned on Uber’s tech blog, they use this latter approach. Instead of matching each request immediately as it arrives, they batch ride requests for a short duration. This way, we can represent the problem as a bipartite graph: one set represents the riders, the other set represents the drivers, and each edge weight represents the wait time if that driver–rider pair were matched."
+      },
+      {
+        "component": "paragraph",
+        "text": "There are multiple algorithms for bipartite matching (a matching is a subset of edges where each node in the graph is connected by at most one edge). This is a very common assignment problem. One brute-force way is to check all n! matchings and pick the one with the minimum total wait time. A more efficient way is to use a polynomial-time algorithm such as the Hungarian algorithm."
+      },
+      {
+        "component": "paragraph",
+        "text": "The Hungarian algorithm exploits the structure of the problem, By finding optimal allocations step by step. We create a matrix of riders × drivers, where each cell contains the wait time (edge weight). Then, we reduce the matrix row-wise and column-wise (subtracting the row minimum from each row and the column minimum from each column). This ensures that there is at least one zero-cost pair (rider → driver) that should be part of the optimal matching. If we can find n zero-weight pairs, then we’ve found the optimal assignment. If not, we iteratively adjust the matrix until we reach the optimal assignment. There’s a plethora of resources to learn the full algorithm, and it’s worth learning."
+      },
+      {
+        "component": "paragraph",
+        "text": "There is one thing we missed during the discussion, that is the ETA calculation. It is done using geo hashing I covered in one of my previous posts. The process is: find the geohash of the rider, then search for drivers in the same geohash or in neighboring cells. If too many drivers are found, the search space is reduced by increasing geohash precision (adding more characters). This continues until a threshold number of nearby drivers is identified. At that point, the system switches to using precise latitude/longitude coordinates to calculate the actual estimated travel times between drivers and riders."
+      },
+      {
+        "component": "paragraph",
+        "text": "That sums it up."
       }
     ]
   },
