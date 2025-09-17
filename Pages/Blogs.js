@@ -1,18 +1,25 @@
 import Navbar from "../components/Navbar.js"
-import Box from "../components/updateBox/box.js"
 const Blogs = /*html*/`
 <style>
-.paragraph {
-  overflow: hidden !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3 !important;
-  -webkit-box-orient: vertical !important;
+
+/* Expanded paragraph (collapsed by default) */
+.expandable {
+  max-height: 120px;       /* adjust this for "preview" size */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.expanded{
+  max-height: max-content;      /* enough space for full content */
+}
+/* Expanded when active (JS will toggle a class) */
+.expandable.show {
+  max-height: 1000px;      /* enough space for full content */
+  transition: max-height 0.6s ease;
 }
 
-.paragraph.expanded {
-  -webkit-line-clamp: unset !important;
-}
-.read-more-btn {
+.read-more-btn 
+{
+  padding-top: 4rem;
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 20px;

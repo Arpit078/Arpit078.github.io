@@ -102,11 +102,11 @@ async function fetchProjects(){
     // updateTechBox(countTotal,countCurrentWeek,countLastWeek,expectedDatewrtLastWeek)
     for(let i =0;i<blogDatabase.length;i++){
     let content = contentGen(blogDatabase[i])
-   
+    console.log(content)
     const projectObj = `
         <div class="content">
             <p class="subHead">${blogDatabase[i].title}</p>
-            <p class="paragraph" id="para-${i}">${content}</p>
+            <div class="expandable" id="para-${i}">${content}</div>
             <span class="read-more-btn" onclick="toggleReadMore('para-${i}', this)">Read More</span>
             <p class="highlight">
                 Dated :
