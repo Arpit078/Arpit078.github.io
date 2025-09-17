@@ -2,15 +2,15 @@ import Navbar from "../components/Navbar.js"
 import Box from "../components/updateBox/box.js"
 const Blogs = /*html*/`
 <style>
-    .paragraph {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* show only 3 lines */
-  -webkit-box-orient: vertical;
+.paragraph {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
 }
 
 .paragraph.expanded {
-  -webkit-line-clamp: unset; /* remove restriction */
+  -webkit-line-clamp: unset !important;
 }
 .read-more-btn {
   color: rgb(0, 0, 0);
