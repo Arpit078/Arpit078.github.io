@@ -1,5 +1,81 @@
 [
   {
+    "id": "274e9933-5fca-80f0-b02f-e856933a4aed",
+    "created_time": "2025-09-20T21:09:00.000Z",
+    "title": "What are pessimistic locking and optimistic locking?",
+    "date": "2025-09-21",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "When programs have critical sections that are accessed by multiple processes, a common practice is to use locks to maintain consistency and prevent program exceptions. How one decides which locking paradigm to use is based on certain factors such as contention, frequency of conflicts, and the cost of update retries."
+      },
+      {
+        "component": "heading_3",
+        "text": "Pessimistic Locking"
+      },
+      {
+        "component": "paragraph",
+        "text": "Based on the assumption that there will be frequent access to the critical section by multiple processes, pessimistic locking solves the consistency problem by blocking access to the resource for other processes while one process is committing changes. Other processes trying to access the resource are sent to busy/wait until the resource is free."
+      },
+      {
+        "component": "heading_3",
+        "text": "Optimistic Locking"
+      },
+      {
+        "component": "paragraph",
+        "text": "Optimistic locking is based on the assumption that contentions are minimal. Let me explain a little more:"
+      },
+      {
+        "component": "paragraph",
+        "text": "In optimistic locking, when two processes try to modify a resource at the same time, each process first records the state of the resource before starting the update. When a process comes back to commit its changes, it checks whether the current state of the resource is different from what was read at the beginning."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "If the state is the same → the update succeeds."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "If the state has changed → it is concluded that another process has updated the resource, and the current process must recompute its changes using this updated state as the new initial value. The process then retries with the new state."
+      },
+      {
+        "component": "heading_3",
+        "text": "Comparison of When to Use Each"
+      },
+      {
+        "component": "paragraph",
+        "text": "Pessimistic Locking:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "High contention."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Operations are expensive (you don’t want retries)."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Example: critical sections in OS kernels, database updates."
+      },
+      {
+        "component": "paragraph",
+        "text": "Optimistic Locking:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Low contention."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Retrying is cheap."
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Example: counters, queues, non-blocking data structures."
+      }
+    ]
+  },
+  {
     "id": "271e9933-5fca-80b1-a60c-fba70a66f8ee",
     "created_time": "2025-09-17T20:09:00.000Z",
     "title": "How do VPN services work?",
