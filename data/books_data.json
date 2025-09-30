@@ -1,14 +1,27 @@
 [
   {
+    "id": "27ee9933-5fca-80e2-bc4c-eea12afbc5ee",
+    "created_time": "2025-09-30T20:34:00.000Z",
+    "book_name": "Days at the Morisaki Bookshop",
+    "read_date": "2025-08-24 to 2025-09-22",
+    "cover_url": "https://m.media-amazon.com/images/I/91KWXdS3uIL._SY466_.jpg",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Found this gem on a random stroll through the Daryaganj Sunday market. Didn’t know I needed this so much."
+      }
+    ]
+  },
+  {
     "id": "258e9933-5fca-8005-8c2e-c08a78fcd95c",
     "created_time": "2025-08-23T10:23:00.000Z",
     "book_name": "The Six Pillars of Self Esteem",
-    "read_date": "2025-08-22 to Reading ...",
+    "read_date": "2025-08-22 to 2025-09-30",
     "cover_url": "https://m.media-amazon.com/images/I/91+wmi0G1VL.jpg",
     "description": [
       {
         "component": "paragraph",
-        "text": "More of a need tbh"
+        "text": "Good book, skim through chapters 6–11 and it sums up the book."
       }
     ]
   },
