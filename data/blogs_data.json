@@ -1,5 +1,69 @@
 [
   {
+    "id": "292e9933-5fca-807e-a2a6-c9c2f95bda19",
+    "created_time": "2025-10-20T19:10:00.000Z",
+    "title": "SLA’s and cloud outage failover mechanisms",
+    "date": "2025-10-20",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Been reading a lot of posts about the recent AWS outage. The official reason hasn’t been fully disclosed by AWS yet all they’ve said is that in one of their regions (US-East-1) there was a fault in the monitoring system for their load balancers, which caused a cascading failure. What exactly triggered the fault is still unknown. Follow their health status here : (https://health.aws.amazon.com/health/status)"
+      },
+      {
+        "component": "paragraph",
+        "text": "The important point I want to make here ( AWS outage is a good opportunity to learn :] ) is that a single cloud provider’s outage can wreak havoc on a large part of the internet. So, what are the consequences for these providers? There’s no universal law penalizing downtime for cloud providers. Instead, application owners and providers sign a Service Level Agreement (SLA), which guarantees a certain uptime."
+      },
+      {
+        "component": "paragraph",
+        "text": "Failing to meet that SLA is usually not harsh on the provider. Most of the time, they simply provide the application owner with a refund for the downtime and sometimes extra credits. Occasionally, for highly sensitive applications like banking services, providers may compensate for actual business losses. But for most consumers, it’s just bill waivers and credits losses due to downtime are not covered."
+      },
+      {
+        "component": "paragraph",
+        "text": "Since cloud providers hold most of the leverage in downtime matters, anyone who wants to safeguard their applications must implement a failover strategy. A naive but safe approach is to think of multi-cloud setups, running the same application on two providers one as backup in case the primary goes down. This approach is straightforward but expensive and doubles engineering effort and cloud costs."
+      },
+      {
+        "component": "paragraph",
+        "text": "More popular ways to tackle the problem are : "
+      },
+      {
+        "component": "heading_3",
+        "text": "1️⃣ Multi-AZ architecture (within a single Region)"
+      },
+      {
+        "component": "paragraph",
+        "text": "Every region provided by a cloud provider has 2–6 Availability Zones (for example, us-east-1a, us-east-1b)  physically separate infrastructures in the same region with independent power, cooling, and networking. If one zone fails, the others might still be running."
+      },
+      {
+        "component": "paragraph",
+        "text": "Applications deploy workloads across at least two AZs in the same Region. A load balancer sits in front, distributing traffic. If one AZ goes down, the load balancer automatically stops sending requests there."
+      },
+      {
+        "component": "heading_3",
+        "text": "2️⃣ Multi-Region architecture (cross-region)"
+      },
+      {
+        "component": "paragraph",
+        "text": "Applications deploy duplicate copies of the entire system in two or more regions. For example:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Primary: us-east-1"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Backup / Secondary: us-west-2 "
+      },
+      {
+        "component": "paragraph",
+        "text": "A Global DNS (like Route 53, Cloudflare, or Akamai) sits on top for geographic routing and health checks. If the primary region is unhealthy, DNS automatically reroutes users to the secondary region."
+      },
+      {
+        "component": "paragraph",
+        "text": "This way, if an entire region shuts down or faces a massive outage like what happened today with AWS US-East-1 your application can switch to a backup region like US-West-2 with minimal disruption."
+      }
+    ]
+  },
+  {
     "id": "274e9933-5fca-80f0-b02f-e856933a4aed",
     "created_time": "2025-09-20T21:09:00.000Z",
     "title": "What are pessimistic locking and optimistic locking?",
