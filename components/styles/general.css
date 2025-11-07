@@ -74,15 +74,18 @@ ul, ol {
   pointer-events: none;
 }
 
-/* when expanded allow full height */
-.expandable.expanded {
-  max-height: 2000px; /* large enough to show whole content */
+/* hide the gradient overlay when expanded so it doesn't cover content */
+.expandable.expanded::after {
+  display: none;
 }
+
+/* when expanded: JS will set inline max-height to the content height for a smooth transition */
+/* expanded state is handled via inline styles set by JS */
 
 /* read more button */
 .read-more-btn {
   display: inline-block;
-  margin-top: 0.4rem;
+  /* margin-top: 0.2rem; */
   color: #354096;
   cursor: pointer;
   user-select: none;
