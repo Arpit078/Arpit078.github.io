@@ -130,15 +130,47 @@ function toggleReadMore(id, btn) {
 
     if (para.classList.contains("expanded")) {
         btn.textContent = "Read Less";
+        btn.setAttribute('aria-expanded','true');
     } else {
         btn.textContent = "Read More";
+        btn.setAttribute('aria-expanded','false');
     }
 }
 
-
+// new helper: hide read-more button when content is already short
+function initExpandableControls() {
+    const COLLAPSED_HEIGHT = 96; // should match .expandable max-height in CSS
+    document.querySelectorAll('.expandable').forEach((el, idx) => {
+        const parent = el.parentElement;
+        const btn = parent ? parent.querySelector('.read-more-btn') : null;
+        // if content fits within collapsed height hide the button and remove gradient
+        if (!btn) return;
+        // use scrollHeight to know full content height
+        if (el.scrollHeight <= COLLAPSED_HEIGHT + 1) {
+            btn.style.display = 'none';
+            el.classList.remove('expanded'); // ensure not expanded
+            el.style.maxHeight = 'none'; // ensure no visual clipping
+            // remove overlay gradient by disabling ::after via a data attr (CSS not modified here)
+        } else {
+            btn.style.display = 'inline-block';
+            el.style.maxHeight = ''; // leave CSS to handle
+        }
+        // set accessible attribute initial state
+        btn.setAttribute('aria-expanded', el.classList.contains('expanded') ? 'true' : 'false');
+        // ensure button calls toggleReadMore if not inline HTML onclick
+        // (Your HTML already uses onclick inline; this is safe fallback)
+        if (!btn.onclick) {
+            const id = el.id || `para-init-${idx}`;
+            el.id = id;
+            btn.addEventListener('click', () => toggleReadMore(id, btn));
+        }
+    });
+}
 
 if(cache[blog]){
     document.getElementById("blog").innerHTML =  cache[blog]
+    // initialize read-more behaviour after DOM injection
+    initExpandableControls();
     // updateTechBox(cache["countTotal"],
     // cache["countCurrentWeek"],
     // cache["countLastWeek"],
@@ -148,5 +180,7 @@ else{
     fetchProjects().then(([res, blog]) => {
         cache[blog] = res;
         document.getElementById("blog").innerHTML = res;
+        // initialize read-more behaviour after DOM injection
+        initExpandableControls();
     });  
 }

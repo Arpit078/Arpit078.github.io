@@ -23,11 +23,71 @@
   font-weight: 300;
   line-height: 1.4;
   color: black;
+  /* make sure long words / URLs wrap on narrow screens */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
-.heading_h3{
-  font-weight: 500;
-  font-size: 2.1rem;
+
+/* make lists wrap similarly */
+ul, ol {
+  max-width: 40em;              
+  font-size: 1.2rem;            
+  font-weight: 300;             
+  line-height: 1.4;             
+  color: black !important;      
+  padding-left: 1.5rem;         
+  margin: 1em 0;                
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+  max-width: 100%;
 }
+
+/* Prevent horizontal overflow for content blocks */
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Expandable paragraph (collapsed by default) */
+.expandable {
+  max-height: 96px; /* roughly 3 lines; adjust as needed */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.35s ease;
+  width: 100%;
+}
+
+/* subtle gradient to hint there's more */
+.expandable::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.4rem;
+  background: linear-gradient(transparent, rgba(255,255,255,0.95));
+  pointer-events: none;
+}
+
+/* when expanded allow full height */
+.expandable.expanded {
+  max-height: 2000px; /* large enough to show whole content */
+}
+
+/* read more button */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: #354096;
+  cursor: pointer;
+  user-select: none;
+}
+
 .highlight{
   max-width: 40em;
   font-size: 1.2rem;
@@ -42,16 +102,6 @@ p{
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-}
-
-ul, ol {
-  max-width: 40em;              /* keep same width as .paragraph */
-  font-size: 1.2rem;            /* match paragraph font size */
-  font-weight: 300;             /* same font weight */
-  line-height: 1.4;             /* same line height */
-  color: black !important;      /* same color */
-  padding-left: 1.5rem;         /* indent bullets/numbers */
-  margin: 1em 0;                /* spacing above/below list */
 }
 
 li {
@@ -97,4 +147,12 @@ a:hover::before {
   padding: 1rem;
   filter: drop-shadow(3px 1px 4px #484849);
   border-radius: 5px;
+}
+
+/* ensure code blocks don't cause overflow */
+.code_block, pre, code {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  box-sizing: border-box;
 }
