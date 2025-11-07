@@ -2,7 +2,7 @@
 //before template string after installing inline html extention.
 import Navbar from "../components/Navbar.js"
 const Home = /*html*/ `
-<div class="Text">
+<div class="Text" style="max-width: 50%;">
     <div id="headAndNav">
         <div class="bg">${Navbar}</div>
     </div>
