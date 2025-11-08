@@ -1,5 +1,93 @@
 [
   {
+    "id": "2a2e9933-5fca-80bf-aa11-f5d45bad6bf3",
+    "created_time": "2025-11-05T04:20:00.000Z",
+    "title": "Design Patterns",
+    "date": "2025-11-05",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "There are three main categories of design patterns."
+      },
+      {
+        "component": "heading_3",
+        "text": "➡️ Creational Design Pattern"
+      },
+      {
+        "component": "paragraph",
+        "text": "It all starts with understanding what OCP (Open Closed Principle) is."
+      },
+      {
+        "component": "paragraph",
+        "text": "Open Closed Principle – Your code should be open to extension but closed for modification. Say you create a function to calculate discounts and have different discounts for students, employees, and premium customers. Now that same function handles all of these entities using if-else statements, applying different discounts based on their types. If a requirement comes that now you need to give discounts to elderly people, there are two ways. One is to add another else-if block in your function, which makes you modify your code not a suitable design approach for the long term. A better way is to have generic factories and builders for creating objects."
+      },
+      {
+        "component": "paragraph",
+        "text": "What that means is you have separate entity types for student, employee, premium customer, etc., with their respective discount functions implemented, and there is a builder class that takes in the entity type and uses its corresponding discount function to return the discount. How this helps is that now, when you need to add a discount for elderly people, you don't need to modify your existing code just add a new class for elderly people handling their respective discount strategy."
+      },
+      {
+        "component": "paragraph",
+        "text": "This is what makes a creational design pattern. It is favored because, in larger codebases, it makes it easier to develop without breaking existing code."
+      },
+      {
+        "component": "paragraph",
+        "text": "There are several patterns under creational design patterns like Singleton, Factory Method, Abstract Factory, etc. But the core idea is to have your code follow OCP."
+      },
+      {
+        "component": "heading_3",
+        "text": "➡️ Structural Design Pattern"
+      },
+      {
+        "component": "paragraph",
+        "text": "OCP is the key principle here as well, but the structural design pattern also focuses on building smaller structures that work with each other without much modification and support maximum additions. Key thoughts to understand it are to learn about:"
+      },
+      {
+        "component": "paragraph",
+        "text": "1️⃣ Adapter Pattern – When you have a working piece of code well-tested under production environments, and then you get an update from your third-party API saying your code is incompatible, you don’t go around changing all of your codebase  you try to develop an adapter that helps your code work with the update. This is compliant with OCP as well avoid modifications and consider adding extensions."
+      },
+      {
+        "component": "paragraph",
+        "text": "2️⃣ Decorator Pattern – When you have things stacked on top of each other or coupled with each other, such as, let’s say there is a FileReader class, then another EncryptedFileReader which decrypts the file and then calls the FileReader, and another class that reads a compressed file by decompressing it and then calling the FileReader. It is a highly coupled structure. Let’s say you get a file that is both encrypted and compressed now you’ll have to create another class that decompresses, then decrypts, and then calls the FileReader, even though you already have all the functions to do the same without this new class."
+      },
+      {
+        "component": "paragraph",
+        "text": "Just a small tweak in the previous structure we do is to make the decryption and decompression classes independent of FileReader, and then we use them as decorators (special classes that add certain functionality to another class) on the FileReader. So when a compressed, encrypted file comes, all you do is call:"
+      },
+      {
+        "component": "paragraph",
+        "text": "CompressionDecorator(EncryptionDecorator(FileReader()))"
+      },
+      {
+        "component": "heading_3",
+        "text": "➡️ Behavioural Design Pattern"
+      },
+      {
+        "component": "paragraph",
+        "text": "This design pattern is meant to govern how responsibilities are distributed across objects and classes, making it easy to add new behaviours without breaking existing code. Key notes for understanding it:"
+      },
+      {
+        "component": "paragraph",
+        "text": "1️⃣ Chain of Responsibility – “Pass it along until someone handles it.” If the current handler can generate a valid response, then it does that; otherwise, it passes the request down to another handler. This pass-down behaviour prevents one from writing multiple coupled if/else cases in one handler, which outright conflicts with OCP."
+      },
+      {
+        "component": "paragraph",
+        "text": "2️⃣ State Pattern – When a class behaves according to its internal state, then the State design pattern comes in handy. One way could be to have your class check for its state before executing a behaviour; another, more design-friendly way, is to have the behaviour injected into the state itself."
+      },
+      {
+        "component": "paragraph",
+        "text": "Taking an example let’s say there is a play button in a music player; it has three states: paused, playing, and stopped. Without a design pattern, one would design the play button with a switch or if/else, i.e."
+      },
+      {
+        "component": "paragraph",
+        "text": "if current state is paused → start playing the music → change the state to playing."
+      },
+      {
+        "component": "paragraph",
+        "text": "With the design pattern, what happens is you call the play button as → state.press_play, where state is the property of the play button (paused, playing, or stopped) no if/else checks, one go hit."
+      }
+    ]
+  },
+  {
     "id": "292e9933-5fca-807e-a2a6-c9c2f95bda19",
     "created_time": "2025-10-20T19:10:00.000Z",
     "title": "SLA’s and cloud outage failover mechanisms",
