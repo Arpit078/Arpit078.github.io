@@ -7,15 +7,19 @@
     "description": [
       {
         "component": "paragraph",
-        "text": "You probably have heard that a distributed system facing node downtime does an election for the new leader node. It is a consensus problem in distributed systems, and it is fairly common and there are a lot of algorithms to solve this."
+        "text": "You probably have heard that a distributed system facing node downtime does an election for a new leader. This is a consensus problem in distributed systems, and there are algorithms to solve it."
       },
       {
         "component": "paragraph",
-        "text": "The reason it is hard for machines to come up with a conclusion is because there are several factors to take care of. Consider a Database consisting of 3 nodes trying to commit a transaction. The leader node A receives a commit and propagates the same to the child nodes. Node B receives the commit message instantly while node C receives it with a 5-second delay due to an unstable network. Now if one commits and the other does not, the database will become inconsistent. Now let’s assume A sends the commit message to B and before sending it to C it crashes. Or worse, now that A has gone down, a new leader must be selected. It may happen that both B and C propose to be the leader and neither of them agrees with the other."
+        "text": "It is hard for machines to reach a conclusion because several factors must be handled. Consider a database with 3 nodes trying to commit a transaction. Leader A receives a commit and propagates it to nodes B and C. B receives it instantly while C receives it with a 5-second network delay. If one commits and the other doesn’t, the database becomes inconsistent. Now assume A sends the commit to B and crashes before sending it to C. Or worse, when A goes down, a new leader must be selected — B and C might both propose themselves, causing conflict."
       },
       {
         "component": "paragraph",
-        "text": "So what Paxos does is it guarantees that all the non-faulty nodes in a distributed system will eventually agree on a single value, even if messages are delayed, nodes crash, or the network behaves unpredictably. Two terms:"
+        "text": "Paxos guarantees that all non-faulty nodes will eventually agree on a single value, even if messages are delayed or nodes crash."
+      },
+      {
+        "component": "paragraph",
+        "text": "Two terms:"
       },
       {
         "component": "paragraph",
@@ -23,11 +27,11 @@
       },
       {
         "component": "paragraph",
-        "text": "2️⃣ Liveness – Nodes eventually decide on a value if a majority is alive and communicative."
+        "text": "2️⃣ Liveness – A majority eventually reaches a decision."
       },
       {
         "component": "paragraph",
-        "text": "In a system following the Paxos protocol for consensus, there are two types of nodes:"
+        "text": "In Paxos there are two types of nodes:"
       },
       {
         "component": "bulleted_list_item",
@@ -43,15 +47,11 @@
       },
       {
         "component": "paragraph",
-        "text": "The consensus begins with the proposer generating a proposal number N. This number should be unique and greater than previously used proposal numbers. One thing to note here is that the system doesn’t have a central entry of the proposal numbers used. So to achieve the constraints on N, it is made of a local logical counter or timestamp of that particular node combined with the proposer ID, which is unique to the node (like its IP or MAC address). The combination then generates a unique increasing number."
+        "text": "The proposer generates a proposal number N, unique and greater than previous ones. Since there is no central tracker, N is formed using a logical counter or timestamp combined with a unique proposer ID (IP/MAC), producing a unique increasing number."
       },
       {
         "component": "paragraph",
-        "text": "Example for N:"
-      },
-      {
-        "component": "paragraph",
-        "text": "proposal_number = (logical_clock << 16) | proposer_id"
+        "text": "Example: proposal_number = (logical_clock << 16) | proposer_id"
       },
       {
         "component": "heading_3",
@@ -59,11 +59,11 @@
       },
       {
         "component": "paragraph",
-        "text": "The proposer broadcasts a message to all the acceptor nodes:"
+        "text": "Proposer sends a Prepare(N):"
       },
       {
         "component": "paragraph",
-        "text": "“If you haven’t promised a higher number (another proposer’s proposal number), promise not to accept anything lower than N (our proposal number).”"
+        "text": "“If you haven’t promised a higher number, promise not to accept anything < N.”"
       },
       {
         "component": "heading_3",
@@ -71,15 +71,15 @@
       },
       {
         "component": "paragraph",
-        "text": "Acceptor nodes respond back:"
+        "text": "Acceptors respond:"
       },
       {
         "component": "bulleted_list_item",
-        "text": "If N is higher than any proposal number it has seen:"
+        "text": "If N is higher than any seen:"
       },
       {
         "component": "bulleted_list_item",
-        "text": "If N is old → the acceptor ignores or rejects it."
+        "text": "If N is old → ignore/reject"
       },
       {
         "component": "heading_3",
@@ -87,27 +87,15 @@
       },
       {
         "component": "paragraph",
-        "text": "The proposer decides what value to propose. Two possibilities:"
+        "text": "Proposer chooses a value:"
       },
       {
-        "component": "paragraph",
-        "text": "1️⃣ Case A: No acceptor had accepted a value earlier"
+        "component": "bulleted_list_item",
+        "text": "If no acceptor has accepted one → choose any value"
       },
       {
-        "component": "paragraph",
-        "text": "→ Proposer can choose any value it wants."
-      },
-      {
-        "component": "paragraph",
-        "text": "2️⃣ Case B: At least one acceptor had accepted a value earlier"
-      },
-      {
-        "component": "paragraph",
-        "text": "→ Proposer must choose the value with the highest proposal number"
-      },
-      {
-        "component": "paragraph",
-        "text": "(this preserves consistency)"
+        "component": "bulleted_list_item",
+        "text": "If some have → choose the value with the highest proposal number (preserves consistency)"
       },
       {
         "component": "heading_3",
@@ -115,35 +103,19 @@
       },
       {
         "component": "paragraph",
-        "text": "The proposer sends Accept(N, value) to acceptors:"
-      },
-      {
-        "component": "paragraph",
-        "text": "“Please accept value V with proposal number N.”"
+        "text": "Proposer sends Accept(N, V)."
       },
       {
         "component": "heading_3",
-        "text": "➡️ Step 6: Acceptors accept it"
+        "text": "➡️ Step 6:"
       },
       {
         "component": "paragraph",
-        "text": "If Accept(N, V) is ≥ the highest promise:"
-      },
-      {
-        "component": "bulleted_list_item",
-        "text": "The acceptor accepts the value"
-      },
-      {
-        "component": "bulleted_list_item",
-        "text": "And stores (N, V)"
-      },
-      {
-        "component": "bulleted_list_item",
-        "text": "It replies Accepted"
+        "text": "If N ≥ highest promise, acceptors store (N, V) and reply Accepted."
       },
       {
         "component": "paragraph",
-        "text": "Once a majority of acceptors have accepted the value, even if messages are delayed or nodes crash later, that value becomes permanent."
+        "text": "Once a majority accepts, the value becomes permanent even if nodes crash later."
       }
     ]
   },
