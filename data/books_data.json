@@ -1,14 +1,14 @@
 [
   {
-    "id": "27ee9933-5fca-8059-b88c-f5932ec0f0ea",
-    "created_time": "2025-09-30T22:16:00.000Z",
-    "book_name": "This is Marketing",
-    "read_date": "2025-10-01 to Reading ...",
-    "cover_url": "https://m.media-amazon.com/images/I/41eNPfvn3vL._SY445_SX342_ControlCacheEqualizer_.jpg",
+    "id": "2cce9933-5fca-804c-b77b-cfd581d9358f",
+    "created_time": "2025-12-17T18:13:00.000Z",
+    "book_name": "Days at the Torunka Café",
+    "read_date": "2025-12-16 to Reading ...",
+    "cover_url": "https://m.media-amazon.com/images/I/911V5qrkGXL._AC_UF1000,1000_QL80_FMwebp_.jpg",
     "description": [
       {
         "component": "paragraph",
-        "text": "Was in the market for “Purple Cow,” couldn’t find it. Anyway, it’s Seth Godin behind both :/"
+        "text": "I don't know how and why every other book I pick up, written by Yagisawa, feels just so relatable……so home"
       }
     ]
   },
