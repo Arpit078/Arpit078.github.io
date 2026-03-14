@@ -1,4 +1,8 @@
+import { execSync } from "child_process";
 import liveServer from "live-server"
+
+// Run the compile script before starting the server
+execSync("node ./scripts/compile.js", { stdio: "inherit" });
 
 var params = {
 	port: process.env.PORT||8181, // Set the server port. Defaults to 8080.

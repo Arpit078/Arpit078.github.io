@@ -35,12 +35,12 @@ async function fetchProjects(){
 //     document.getElementById("project").innerHTML =  res
 // })
 
-if(cache[project]){
-    document.getElementById("project").innerHTML =  cache[project]
+if(cache["project"]){
+    document.getElementById("project").innerHTML =  cache["project"]
 }
 else{
     fetchProjects().then(([res, project]) => {
-        cache[project] = res;
+        cache["project"] = res;
         document.getElementById("project").innerHTML = res;
     });  
 }

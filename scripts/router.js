@@ -8,7 +8,8 @@ function onNavigate(pathname){
     //     window.location.origin +pathname
     //     )
     window.location.hash = pathname
-    dom.innerHTML = routes[window.location.hash];
+    const routeNameWithHash = '#' + window.location.hash.slice(1).split('?')[0];
+    dom.innerHTML = routes[routeNameWithHash];
     
 }
 
@@ -25,9 +26,9 @@ function removeScriptBySrc(src) {
 }
 
 const BlogsData =sessionStorage.getItem("Blogs");
-function Blogs()
+function Blogs(params="")
       {
-          onNavigate("#Blogs");
+          onNavigate("#Blogs" + params);
           let myScript = document.createElement("script");
           myScript.setAttribute("src", "../Logic/Blogs.js");
           removeScriptBySrc("Logic")
@@ -36,11 +37,22 @@ function Blogs()
       
       
 const BooksData =sessionStorage.getItem("Books");
-function Books()
+function Books(params="")
       {
-          onNavigate("#Books");
+          onNavigate("#Books" + params);
           let myScript = document.createElement("script");
           myScript.setAttribute("src", "../Logic/Books.js");
+          removeScriptBySrc("Logic")
+          document.body.appendChild(myScript);
+      };
+      
+      
+const DetailedBlogData =sessionStorage.getItem("DetailedBlog");
+function DetailedBlog(params="")
+      {
+          onNavigate("#DetailedBlog" + params);
+          let myScript = document.createElement("script");
+          myScript.setAttribute("src", "../Logic/DetailedBlog.js");
           removeScriptBySrc("Logic")
           document.body.appendChild(myScript);
       };
@@ -50,9 +62,9 @@ function Books()
                 onNavigate("#Home");
             };
 const ProjectsData =sessionStorage.getItem("Projects");
-function Projects()
+function Projects(params="")
       {
-          onNavigate("#Projects");
+          onNavigate("#Projects" + params);
           let myScript = document.createElement("script");
           myScript.setAttribute("src", "../Logic/Projects.js");
           removeScriptBySrc("Logic")
@@ -60,20 +72,21 @@ function Projects()
       };
       
       
-const routes = {"":HomeData,"#Blogs":BlogsData,"#Books":BooksData,"#Home":HomeData,"#Projects":ProjectsData};
-if(window.location.hash in routes == true)
+const routes = {"":HomeData,"#Blogs":BlogsData,"#Books":BooksData,"#DetailedBlog":DetailedBlogData,"#Home":HomeData,"#Projects":ProjectsData};
+const routeName = window.location.hash.slice(1).split('?')[0];
+const routeNameWithHash = '#' + window.location.hash.slice(1).split('?')[0];
+if(routeNameWithHash in routes == true)
     {
-        dom.innerHTML = routes[window.location.hash];
+        dom.innerHTML = routes[routeNameWithHash];
     }
 
-const logicRoutes =["Blogs","Books","Projects"];
+const logicRoutes =["Blogs","Books","DetailedBlog","Projects"];
 
 //executes only once for the cases when the user visits the specific route from search
-if(logicRoutes.includes(window.location.hash.slice(1)))
-    {
-        let myScript = document.createElement("script");
-        const filename = window.location.hash.slice(1)
-        const filepath = "../Logic/" + filename + ".js"
-        myScript.setAttribute("src", filepath);
-        document.body.appendChild(myScript);
-    }
+
+if (logicRoutes.includes(routeName)) {
+    let myScript = document.createElement("script");
+    const filepath = "../Logic/" + routeName + ".js";
+    myScript.setAttribute("src", filepath);
+    document.body.appendChild(myScript);
+}

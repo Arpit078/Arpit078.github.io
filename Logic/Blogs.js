@@ -102,12 +102,12 @@ async function fetchProjects(){
     // updateTechBox(countTotal,countCurrentWeek,countLastWeek,expectedDatewrtLastWeek)
     for(let i =0;i<blogDatabase.length;i++){
     let content = contentGen(blogDatabase[i])
-    console.log(content)
+    console.log(blogDatabase[i].id)
     const projectObj = `
         <div class="content">
             <p class="subHead">${blogDatabase[i].title}</p>
             <div class="expandable" id="para-${i}">${content}</div>
-            <span class="read-more-btn" onclick="toggleReadMore('para-${i}', this)">Read More</span>
+            <div class="read-more-btn" onclick="toggleReadMore('${blogDatabase[i].id}')">Read More</div>
             <p class="highlight">
                 Dated :
                 <span class="paragraph">${blogDatabase[i].date}</span> 
@@ -124,83 +124,13 @@ async function fetchProjects(){
 // // Example usage:
 // const futureDate = getNextWeekdays(3); // Find a date that is 3 weekdays away from today
 // console.log(futureDate);
-function toggleReadMore(id, btn) {
-    const para = document.getElementById(id);
-    if (!para) return;
-    const COLLAPSED_HEIGHT = 96; // keep in sync with CSS collapsed height
-
-    // If currently expanded -> collapse
-    if (para.classList.contains('expanded')) {
-        // If maxHeight is 'none' (was cleared after expand), set it to current scrollHeight
-        // so we can transition down to the collapsed height.
-        if (getComputedStyle(para).maxHeight === 'none') {
-            para.style.maxHeight = para.scrollHeight + 'px';
-        }
-        // force reflow so the browser registers the starting height
-        // then set to collapsed height to animate
-        // eslint-disable-next-line no-unused-expressions
-        para.offsetHeight;
-        para.style.maxHeight = COLLAPSED_HEIGHT + 'px';
-        para.classList.remove('expanded');
-        btn.textContent = 'Read More';
-        btn.setAttribute('aria-expanded', 'false');
-        return;
-    }
-
-    // Expand: set class and animate to the full content height
-    para.classList.add('expanded');
-    // set to exact scrollHeight so transition reaches the full content without clipping
-    para.style.maxHeight = para.scrollHeight + 'px';
-    btn.textContent = 'Read Less';
-    btn.setAttribute('aria-expanded', 'true');
-
-    // After transition ends, clear inline maxHeight so the element can grow/shrink with content
-    const onTransitionEnd = (e) => {
-        if (e.propertyName !== 'max-height') return;
-        if (para.classList.contains('expanded')) {
-            para.style.maxHeight = 'none';
-        }
-        para.removeEventListener('transitionend', onTransitionEnd);
-    };
-    para.addEventListener('transitionend', onTransitionEnd);
+function toggleReadMore(id) {
+   DetailedBlog("?id=" + id);
 }
 
-// new helper: hide read-more button when content is already short
-function initExpandableControls() {
-    const COLLAPSED_HEIGHT = 96; // should match .expandable max-height in CSS
-    document.querySelectorAll('.expandable').forEach((el, idx) => {
-        const parent = el.parentElement;
-        const btn = parent ? parent.querySelector('.read-more-btn') : null;
-        // if content fits within collapsed height hide the button and remove gradient
-        if (!btn) return;
-        // use scrollHeight to know full content height
-        if (el.scrollHeight <= COLLAPSED_HEIGHT + 1) {
-            // content fits: show full content and hide button
-            btn.style.display = 'none';
-            el.classList.remove('expanded'); // ensure not expanded
-            el.style.maxHeight = 'none'; // show full content
-        } else {
-            // content overflows: ensure collapsed state and show button
-            btn.style.display = 'inline-block';
-            el.classList.remove('expanded');
-            el.style.maxHeight = COLLAPSED_HEIGHT + 'px';
-        }
-        // set accessible attribute initial state
-        btn.setAttribute('aria-expanded', el.classList.contains('expanded') ? 'true' : 'false');
-        // ensure button calls toggleReadMore if not inline HTML onclick
-        // (Your HTML already uses onclick inline; this is safe fallback)
-        if (!btn.onclick) {
-            const id = el.id || `para-init-${idx}`;
-            el.id = id;
-            btn.addEventListener('click', () => toggleReadMore(id, btn));
-        }
-    });
-}
 
-if(cache[blog]){
-    document.getElementById("blog").innerHTML =  cache[blog]
-    // initialize read-more behaviour after DOM injection
-    initExpandableControls();
+if(cache["blog"]){""
+    document.getElementById("blog").innerHTML =  cache["blog"]
     // updateTechBox(cache["countTotal"],
     // cache["countCurrentWeek"],
     // cache["countLastWeek"],
@@ -208,9 +138,8 @@ if(cache[blog]){
 }
 else{
     fetchProjects().then(([res, blog]) => {
-        cache[blog] = res;
+        cache["blog"] = res;
         document.getElementById("blog").innerHTML = res;
         // initialize read-more behaviour after DOM injection
-        initExpandableControls();
     });  
 }
