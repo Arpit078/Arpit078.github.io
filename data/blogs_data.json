@@ -1,5 +1,89 @@
 [
   {
+    "id": "323e9933-5fca-80f5-b94e-d3125c1fd2e4",
+    "created_time": "2026-03-14T13:47:00.000Z",
+    "title": "Notes on Engines and Transmission",
+    "date": "2026-03-14",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "I have been wanting to learn about engines and power transmission for a while now, particularly because of my growing interest in motorcycles. I always wondered why scooters don’t have a gearbox and what exactly a gearbox does. Here go my findings and learnings about motor vehicles."
+      },
+      {
+        "component": "heading_3",
+        "text": "Engines"
+      },
+      {
+        "component": "paragraph",
+        "text": "An engine is basically what gives the vehicle power. It burns up a fuel + air mixture (from the carburetor or a fuel injection system) in a cylinder and translates that power to a rotating shaft, which goes to the clutch, which then goes to a gearbox and finally goes to the wheel."
+      },
+      {
+        "component": "paragraph",
+        "text": "Most vehicles have internal combustion (IC) engines. They are either 2-stroke engines or 4-stroke engines. Strokes are basically the movement phases of the piston in the cylinder."
+      },
+      {
+        "component": "paragraph",
+        "text": "In a 2-stroke engine there are two phases: one compression stroke and a power stroke (combustion). In this setup what is happening is that every rotation of the crankshaft is powered by a combustion, which gives more power but also consumes more fuel."
+      },
+      {
+        "component": "paragraph",
+        "text": "While in a 4-stroke engine we have 4 phases: intake → compression → power (combustion) → exhaust. If you could see, we have two rotations of the crankshaft per combustion, meaning one combustion powers two rotations, which results in lower power per rotation compared to a 2-stroke engine."
+      },
+      {
+        "component": "paragraph",
+        "text": "What we hear about as the CCs of an engine is basically the volume of the cylinder, which determines how much fuel-air mixture the cylinder can hold."
+      },
+      {
+        "component": "paragraph",
+        "text": "There are multi-cylinder engines as well. There are 4-cylinder engines, 6-cylinder engines, basically providing more power in the engine. All these cylinders are synced so that when one goes into compression another goes into a combustion stroke, making the power delivery smoother. All the crank throws are connected to the same crankshaft that transfers the power to the gearbox."
+      },
+      {
+        "component": "heading_3",
+        "text": "Transmission"
+      },
+      {
+        "component": "paragraph",
+        "text": "There is a certain range of RPM (a relatively small range) that you can get from an engine because you can accelerate and increase the fuel in the air-fuel mix, giving more power in combustions and more RPM to the engine crankshaft. But to run a vehicle at different speeds you need different RPMs on the wheel, to be precise a wider range of RPMs."
+      },
+      {
+        "component": "paragraph",
+        "text": "Since the power provided by the engine is limited within that RPM range, we have gears to vary the torque and speed."
+      },
+      {
+        "component": "paragraph",
+        "text": "When the bike is standing, we need a higher amount of torque to overcome the static friction. Moreover the speed of the wheel will be very low in the beginning, so if you connect the wheel to something rotating at let's say 900 RPM (engine) it will be a nightmare during the connection."
+      },
+      {
+        "component": "paragraph",
+        "text": "So what we do is connect the wheel to something that is moving at lower RPM but with higher torque. To achieve this what we do is have a small gear attached to the engine which drives a bigger gear on the transmission side, so for every rotation of the engine our wheel gear rotates a little bit, transferring the same power in that smaller movement but with higher torque."
+      },
+      {
+        "component": "paragraph",
+        "text": "While when we need higher speeds we connect the engine to a gear ratio that makes the wheel rotate faster compared to the engine, depending on the gear ratio."
+      },
+      {
+        "component": "paragraph",
+        "text": "What scooters use is a similar concept but they have this setup automatic. They use CVT (Continuously Variable Transmission). So what happens is that at lower speeds the pulleys adjust their diameters accordingly and similarly for higher speeds. They use a belt instead of chain-driven gears."
+      },
+      {
+        "component": "paragraph",
+        "text": "The most important part of the transmission system is the clutch. While shifting gears we need to disconnect the engine from the wheel, otherwise during the shift we might damage the gears."
+      },
+      {
+        "component": "paragraph",
+        "text": "How the clutch works is very interesting. It was an ahhaaa moment for me when I learned this. So what we have is that we connect the engine and the gearbox using friction. We have a lot of clutch plates and each clutch plate is a pair of a friction plate and a steel plate held together tightly between the engine and gearbox with springs."
+      },
+      {
+        "component": "paragraph",
+        "text": "When they are tightly pressed against each other the engine is connected with the gearbox and in turn the wheel due to friction. When we press the clutch what happens is the springs are compressed and the pressure on the clutch plates is released, causing a disconnection between the engine and the gearbox."
+      },
+      {
+        "component": "paragraph",
+        "text": "That was all! pretty fascinating engineering I should say."
+      }
+    ]
+  },
+  {
     "id": "2b0e9933-5fca-80ba-99bf-e31f22a64a3f",
     "created_time": "2025-11-19T15:40:00.000Z",
     "title": "Paxos Theorem",
