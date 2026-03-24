@@ -27,7 +27,7 @@ const Home = /*html*/ `
 </p>
 
 <p class="paragraph">
-    Outside work, I enjoy playing basketball, reading books, and traveling sometimes.
+   Outside work, I’m learning Muay Thai, sometimes reading (rarely these days 😉), and traveling occasionally.
 </p>
 
 
