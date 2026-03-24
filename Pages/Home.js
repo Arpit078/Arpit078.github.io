@@ -24,8 +24,6 @@ const Home = /*html*/ `
 <p class="paragraph">
     Most of my work is open-source and publicly available on 
     <a href="https://github.com/Arpit078" class="link">GitHub<span class="bar"></span></a>.
-    You can also find me on 
-    <a href="https://www.linkedin.com/in/arpit-verma-806268227/" class="link">LinkedIn.<span class="bar"></span></a>
 </p>
 
 <p class="paragraph">
