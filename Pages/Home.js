@@ -14,11 +14,9 @@ const Home = /*html*/ `
 </p>
 
 <p class="paragraph">
-    I love building products that solve real problems.
-    I built a community driven habit tracker app, check it out: <a href="https://play.google.com/store/apps/details?id=com.microdev.tainted" class="link">Tainted<span class="bar"></span></a>.
-    I also created a lesser-known SPA (Single Page Application) framework called 
-    <a href="https://pre-reactjs-docs.vercel.app/" class="link">pre-reactJS<span class="bar"></span></a>, 
-    which actually powers this website.  
+    I enjoy building cool stuff.
+    I built <a href="https://pre-reactjs-docs.vercel.app/" class="link">pre-reactJS<span class="bar"></span></a> SPA framework
+    which actually powers this website, I also created a community driven habit tracker app, check it out: <a href="https://play.google.com/store/apps/details?id=com.microdev.tainted" class="link">Tainted<span class="bar"></span></a>
 </p>
 
 <p class="paragraph">
@@ -27,7 +25,7 @@ const Home = /*html*/ `
 </p>
 
 <p class="paragraph">
-   Outside work, I’m learning Muay Thai, sometimes reading (rarely these days 😉), and traveling occasionally.
+    Outside of work, I’m learning Muay Thai, reading, and travelling whenever I get the chance.
 </p>
 
 
