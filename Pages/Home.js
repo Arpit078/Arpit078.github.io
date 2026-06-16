@@ -24,11 +24,6 @@ const Home = /*html*/ `
     <a href="https://github.com/Arpit078" class="link">GitHub<span class="bar"></span></a>.
 </p>
 
-<p class="paragraph">
-    Outside of work, I’m learning Muay Thai, reading, and travelling whenever I get the chance.
-</p>
-
-
 </div>
 
 `;
