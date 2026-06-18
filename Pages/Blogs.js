@@ -28,7 +28,7 @@ const Blogs = /*html*/`
 </style>
 <div id="blogs" class="text">
  <div id="headAndNav">
-     <h1 class="title">Blogs.</h1>
+     <h1 class="title">Notes.</h1>
      <div class="bg">${Navbar}</div>
     </div>
 <div>
