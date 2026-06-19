@@ -46,6 +46,9 @@ fetch("../data/blogs_data.json")
       if (blogContent) {
         const detailedBlogDiv = document.getElementById("detailed_blog");
         detailedBlogDiv.innerHTML = blogContent;
+        if (typeof renderMath === 'function') {
+          renderMath(detailedBlogDiv);
+        }
       }
     } else {
       console.error("No blog ID found in the URL");

@@ -149,14 +149,27 @@ a:hover::before {
   transform: scaleY(1);
 }
 .code_block{
-  background-color: black;
+  background: rgba(20, 20, 20, 0.672);
   font-family: 'Source Code Pro', monospace;
-  color: wheat;
-  width: max-content;
-  border-radius: 6px;
+  color: #ffb86c;
+  width: 100%;
+  border-radius: 8px;
   padding: 1rem;
-  filter: drop-shadow(3px 1px 4px #484849);
-  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.code_block pre {
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+.equation {
+  margin: 1rem 0;
 }
 
 /* ensure code blocks don't cause overflow */

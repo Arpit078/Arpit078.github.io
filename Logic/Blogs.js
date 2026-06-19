@@ -139,7 +139,11 @@ if(cache["blog"]){""
 else{
     fetchProjects().then(([res, blog]) => {
         cache["blog"] = res;
-        document.getElementById("blog").innerHTML = res;
+        const blogContainer = document.getElementById("blog");
+        blogContainer.innerHTML = res;
+        if (typeof renderMath === 'function') {
+            renderMath(blogContainer);
+        }
         // initialize read-more behaviour after DOM injection
     });  
 }

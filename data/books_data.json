@@ -75,19 +75,23 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Blind Luck – Pure chance, outside of your control. Things just happen to go your way (fate, fortune, randomness)."
+        "text": "Blind Luck – Pure chance, outside of your control. Things just happen to go your way (fate, fortune, randomness).",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Luck from friction – Created by persistence, hard work, and hustle. By being active and stirring things up, you increase the odds of lucky breaks finding you."
+        "text": "Luck from friction – Created by persistence, hard work, and hustle. By being active and stirring things up, you increase the odds of lucky breaks finding you.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Luck from Preparation – Comes from skill and awareness. When you’re highly knowledgeable in a field, you notice opportunities and lucky breaks others miss."
+        "text": "Luck from Preparation – Comes from skill and awareness. When you’re highly knowledgeable in a field, you notice opportunities and lucky breaks others miss.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Luck from Character – The rarest and most powerful. You build a unique reputation, expertise, or brand so opportunities seek you out. At this level, what others call “luck” is really the result of who you’ve become."
+        "text": "Luck from Character – The rarest and most powerful. You build a unique reputation, expertise, or brand so opportunities seek you out. At this level, what others call “luck” is really the result of who you’ve become.",
+        "children": []
       },
       {
         "component": "heading_3",
@@ -205,15 +209,18 @@
       },
       {
         "component": "numbered_list_item",
-        "text": " Learning happens just beyond the comfort zone you need to push yourself just enough that you are in the state of practice where things are hard but doable for sure."
+        "text": " Learning happens just beyond the comfort zone you need to push yourself just enough that you are in the state of practice where things are hard but doable for sure.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "No expert does not go by the face value of things what that means is that every expert devises a way of his own slightly tweaked to the defined way to do the thing say for example a chess grand master does not see two three pieces and moves at a time he views the whole board and all the pieces at once and compares them to the situations he had practiced on before called a mental representaion, hope that makes some sense. "
+        "text": "No expert does not go by the face value of things what that means is that every expert devises a way of his own slightly tweaked to the defined way to do the thing say for example a chess grand master does not see two three pieces and moves at a time he views the whole board and all the pieces at once and compares them to the situations he had practiced on before called a mental representaion, hope that makes some sense. ",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "There is something called deliberate practice to acheive greatness in a particular field, Deliberate practice basically means that you should follow the instructions laid out by the experts of the field and devise your own methods over it while maintaing your practice just beyond the comfort zone it is not the number of hours you put in but it is the amount of effective practice that you put in thus experts are not made in 10000 hours but below or above that number depending on the practice efficiency."
+        "text": "There is something called deliberate practice to acheive greatness in a particular field, Deliberate practice basically means that you should follow the instructions laid out by the experts of the field and devise your own methods over it while maintaing your practice just beyond the comfort zone it is not the number of hours you put in but it is the amount of effective practice that you put in thus experts are not made in 10000 hours but below or above that number depending on the practice efficiency.",
+        "children": []
       }
     ]
   },

@@ -1,5 +1,304 @@
 [
   {
+    "id": "383e9933-5fca-809d-9e26-ec9eccfca74d",
+    "created_time": "2026-06-18T18:27:00.000Z",
+    "title": "B-Trees and Indexing in SQL DBs",
+    "date": "2026-06-18",
+    "description": [
+      {
+        "component": "paragraph",
+        "text": "Wrote a note about Indexing in SQL databases, following is what this tries to answer"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "What exactly is B-Tree and Why it is the preferred data structure for database indexes compared to other data structures?",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "How do database indexes use B-Trees",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "What metrics should be evaluated before deciding to add an index?",
+        "children": []
+      },
+      {
+        "component": "heading_2",
+        "text": "What exactly is a B-Tree and why is it the preferred data structure for database indexes compared to other data structures?"
+      },
+      {
+        "component": "paragraph",
+        "text": "Indexes are structures in databases that improve query times with a tradeoff of slightly increased write latencies and additional storage. Improving query times is essentially a searching problem, and there are a ton of algorithms and data structures available for that."
+      },
+      {
+        "component": "paragraph",
+        "text": "The easiest way to speed up searches when you're allowed some extra space is to hash the dataset. For equality searches such as:"
+      },
+      {
+        "component": "code",
+        "text": "WHERE id = 123",
+        "language": "sql"
+      },
+      {
+        "component": "paragraph",
+        "text": "a hash table can provide near O(1) lookups, which is incredibly fast."
+      },
+      {
+        "component": "paragraph",
+        "text": "The caveat is that hash tables only help with equality searches. The moment you want to perform range queries such as:"
+      },
+      {
+        "component": "code",
+        "text": "WHERE id BETWEEN 100 AND 200",
+        "language": "sql"
+      },
+      {
+        "component": "paragraph",
+        "text": "or order the results:"
+      },
+      {
+        "component": "code",
+        "text": "ORDER BY id",
+        "language": "sql"
+      },
+      {
+        "component": "paragraph",
+        "text": "the hash table loses its advantage because it does not maintain any ordering of keys(Skipping ordered hashmaps as they internally use balancing trees discussed later). At that point, you would have to scan a significant portion of the hash table, defeating much of the purpose of adding an index."
+      },
+      {
+        "component": "paragraph",
+        "text": "Binary Search is a effective searching technique that can help here (O(log(n)) search compered to O(1) of hashmap :/), we have data structures built around it such as Binary Search Trees (BSTs). For the most part, BSTs can solve all the problems we care about for querying. Equality lookups can be performed in O(log N), and range queries can be performed in O(log N + K), where K is the number of elements in the range. You find the first element in the range and then keep finding its successors (the next key larger than the current key). The same idea applies to ordered queries with limits: find the smallest matching element and then walk through the next K successors."
+      },
+      {
+        "component": "paragraph",
+        "text": "The only problem with using a BST as a database index is that it works best when all data resides in memory. Databases, however, store their data on disk. Since BST nodes are connected through pointers, traversing from one node to another can require reading different disk pages. Disk access is orders of magnitude slower than memory access, so the number of pages touched becomes extremely important."
+      },
+      {
+        "component": "paragraph",
+        "text": "For a table with 1,000,000 rows, a balanced BST would have a height of roughly:"
+      },
+      {
+        "component": "equation",
+        "expression": "\\log_2(1,000,000) \\approx 20"
+      },
+      {
+        "component": "paragraph",
+        "text": "This means a lookup may require traversing around 20 levels of the tree. If those nodes are not already cached in memory, that can translate into many page reads."
+      },
+      {
+        "component": "paragraph",
+        "text": "This is the exact problem B-Trees solve."
+      },
+      {
+        "component": "paragraph",
+        "text": "Instead of storing a single key per node, a B-Tree stores many keys inside a node. You can think of a node as a sorted array of keys along with child pointers. Each key acts as a separator that determines which child subtree should be followed next."
+      },
+      {
+        "component": "paragraph",
+        "text": "Because each node contains many keys, each node can have hundreds of children. This dramatically reduces the height of the tree."
+      },
+      {
+        "component": "paragraph",
+        "text": "The height of a B-Tree is approximately:"
+      },
+      {
+        "component": "equation",
+        "expression": "\\log_B(N)"
+      },
+      {
+        "component": "paragraph",
+        "text": "where B is the branching factor (the number of children an internal node can have)."
+      },
+      {
+        "component": "paragraph",
+        "text": "For a table with 1,000,000 rows and a branching factor of roughly 256:"
+      },
+      {
+        "component": "equation",
+        "expression": "\\log_{256}(1,000,000) \\approx 3"
+      },
+      {
+        "component": "paragraph",
+        "text": "which means the tree may only be 3-4 levels deep. Fewer levels means fewer page reads and significantly faster lookups."
+      },
+      {
+        "component": "paragraph",
+        "text": "Most modern databases actually use B+ Trees, which are a specialized variant of B-Trees."
+      },
+      {
+        "component": "paragraph",
+        "text": "There are two important differences:"
+      },
+      {
+        "component": "paragraph",
+        "text": "1. Actual records exist only in the leaf nodes"
+      },
+      {
+        "component": "paragraph",
+        "text": "In a B+ Tree, internal nodes only store separator keys and child pointers. They are used purely for navigation."
+      },
+      {
+        "component": "paragraph",
+        "text": "The leaf nodes contain either:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "the actual row data (clustered indexes), or",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "pointers to the rows (secondary indexes)",
+        "children": []
+      },
+      {
+        "component": "paragraph",
+        "text": "Since internal nodes are much smaller, more keys can fit inside a page, increasing the branching factor and keeping the tree even shallower."
+      },
+      {
+        "component": "paragraph",
+        "text": "2. Leaf nodes are linked together"
+      },
+      {
+        "component": "paragraph",
+        "text": "All leaf nodes are linked, typically as a doubly linked list."
+      },
+      {
+        "component": "paragraph",
+        "text": "This makes range queries extremely efficient. Once the database reaches the first matching leaf, it can simply move horizontally through neighboring leaves until the end of the range is reached."
+      },
+      {
+        "component": "paragraph",
+        "text": "Instead of repeatedly traversing up and down the tree, it performs a mostly sequential scan through the linked leaves."
+      },
+      {
+        "component": "paragraph",
+        "text": "That is what makes B+ Trees particularly effective for:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "range queries",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "ordered scans",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "ORDER BY clauses",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "LIMIT queries",
+        "children": []
+      },
+      {
+        "component": "paragraph",
+        "text": "Of course, none of this comes for free."
+      },
+      {
+        "component": "paragraph",
+        "text": "Every INSERT, UPDATE, or DELETE must also maintain the index. When a new key is inserted, the target node must remain sorted. If the node exceeds its maximum capacity, it may need to split, causing changes to propagate upward through the tree. Similarly, deletions may require merges or redistributions between neighboring nodes to maintain balance."
+      },
+      {
+        "component": "paragraph",
+        "text": "These operations are still logarithmic in complexity, but they introduce additional work compared to a table without indexes. This is the fundamental tradeoff of indexing:"
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Faster reads",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Slower writes",
+        "children": []
+      },
+      {
+        "component": "bulleted_list_item",
+        "text": "Additional storage usage",
+        "children": []
+      },
+      {
+        "component": "paragraph",
+        "text": "And that is exactly why B+ Trees have become the default indexing structure in most relational databases. They provide an excellent balance between lookup performance, range query support, storage efficiency, and manageable write costs."
+      },
+      {
+        "component": "heading_2",
+        "text": "How do database indexes use B-Trees"
+      },
+      {
+        "component": "paragraph",
+        "text": "This is a short one. Indexes can be built on columns whose values can be compared and ordered. So when you create an index on a column with integers, a basic numeric comparator works. When you create an index on a column with strings, lexicographical comparison is used to determine the ordering."
+      },
+      {
+        "component": "paragraph",
+        "text": "Under the hood, the database stores the indexed values in a B-Tree in sorted order. The keys inside a node act as separators: values smaller than a key are routed to one child, while larger values are routed to another. "
+      },
+      {
+        "component": "paragraph",
+        "text": "So for columns like paragraphs of text it is pointless to add an index as what will one compare two paragraphs on."
+      },
+      {
+        "component": "heading_2",
+        "text": "What metrics should be evaluated before deciding to add an index?"
+      },
+      {
+        "component": "paragraph",
+        "text": "1. Write Operations on the Table"
+      },
+      {
+        "component": "paragraph",
+        "text": "The fact that indexes slow down writes is well established. Every INSERT, UPDATE, and DELETE has to update the index in addition to the table data. This does not mean indexes should only be added to rarely updated tables, but it does mean that the write overhead should be carefully evaluated before promoting an index to production. One should check the write volume on the table and ensure that the additional latency introduced by index maintenance stays within acceptable limits."
+      },
+      {
+        "component": "paragraph",
+        "text": "2. Read and Write Latencies"
+      },
+      {
+        "component": "paragraph",
+        "text": "Read and write latencies should be compared before and after adding an index. The goal is to ensure that the reduction in read latency justifies the increase in write latency. In most cases, indexes are added to improve the performance of frequently executed queries, but the trade-off should always be measured rather than assumed."
+      },
+      {
+        "component": "paragraph",
+        "text": "3. Query Selectivity (Cardinality)"
+      },
+      {
+        "component": "paragraph",
+        "text": "The type of queries executed against the table matters a lot. Indexes provide the biggest benefit when a query needs to scan a large amount of data to return a relatively small number of rows. If a query already returns a significant percentage of the table, the database may prefer a full table scan, and the gains from indexing can be marginal. Understanding query selectivity is therefore critical before introducing an index."
+      },
+      {
+        "component": "paragraph",
+        "text": "4. Query Patterns and Index Usage"
+      },
+      {
+        "component": "paragraph",
+        "text": "Indexes should be created for columns that are frequently used in filters, joins, sorting, or grouping operations. Before adding an index, it is worth identifying the queries that lie on the application's hot path and understanding which columns are responsible for the majority of the workload. An index that is never used is pure overhead."
+      },
+      {
+        "component": "paragraph",
+        "text": "5. Storage Footprint"
+      },
+      {
+        "component": "paragraph",
+        "text": "Indexes consume storage, sometimes a significant amount of it. Depending on the indexed columns and the number of indexes on a table, index size can range from a small fraction of the table size to being comparable to the table itself. Additional storage also means more memory pressure and cache usage, so be deliberate about which columns are indexed."
+      },
+      {
+        "component": "paragraph",
+        "text": "As a rule of thumb, an index is usually worth adding when it significantly reduces the amount of data scanned and improves the latency of frequently executed queries, while keeping the additional write and storage costs acceptable."
+      },
+      {
+        "component": "heading_3",
+        "text": "That sums up the note. Thanks for reading, and let me know if I got something wrong :)"
+      }
+    ]
+  },
+  {
     "id": "323e9933-5fca-80f5-b94e-d3125c1fd2e4",
     "created_time": "2026-03-14T13:47:00.000Z",
     "title": "Notes on Engines and Transmission",
@@ -119,11 +418,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Proposers → suggest values"
+        "text": "Proposers → suggest values",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Acceptors → vote to accept values"
+        "text": "Acceptors → vote to accept values",
+        "children": []
       },
       {
         "component": "heading_3",
@@ -159,11 +460,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "If N is higher than any seen:"
+        "text": "If N is higher than any seen:",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "If N is old → ignore/reject"
+        "text": "If N is old → ignore/reject",
+        "children": []
       },
       {
         "component": "heading_3",
@@ -175,11 +478,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "If no acceptor has accepted one → choose any value"
+        "text": "If no acceptor has accepted one → choose any value",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "If some have → choose the value with the highest proposal number (preserves consistency)"
+        "text": "If some have → choose the value with the highest proposal number (preserves consistency)",
+        "children": []
       },
       {
         "component": "heading_3",
@@ -339,11 +644,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Primary: us-east-1"
+        "text": "Primary: us-east-1",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Backup / Secondary: us-west-2 "
+        "text": "Backup / Secondary: us-west-2 ",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -387,11 +694,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "If the state is the same → the update succeeds."
+        "text": "If the state is the same → the update succeeds.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "If the state has changed → it is concluded that another process has updated the resource, and the current process must recompute its changes using this updated state as the new initial value. The process then retries with the new state."
+        "text": "If the state has changed → it is concluded that another process has updated the resource, and the current process must recompute its changes using this updated state as the new initial value. The process then retries with the new state.",
+        "children": []
       },
       {
         "component": "heading_3",
@@ -403,15 +712,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "High contention."
+        "text": "High contention.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Operations are expensive (you don’t want retries)."
+        "text": "Operations are expensive (you don’t want retries).",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Example: critical sections in OS kernels, database updates."
+        "text": "Example: critical sections in OS kernels, database updates.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -419,15 +731,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Low contention."
+        "text": "Low contention.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Retrying is cheap."
+        "text": "Retrying is cheap.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Example: counters, queues, non-blocking data structures."
+        "text": "Example: counters, queues, non-blocking data structures.",
+        "children": []
       }
     ]
   },
@@ -559,11 +874,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "The connection table fills up because these fake addresses remain there until they time out."
+        "text": "The connection table fills up because these fake addresses remain there until they time out.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "The server wastes bandwidth sending requests that go nowhere."
+        "text": "The server wastes bandwidth sending requests that go nowhere.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -595,19 +912,23 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Add CAPTCHAs on the frontend."
+        "text": "Add CAPTCHAs on the frontend.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Rate-limit APIs."
+        "text": "Rate-limit APIs.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Use pagination and other methods to avoid huge DB queries from a single trigger."
+        "text": "Use pagination and other methods to avoid huge DB queries from a single trigger.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Use async processing with queues to prevent server overload."
+        "text": "Use async processing with queues to prevent server overload.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -671,11 +992,13 @@
       },
       {
         "component": "numbered_list_item",
-        "text": "Chaining – The array buckets/slots are containers like linked lists or vectors. These can then chain the key-value pairs that fall on the same index. For example, on a bucket you might see something like:"
+        "text": "Chaining – The array buckets/slots are containers like linked lists or vectors. These can then chain the key-value pairs that fall on the same index. For example, on a bucket you might see something like:",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Open Addressing – In this approach, when collisions happen, instead of storing in the same slot, another empty slot is found. This can be done by linearly searching for the next vacant bucket, or using a probing function to find a new bucket, or by rehashing the key with a second hash function. While querying, you first get the index with the first hash function if the key matches, done. Otherwise, you follow the probing sequence (linear/quadratic/double hashing) until you either find the key or hit an empty slot."
+        "text": "Open Addressing – In this approach, when collisions happen, instead of storing in the same slot, another empty slot is found. This can be done by linearly searching for the next vacant bucket, or using a probing function to find a new bucket, or by rehashing the key with a second hash function. While querying, you first get the index with the first hash function if the key matches, done. Otherwise, you follow the probing sequence (linear/quadratic/double hashing) until you either find the key or hit an empty slot.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -711,11 +1034,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Uses .m3u8 (text-based playlists)."
+        "text": "Uses .m3u8 (text-based playlists).",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Segments are usually MPEG-TS (.ts) or fMP4 (.m4s)."
+        "text": "Segments are usually MPEG-TS (.ts) or fMP4 (.m4s).",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -723,15 +1048,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "An open standard."
+        "text": "An open standard.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Uses .mpd files (XML-based manifests)."
+        "text": "Uses .mpd files (XML-based manifests).",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Segments are usually fMP4 (.m4s)."
+        "text": "Segments are usually fMP4 (.m4s).",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -754,36 +1082,49 @@
         "text": "It is a very sensitive part of the design for coding platforms like LeetCode and GeeksforGeeks. Allowing users to send in code and run it on your server is a dangerous choice. On the surface, it just looks like running Docker containers for execution, but that too needs a lot of modifications since it shares the kernel with the host machine."
       },
       {
+        "component": "divider"
+      },
+      {
         "component": "paragraph",
         "text": "Option 1: Docker containers"
       },
       {
         "component": "bulleted_list_item",
-        "text": "Prebuilt language-specific containers are used to execute code in a sandbox."
+        "text": "Prebuilt language-specific containers are used to execute code in a sandbox.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "They use namespaces like the process namespace that isolates the container processes, and the network namespace which disables any network access to the host."
+        "text": "They use namespaces like the process namespace that isolates the container processes, and the network namespace which disables any network access to the host.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "cgroups are used to put resource consumption limits on the processes of these containers. For example, for every test case, max use 2s or 256MB RAM."
+        "text": "cgroups are used to put resource consumption limits on the processes of these containers. For example, for every test case, max use 2s or 256MB RAM.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "seccomp is added to protect against any system call generated by the user code. Filesystem access is controlled for the code execution, and code can only access the memory it needs for fair use."
+        "text": "seccomp is added to protect against any system call generated by the user code. Filesystem access is controlled for the code execution, and code can only access the memory it needs for fair use.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Though a lot of security modifications are needed, it has benefits, to begin with, it is faster to start up and has low memory overhead."
+        "text": "Though a lot of security modifications are needed, it has benefits, to begin with, it is faster to start up and has low memory overhead.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "The downside is the kernel is shared; if a kernel escape exploit is found, the host machine can be compromised."
+        "text": "The downside is the kernel is shared; if a kernel escape exploit is found, the host machine can be compromised.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Preferable for low-risk loads. Suitable for interpreted languages where dangerous syscalls are either not present (like no mount() syscall in Python) or are made via the interpreter."
+        "text": "Preferable for low-risk loads. Suitable for interpreted languages where dangerous syscalls are either not present (like no mount() syscall in Python) or are made via the interpreter.",
+        "children": []
+      },
+      {
+        "component": "divider"
       },
       {
         "component": "paragraph",
@@ -791,27 +1132,38 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Lightweight virtual machines, open-sourced and heavily used and developed by AWS."
+        "text": "Lightweight virtual machines, open-sourced and heavily used and developed by AWS.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Startups are fast but slower compared to Docker containers."
+        "text": "Startups are fast but slower compared to Docker containers.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Stronger isolation though, as the kernel is its own, not shared. Any syscall stays in the VM and does not reach the host machine."
+        "text": "Stronger isolation though, as the kernel is its own, not shared. Any syscall stays in the VM and does not reach the host machine.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Strongly bounded memory, as a complete OS is running and cannot read memory outside of it."
+        "text": "Strongly bounded memory, as a complete OS is running and cannot read memory outside of it.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Usable for high-risk loads like compiled languages such as C++ and Rust, where direct syscalls can be made by the compiled machine code."
+        "text": "Usable for high-risk loads like compiled languages such as C++ and Rust, where direct syscalls can be made by the compiled machine code.",
+        "children": []
+      },
+      {
+        "component": "divider"
       },
       {
         "component": "paragraph",
         "text": "Platforms like LeetCode use a hybrid model for code sandboxing. For trusted clients and loads, they use Docker-based containers, while for risky and untrusted submissions, microVMs are used."
+      },
+      {
+        "component": "divider"
       },
       {
         "component": "paragraph",
@@ -843,11 +1195,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "They tell the client which pieces to download."
+        "text": "They tell the client which pieces to download.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "They verify file integrity, ensuring that downloaded pieces haven’t been tampered with."
+        "text": "They verify file integrity, ensuring that downloaded pieces haven’t been tampered with.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -855,11 +1209,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Leechers: users who are downloading file pieces."
+        "text": "Leechers: users who are downloading file pieces.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Seeders: users who are uploading file pieces."
+        "text": "Seeders: users who are uploading file pieces.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -895,27 +1251,33 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "GraphQL is a query language for APIs."
+        "text": "GraphQL is a query language for APIs.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Instead of the server deciding what data you get (like in REST) the client asks exactly what it needs."
+        "text": "Instead of the server deciding what data you get (like in REST) the client asks exactly what it needs.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Instead of multiple endpoints, there is only one flexible endpoint."
+        "text": "Instead of multiple endpoints, there is only one flexible endpoint.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "You just define a schema and data resolvers(methods to fetch the data), the client sends in dynamic requests around the schema with what it needs."
+        "text": "You just define a schema and data resolvers(methods to fetch the data), the client sends in dynamic requests around the schema with what it needs.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Like you can get {“query” : \"{ user(id: 123) { name email orders { id total } } }”} no specific handler needs to be coded on the backend for different queries."
+        "text": "Like you can get {“query” : \"{ user(id: 123) { name email orders { id total } } }”} no specific handler needs to be coded on the backend for different queries.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "This reduces over-fetching/under-fetching problems common with REST. Just return exactly what was asked."
+        "text": "This reduces over-fetching/under-fetching problems common with REST. Just return exactly what was asked.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -923,23 +1285,28 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Heavily used in enterprise and legacy systems (e.g., banking, telecom, government)."
+        "text": "Heavily used in enterprise and legacy systems (e.g., banking, telecom, government).",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Operates over multiple protocols (HTTP, SMTP, etc.), not just HTTP."
+        "text": "Operates over multiple protocols (HTTP, SMTP, etc.), not just HTTP.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Uses XML as request/response objects. Has a strict schema defined for the objects. If req/res does not follow the schema, the API call fails. "
+        "text": "Uses XML as request/response objects. Has a strict schema defined for the objects. If req/res does not follow the schema, the API call fails. ",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Comes with strict standards and built-in security (WS-Security), Portions like certain fields of the req/res object can be encrypted separately in the application layer itself! while in REST it is done in the Transport layer."
+        "text": "Comes with strict standards and built-in security (WS-Security), Portions like certain fields of the req/res object can be encrypted separately in the application layer itself! while in REST it is done in the Transport layer.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Many banking systems use SOAP because it provides stricter control over payloads and is generally considered more secure."
+        "text": "Many banking systems use SOAP because it provides stricter control over payloads and is generally considered more secure.",
+        "children": []
       }
     ]
   },
@@ -963,15 +1330,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Methods like PUT, DELETE, or PATCH."
+        "text": "Methods like PUT, DELETE, or PATCH.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "POST requests with content types other than application/x-www-form-urlencoded, multipart/form-data, or text/plain."
+        "text": "POST requests with content types other than application/x-www-form-urlencoded, multipart/form-data, or text/plain.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Requests with custom headers (e.g., Authorization, X-API-KEY, etc.)."
+        "text": "Requests with custom headers (e.g., Authorization, X-API-KEY, etc.).",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1039,15 +1409,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "ZREMRANGEBYSCORE (remove elements outside the time range)"
+        "text": "ZREMRANGEBYSCORE (remove elements outside the time range)",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "ZADD (add the new timestamp)"
+        "text": "ZADD (add the new timestamp)",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "ZCARD (count the size)"
+        "text": "ZCARD (count the size)",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1123,15 +1496,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Enforcing corporate/institutional policies (e.g., blocking certain websites)"
+        "text": "Enforcing corporate/institutional policies (e.g., blocking certain websites)",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Anonymizing client identity, So all the server sees is the ip address of the proxy server requesting the resource"
+        "text": "Anonymizing client identity, So all the server sees is the ip address of the proxy server requesting the resource",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Forward proxy acts as an abstraction layer for the clients."
+        "text": "Forward proxy acts as an abstraction layer for the clients.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1147,15 +1523,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Load balancing across multiple servers."
+        "text": "Load balancing across multiple servers.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Routing requests to different services, i.e. yourdomain.com/service1 and service2 maybe running on the same server but on different ports, proxy server can direct the traffic accordingly."
+        "text": "Routing requests to different services, i.e. yourdomain.com/service1 and service2 maybe running on the same server but on different ports, proxy server can direct the traffic accordingly.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Enhancing security by hiding server details(Abstraction layer for the server)"
+        "text": "Enhancing security by hiding server details(Abstraction layer for the server)",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1163,11 +1542,13 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Forward Proxy → client-facing (protects/manages the client)"
+        "text": "Forward Proxy → client-facing (protects/manages the client)",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Reverse Proxy → server-facing (protects/manages the server)"
+        "text": "Reverse Proxy → server-facing (protects/manages the server)",
+        "children": []
       }
     ]
   },
@@ -1203,31 +1584,38 @@
       },
       {
         "component": "numbered_list_item",
-        "text": "Take the user’s longitude and latitude. The longitude range is [-180, 180] and the latitude range is [-90, 90]."
+        "text": "Take the user’s longitude and latitude. The longitude range is [-180, 180] and the latitude range is [-90, 90].",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Create a bit array (size depends on the precision required). Each geohash character requires 5 bits."
+        "text": "Create a bit array (size depends on the precision required). Each geohash character requires 5 bits.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Start with the longitude: if it lies in the upper half of the range, set the bit; otherwise, leave it unset."
+        "text": "Start with the longitude: if it lies in the upper half of the range, set the bit; otherwise, leave it unset.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Halve the range (e.g., [0, 180]) and do the same for latitude to set the next bit."
+        "text": "Halve the range (e.g., [0, 180]) and do the same for latitude to set the next bit.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Repeat this process until the array is filled."
+        "text": "Repeat this process until the array is filled.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Take 5 bits at a time, convert them to base32, and map them to a character from '0123456789bcdefghjkmnpqrstuvwxyz'."
+        "text": "Take 5 bits at a time, convert them to base32, and map them to a character from '0123456789bcdefghjkmnpqrstuvwxyz'.",
+        "children": []
       },
       {
         "component": "numbered_list_item",
-        "text": "Repeat until you obtain the final geohash string."
+        "text": "Repeat until you obtain the final geohash string.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1235,15 +1623,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "5 characters → ~4.9 km precision"
+        "text": "5 characters → ~4.9 km precision",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "6 characters → ~1.2 km precision"
+        "text": "6 characters → ~1.2 km precision",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "7 characters → ~152 m precision"
+        "text": "7 characters → ~152 m precision",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1271,19 +1662,23 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Data source - The source of Truth : Postgres, MySQL, MongoDB"
+        "text": "Data source - The source of Truth : Postgres, MySQL, MongoDB",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Ingestion pipeline- To  copy or stream the data into Elasticsearch from the database."
+        "text": "Ingestion pipeline- To  copy or stream the data into Elasticsearch from the database.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Elasticsearch cluster - Multiple nodes with primary and replica shards of indexes(A big Index over the whole database is broken down into multiple smaller shards so that you can query all of the index in one go with parallel searches on these shards pretty clever!)"
+        "text": "Elasticsearch cluster - Multiple nodes with primary and replica shards of indexes(A big Index over the whole database is broken down into multiple smaller shards so that you can query all of the index in one go with parallel searches on these shards pretty clever!)",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Search API - search queries are done via REST API (JSON over HTTP)"
+        "text": "Search API - search queries are done via REST API (JSON over HTTP)",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1379,15 +1774,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Apply all the hash functions on the key - idx1 = H1(”cat”) = 2; idx2 =  H2(”cat”) = 7"
+        "text": "Apply all the hash functions on the key - idx1 = H1(”cat”) = 2; idx2 =  H2(”cat”) = 7",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Set all the bits at indexes idx1 and idx2 in the bit array."
+        "text": "Set all the bits at indexes idx1 and idx2 in the bit array.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Updated bit array : [0 0 1 0 0 0 0 1 0 0]"
+        "text": "Updated bit array : [0 0 1 0 0 0 0 1 0 0]",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1399,15 +1797,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Apply all the hash functions on the key - idx1 = H1(”dog”) = 4; idx2 = H2(”dog”)  = 7"
+        "text": "Apply all the hash functions on the key - idx1 = H1(”dog”) = 4; idx2 = H2(”dog”)  = 7",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "check all the bits in the bit array at the idx1 and idx2."
+        "text": "check all the bits in the bit array at the idx1 and idx2.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "If all the bits are set the element is in the set else not. Clearly dog is not a member."
+        "text": "If all the bits are set the element is in the set else not. Clearly dog is not a member.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1451,19 +1852,23 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Atomicity: In a transaction either all the operations are successful or none of them are."
+        "text": "Atomicity: In a transaction either all the operations are successful or none of them are.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Consistency: After a transaction the DB should remain in a valid state, always respecting constraints such as schemas."
+        "text": "Consistency: After a transaction the DB should remain in a valid state, always respecting constraints such as schemas.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Isolation: Every transaction should happen in Isolation, such that no other transaction is affected. This is often implemented using MVCC (Multi-Version Concurrency Control), which I’ll cover later."
+        "text": "Isolation: Every transaction should happen in Isolation, such that no other transaction is affected. This is often implemented using MVCC (Multi-Version Concurrency Control), which I’ll cover later.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Durability: Once committed, a transaction is permanent and crash-safe, often implemented via Write-Ahead Logging (WAL), also discussed later."
+        "text": "Durability: Once committed, a transaction is permanent and crash-safe, often implemented via Write-Ahead Logging (WAL), also discussed later.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1483,19 +1888,23 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Atomicity : MongoDB stores data in BSON format, where each document is a contiguous unit on the disk, making single-document updates atomic. It extends this further with multi-document transactions using Write-Ahead Logging (WAL). While most NoSQL databases (like Cassandra) ensure only document-level atomicity, MongoDB supports atomic operations across multiple documents."
+        "text": "Atomicity : MongoDB stores data in BSON format, where each document is a contiguous unit on the disk, making single-document updates atomic. It extends this further with multi-document transactions using Write-Ahead Logging (WAL). While most NoSQL databases (like Cassandra) ensure only document-level atomicity, MongoDB supports atomic operations across multiple documents.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Consistency : Document-level consistency can be enforced through schemas. Note: this is different from the “consistency” defined in the CAP theorem."
+        "text": "Consistency : Document-level consistency can be enforced through schemas. Note: this is different from the “consistency” defined in the CAP theorem.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Isolation : MongoDB uses document-level locking for isolation. During transactions, it provides snapshot isolation, ensuring reads within a transaction see a stable view of the data."
+        "text": "Isolation : MongoDB uses document-level locking for isolation. During transactions, it provides snapshot isolation, ensuring reads within a transaction see a stable view of the data.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Durability : MongoDB uses a Write-Ahead Log (WAL) called WiredTiger, which provides a configurable property called WriteConcern to manage durability requirements, tunable by the user."
+        "text": "Durability : MongoDB uses a Write-Ahead Log (WAL) called WiredTiger, which provides a configurable property called WriteConcern to manage durability requirements, tunable by the user.",
+        "children": []
       },
       {
         "component": "paragraph",
@@ -1535,15 +1944,18 @@
       },
       {
         "component": "bulleted_list_item",
-        "text": "Hot Storage → High IOPS (Input/Output per second). Expensive but very fast, typically backed by SSDs."
+        "text": "Hot Storage → High IOPS (Input/Output per second). Expensive but very fast, typically backed by SSDs.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Cold Storage → Higher latency, backed by slower HDDs. Cheaper than hot storage."
+        "text": "Cold Storage → Higher latency, backed by slower HDDs. Cheaper than hot storage.",
+        "children": []
       },
       {
         "component": "bulleted_list_item",
-        "text": "Archive Storage → Retrieval takes minutes to hours, built on magnetic tapes and deep archive storage infra. Cheapest option."
+        "text": "Archive Storage → Retrieval takes minutes to hours, built on magnetic tapes and deep archive storage infra. Cheapest option.",
+        "children": []
       }
     ]
   }
