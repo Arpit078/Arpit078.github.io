@@ -42,14 +42,13 @@
     padding-left: 0;
    }
    
-   ul{
+   #headAndNav ul{
     position:sticky;
     top: 0;
-    left:50;
-    /* background-color: rgba(126, 134, 131, 0.236); */
-    /* filter: blur(5px); */
-    height: max-content;
-    width: max-content;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    z-index: 20;
   }
   }
 
